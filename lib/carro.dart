@@ -7,6 +7,8 @@ class Carro extends PositionComponent {
   final Paint paint;
 
   Carro({
+
+    
     required super.position,
     required this.paint,
     required super.size,
