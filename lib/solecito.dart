@@ -1,13 +1,15 @@
-import 'package:flutter/material.dart';
-import 'package:flame/game.dart';
-import 'package:flame/palette.dart';
+library figuras_flame;
 
-class Solecito with Game {
-  @override
-  Future<void> onLoad() async {
-    super.onLoad();
-    // init
-  }
+import 'package:flame/components.dart';
+import 'package:flame/palette.dart';
+import 'package:flutter/material.dart';
+
+class Solecito extends PositionComponent {
+  Solecito({
+    required super.position,
+    required super.size,
+    super.children,
+  }) : super();
 
   @override
   void render(Canvas canvas) {
@@ -43,7 +45,4 @@ class Solecito with Game {
     canvas.drawLine(Offset(size.x * 0.6, size.y * 0.44),
         Offset(size.x * 0.75, size.y * 0.35), paint); //extra4 xd
   }
-
-  @override
-  void update(double dt) {}
 }
