@@ -3,7 +3,6 @@ library figuras_flame;
 import 'dart:ui';
 import 'package:flame/components.dart';
 
-
 class Stickman extends PositionComponent {
   final Paint paint;
 
@@ -19,8 +18,10 @@ class Stickman extends PositionComponent {
   @override
   void render(Canvas canvas) {
     super.render(canvas);
-    //Dibujar la cabeza
+    
     double radio = size.x / 2;
+
+    //Dibujar la cabeza
     canvas.drawCircle(
       Offset(radio, radio),
       radio,
