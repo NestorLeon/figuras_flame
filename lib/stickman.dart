@@ -3,6 +3,7 @@ library figuras_flame;
 import 'dart:ui';
 import 'package:flame/components.dart';
 
+
 class Stickman extends PositionComponent {
   final Paint paint;
 
