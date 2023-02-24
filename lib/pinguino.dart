@@ -1,42 +1,61 @@
 import 'dart:ui';
 import 'package:flame/components.dart';
+import 'package:flutter/material.dart';
 
 class Penguin extends PositionComponent {
-  static const penguinSize = 50.0;
-  static const penguinColor = Color(0xFF000000);
-  static const bellyColor = Color(0xFFFFFFFF);
-  static const eyeColor = Color(0xFF000000);
-  static const eyeSize = 8.0;
-  static const beakColor = Color(0xFFFFA500);
-  static const beakSize = 12.0;
-
   @override
   void render(Canvas canvas) {
-    // Draw penguin body
-    final Paint penguinPaint = Paint()..color = penguinColor;
-    const Rect penguinRect = Rect.fromLTWH(0, 0, penguinSize, penguinSize);
-    canvas.drawRect(penguinRect, penguinPaint);
+    // Cabeza
+    const headRect = Rect.fromLTWH(0, 0, 60, 60);
+    final headPaint = Paint()..color = Colors.white;
+    canvas.drawOval(headRect, headPaint);
 
-    // Draw penguin belly
-    final Paint bellyPaint = Paint()..color = bellyColor;
-    const Rect bellyRect =
-        Rect.fromLTWH(5, 5, penguinSize - 10, penguinSize - 10);
-    canvas.drawRect(bellyRect, bellyPaint);
+    // Ojos
+    const eyeLeftCenter = Offset(20, 20);
+    const eyeRightCenter = Offset(40, 20);
+    const eyeRadius = 5.0;
+    final eyePaint = Paint()..color = const Color.fromARGB(255, 66, 66, 66);
+    canvas.drawCircle(eyeLeftCenter, eyeRadius, eyePaint);
+    canvas.drawCircle(eyeRightCenter, eyeRadius, eyePaint);
 
-    // Draw penguin eyes
-    final Paint eyePaint = Paint()..color = eyeColor;
-    const double leftEyeX = 15;
-    const double rightEyeX = 35;
-    const double eyeY = 20;
-    canvas.drawCircle(const Offset(leftEyeX, eyeY), eyeSize, eyePaint);
-    canvas.drawCircle(const Offset(rightEyeX, eyeY), eyeSize, eyePaint);
+    // Pico
+    final mouthPath = Path();
+    mouthPath.moveTo(30, 35);
+    mouthPath.lineTo(35, 40);
+    mouthPath.lineTo(30, 45);
+    final mouthPaint = Paint()..color = Colors.orange;
+    canvas.drawPath(mouthPath, mouthPaint);
 
-    // Draw penguin beak
-    final Paint beakPaint = Paint()..color = beakColor;
-    final Path beakPath = Path();
-    beakPath.moveTo(penguinSize / 2, penguinSize - 15);
-    beakPath.lineTo(penguinSize / 2 - beakSize / 2, penguinSize - 10);
-    beakPath.lineTo(penguinSize / 2 + beakSize / 2, penguinSize - 10);
-    canvas.drawPath(beakPath, beakPaint);
+    // Cuerpo
+    const bodyRect = Rect.fromLTWH(10, 60, 40, 50);
+    final bodyPaint = Paint()..color = const Color.fromARGB(255, 56, 56, 56);
+    canvas.drawRect(bodyRect, bodyPaint);
+
+    // Alas
+    final wingPath = Path();
+    wingPath.moveTo(10, 80);
+    wingPath.lineTo(25, 75);
+    wingPath.lineTo(25, 110);
+    wingPath.lineTo(10, 115);
+    wingPath.close();
+    final wingPaint = Paint()..color = const Color.fromARGB(255, 255, 255, 255);
+    canvas.drawPath(wingPath, wingPaint);
+
+    // Piernas
+    const legTopY = 110.0;
+    const legBottomY = 130.0;
+    const legLeftX = 20.0;
+    const legRightX = 40.0;
+    final legPaint = Paint()..color = Colors.orange;
+    canvas.drawLine(
+      const Offset(legLeftX, legTopY),
+      const Offset(legLeftX, legBottomY),
+      legPaint,
+    );
+    canvas.drawLine(
+      const Offset(legRightX, legTopY),
+      const Offset(legRightX, legBottomY),
+      legPaint,
+    );
   }
 }
