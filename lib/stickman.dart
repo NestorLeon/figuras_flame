@@ -1,15 +1,18 @@
 library figuras_flame;
 
 import 'dart:ui';
+import 'package:figuras_flame/tipos_de_forma.dart';
 import 'package:flame/components.dart';
 
 class Stickman extends PositionComponent {
   final Paint paint;
+  final FormaTypes forma;
 
   Stickman({
     required super.position,
     required this.paint,
     required super.size,
+    this.forma = FormaTypes.rectanguloVertical,
     super.children,
   }) : super();
 
