@@ -1,6 +1,6 @@
 ## figuras_flame
 
-A Flutter package with figures of animals and objects for flutter flame package.
+A package with figures of animals and objects drawn on canvas for the flame package.
 
 ## Usage
 
