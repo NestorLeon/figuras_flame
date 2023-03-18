@@ -39,7 +39,7 @@ class Iguana extends PositionComponent {
     // Nariz
     final nosePosition = Offset(r, r * 1.2);
     canvas.drawCircle(
-        nosePosition, 4, Paint()..color = const Color.fromARGB(69, 0, 0, 0));
+        nosePosition, r / 10, Paint()..color = const Color.fromARGB(69, 0, 0, 0));
 
     // Cola
     final tailPath = Path()
