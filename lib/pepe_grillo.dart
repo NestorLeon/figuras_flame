@@ -1,3 +1,4 @@
+import 'package:flame/components.dart';
 import 'package:flame/palette.dart';
 import 'package:flame/text.dart';
 import 'package:flutter/foundation.dart';
@@ -5,11 +6,18 @@ import 'package:flutter/material.dart';
 import 'package:flame/game.dart';
 import 'dart:math';
 
-class Grillo with Game {
+class Grillo extends PositionComponent {
+  final Paint paint;
+  Grillo({ 
+  required super.position,
+  required this.paint,
+  required super.size,
+  super.children,
+  }
+):super();
   @override
   Future<void> onLoad() async {
-    //super.onLoad();
-    // init
+   
   }
 
   @override
@@ -26,48 +34,48 @@ class Grillo with Game {
     ..color = Color.fromARGB(255, 255, 255, 255);
 
     final Cabeza =
-        Rect.fromCenter(center: Offset(400, 400), width: 200, height: 230);
+        Rect.fromCenter(center: Offset(size.x*.400, size.x*.400), width: size.x*.200, height: size.x*.230);
     final Ojo1 =
-        Rect.fromCenter(center: Offset(350, 380), width:50, height: 70);
+        Rect.fromCenter(center: Offset(size.x*.350, size.x*.380), width:size.x*.050, height: size.x*.070);
     final Ojo2 =
-        Rect.fromCenter(center: Offset(450, 380), width:50, height: 70);
+        Rect.fromCenter(center: Offset(size.x*.450, size.x*.380), width:size.x*.050, height: size.x*.070);
 
     final Pupila1 =
-        Rect.fromCenter(center: Offset(350, 390), width:40, height: 50);
+        Rect.fromCenter(center: Offset(size.x*.350, size.x*.390), width:size.x*.040, height: size.x*.050);
     final Pupila2 =
-        Rect.fromCenter(center: Offset(450, 390), width:40, height: 50);
+        Rect.fromCenter(center: Offset(size.x*.450, size.x*.390), width:size.x*.040, height: size.x*.050);
 
     final cachete1=
-    Rect.fromCenter(center: Offset(360 ,450), width: 120, height: 90);
+    Rect.fromCenter(center: Offset(size.x*.360 ,size.x*.450), width: size.x*.120, height: size.x*.090);
     
     final cachete2=
-    Rect.fromCenter(center: Offset(440,450), width: 120, height: 90);
+    Rect.fromCenter(center: Offset(size.x*.440,size.x*.450), width: size.x*.120, height: size.x*.090);
     
     var Bigote= Path()
-    ..moveTo(400, 460)
-    ..lineTo(430, 435)
-    ..lineTo(370, 435)
+    ..moveTo(size.x*.400, size.x*.460)
+    ..lineTo(size.x*.430, size.x*.435)
+    ..lineTo(size.x*.370, size.x*.435)
     ..close();
     var Bigote_Fondo= Path()
-    ..moveTo(400, 457)
-    ..lineTo(433, 429)
-    ..lineTo(367, 429)
+    ..moveTo(size.x*.400, size.x*.457)
+    ..lineTo(size.x*.433, size.x*.429)
+    ..lineTo(size.x*.367, size.x*.429)
     ..close();
     var Sombrero = Path()
-      ..moveTo(250, 330)
-      ..lineTo(550, 330)
-      ..lineTo(550, 300)
-      ..lineTo(480, 300)
-      ..lineTo(510, 100)
-      ..lineTo(290, 100)
-      ..lineTo(320, 300)
-      ..lineTo(250, 300)
+      ..moveTo(size.x*.250, size.x*.330)
+      ..lineTo(size.x*.550, size.x*.330)
+      ..lineTo(size.x*.550, size.x*.300)
+      ..lineTo(size.x*.480, size.x*.300)
+      ..lineTo(size.x*.510, size.x*.100)
+      ..lineTo(size.x*.290, size.x*.100)
+      ..lineTo(size.x*.320, size.x*.300)
+      ..lineTo(size.x*.250, size.x*.300)
       ..close();
     
     canvas.drawOval(Cabeza, colorVerde);
   
-    canvas.drawPath(Sombrero, colorAzul);
-    canvas.drawRect( Rect.fromCenter(center: Offset(400,287), width: 167, height: 25),colorRojo);
+    canvas.drawPath(Sombrero, paint);
+    canvas.drawRect( Rect.fromCenter(center: Offset(size.x*.400,size.x*.287), width: size.x*.167, height: size.x*.025),colorRojo);
     canvas.drawOval(Ojo1, colorBlanco);
     canvas.drawOval(Ojo2, colorBlanco);
     canvas.drawOval(Pupila1, colorNegro);
