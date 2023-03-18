@@ -1,104 +1,101 @@
-import 'package:flame/palette.dart';
-import 'package:flame/text.dart';
+import 'dart:ui';
+import 'package:flame/components.dart';
+import 'package:flame/geometry.dart';
 import 'package:flutter/material.dart';
-import 'package:flame/game.dart';
 
-void main() async {
-  runApp(GameWidget(game: MyCircle()));
-}
+class elefante extends PositionComponent {
+  late TextComponent textComponent;
+final Paint paint;
+  elefante({
+    required super.position,
+    required super.size,
+    required this.paint,
+    super.children,
+  }) : super();
 
-class MyCircle with Game {
-  @override
-  Future<void> onLoad() async {
-    super.onLoad();
-    // init
-  }
-
+  double t = 0;
   @override
   void render(Canvas canvas) {
-    canvas.drawCircle(const Offset(0, 0), 1, BasicPalette.red.paint());
-
+    super.render(canvas);
+    double enx = size.x /2;
+    double eny = size.y /2;
+    final colorA = Paint()..color = Colors.grey;
+    final colorB = Paint()..color = Colors.black;
+    final colorC = Paint()..color = Colors.white;
     // canvas.drawRect(Rect.fromCircle(center: const Offset(0, 0), radius: 20),
     //     BasicPalette.red.paint());
-    
+
     //cabeza
     canvas.drawRect(
-      Rect.fromLTWH(300, 170, 20, 80),
-      BasicPalette.gray.paint(),
+      Rect.fromLTWH(enx *3.00,eny* 1.70,enx* 0.20,eny* 0.80),
+      paint,
     );
 
     canvas.drawCircle(
-      Offset(300, 120),
+      Offset(enx *3.00,eny* 1.20),
       25,
-      BasicPalette.gray.paint(),
+      paint,
     );
     canvas.drawCircle(
-      Offset(240, 120),
+      Offset(enx *2.40,eny* 1.20),
       25,
-      BasicPalette.gray.paint(),
+      paint,
     );
 
     canvas.drawOval(
-      Rect.fromLTWH(220, 120, 100, 100),
-      BasicPalette.gray.paint(),
+      Rect.fromLTWH(enx *2.20,eny* 1.20, enx *1.00,eny* 1.00),
+      paint,
     );
 
     canvas.drawCircle(
-      Offset(260, 165),
+      Offset(enx *2.60,eny* 1.65),
       10,
-      BasicPalette.gray.paint(),
+      paint,
     );
     canvas.drawCircle(
-      Offset(295, 165),
+      Offset(enx *2.95,eny* 1.65),
       10,
-      BasicPalette.gray.paint(),
+      paint,
     );
     //ojos
-    
-    canvas.drawCircle(Offset(260, 165),10, BasicPalette.white.paint());
-    canvas.drawCircle(Offset(295, 165),10, BasicPalette.white.paint());
+
+    canvas.drawCircle(Offset(enx *2.60,eny* 1.65), 10, colorC);
+    canvas.drawCircle(Offset(enx *2.95,eny* 1.65), 10, colorC);
     canvas.drawCircle(
-      Offset(265, 165),
+      Offset(enx *2.65,eny*1.65),
       5,
-      BasicPalette.black.paint(),
+      colorB,
     );
     canvas.drawCircle(
-      Offset(300, 165),
+      Offset(enx *3.00,eny* 1.65),
       5,
-      BasicPalette.black.paint(),
+      colorB,
     );
 
 // Dibujar el cuerpo del elefante
 
     canvas.drawOval(
-      Rect.fromLTWH(25, 175, 250, 125),
-      BasicPalette.gray.paint(),
+      Rect.fromLTWH(enx *0.25,eny* 1.75,enx * 2.50, eny*1.25),
+      paint,
     );
 
     canvas.drawRect(
-      Rect.fromLTWH(200, 290, 20, 80),
-      BasicPalette.gray.paint(),
+      Rect.fromLTWH(enx *2.00,eny* 2.90, enx *0.20,eny* 0.80),
+      paint,
     );
     canvas.drawRect(
-      Rect.fromLTWH(120, 290, 20, 80),
-      BasicPalette.gray.paint(),
+      Rect.fromLTWH(enx *1.20,eny* 2.90,enx * 0.20,eny* 0.80),
+      paint,
     );
     canvas.drawRect(
-      Rect.fromLTWH(80, 290, 20, 80),
-      BasicPalette.gray.paint(),
+      Rect.fromLTWH(enx *0.80, eny*2.90,enx * 0.20,eny* 0.80),
+      paint,
     );
     canvas.drawRect(
-      Rect.fromLTWH(230, 270, 20, 90),
-      BasicPalette.gray.paint(),
+      Rect.fromLTWH(enx *2.30,eny* 2.70,enx * 0.20,eny* 0.90),
+      paint,
     );
     canvas.drawLine(
-        Offset(30, 235), Offset(-40, 315),
-        BasicPalette.gray.paint());
-
-  
-    
+        Offset(enx *0.30,eny* 2.35), Offset(enx *-0.40,eny* 3.15), colorA);
   }
-
-  @override
-  void update(double deltaTime) {}
 }
