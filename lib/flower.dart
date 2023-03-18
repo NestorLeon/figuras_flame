@@ -1,10 +1,77 @@
 import 'dart:ui';
+import 'tipos_de_forma.dart';
 import 'package:flame/components.dart';
 
-
-double  t = 0;
-
 class Flower extends PositionComponent {
+
+  final Paint paint;
+  final FormaTypes forma;
+
+  Flower({
+    required super.position,
+    required this.paint,
+    required super.size,
+    this.forma = FormaTypes.rectanguloVertical,
+    super.children,
+  }) : super();
+  
+  double  t = 0;
+
+  @override
+  void render(Canvas canvas) {
+    super.render(canvas);
+    //Dibujar la cabeza
+    double r = size.x / 2;
+    double rc = (1/3) * size.x;
+    double rp = (1/4) * size.x;
+
+
+    //Dibujar el tallo
+    canvas.drawLine(
+      Offset(r, (5/6) * r),
+      Offset(r, size.y),
+      paint..strokeWidth = (1.25/3) * r,
+    );
+
+    //Petalos
+    canvas.drawCircle(
+      Offset((1/6) * size.x,(1/6) * size.y), 
+      rp, 
+      paint..strokeWidth = 4,
+    );
+
+    canvas.drawCircle(
+      Offset((5/6) * size.x, (1/6) * size.y), 
+      rp, 
+      paint..strokeWidth = 4,
+    );
+
+    canvas.drawCircle(
+      Offset((3/6) * size.x, (1/15) * size.y), 
+      rp, 
+      paint..strokeWidth = 4,
+    );
+
+    canvas.drawCircle(
+      Offset((2/10) * size.x, (3/6) * r  + r), 
+      rp, 
+      paint..strokeWidth = 4,
+    );
+
+    canvas.drawCircle(
+      Offset((8/10) * size.x, (3/6) * r + r), 
+      rp, 
+      paint..strokeWidth = 4,
+    );
+
+    //Pistillo
+    canvas.drawCircle(
+      Offset(r, r),
+      rc,
+      paint..strokeWidth = 4,
+    );
+  }
+/*
   static const petalSize = 75.0;
   static const petal1Size = 55.0;
   static const stemSize = 10.0;
@@ -54,5 +121,5 @@ class Flower extends PositionComponent {
     final Paint pistil1Paint = Paint()..color = pistil1Color;
     canvas.drawCircle(const Offset(600, 210), pistilSize, pistil1Paint);
 
-  }
+  }*/
 }
