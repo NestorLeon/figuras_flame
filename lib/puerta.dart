@@ -1,62 +1,59 @@
-
-import 'package:flame/palette.dart';
-import 'package:flame/text.dart';
+import 'dart:ui';
+import 'package:flame/components.dart';
+import 'package:flame/geometry.dart';
 import 'package:flutter/material.dart';
-import 'package:flame/game.dart';
-import "dart:ui";
 
-void main() async {
-  runApp(GameWidget(game: MyDoor()));
-}
+class puerta extends PositionComponent {
+  late TextComponent textComponent;
 
-class MyDoor with Game {
-  @override
-  Future<void> onLoad() async {
-    super.onLoad();
-    // init
-  }
+  puerta({
+    required super.position,
+    required super.size,
+    super.children,
+  }) : super();
+
+  double t = 0;
 
   @override
   void render(Canvas canvas) {
-      
-    //cuerpo puerta
-    canvas.drawRect(
-      Rect.fromLTWH(15, 200, 270, 600),
-      BasicPalette.gray.paint(),
-    );
-
-
-    //vidrios
-       //v1
-      canvas.drawRect(
-      Rect.fromLTWH(145, 230, 100, 100),
-      BasicPalette.lightBlue.paint(),
-    );
-       //v2
-      canvas.drawRect(
-      Rect.fromLTWH(145, 335, 100, 100),
-      BasicPalette.lightBlue.paint(),
-    );
-       //v3
-      canvas.drawRect(
-      Rect.fromLTWH(40, 335, 100, 100),
-      BasicPalette.lightBlue.paint(),
-    );
-       //v4
-      canvas.drawRect(
-      Rect.fromLTWH(40, 230, 100, 100),
-      BasicPalette.lightBlue.paint(),
-    );
-
-
-    //manija
-    canvas.drawCircle(Offset(250, 500),10, 
-    BasicPalette.yellow.paint(),
-    );
-   
+    super.render(canvas);
     
+   
+    final colorA = Paint()..color = Color.fromARGB(255, 54, 19, 19);
+    final colorB = Paint()..color = Color.fromARGB(255, 93, 182, 255);
+    final colorC = Paint()..color = Color.fromARGB(255, 229, 255, 0);
+     
+
+    
+    var cuerpocarro = Path()
+      ..moveTo(40, 20)
+      ..lineTo(130, 20)
+      ..lineTo(130, 170)
+      ..lineTo(40, 170)
+      ..lineTo(40, 35)
+      ..close();
+      canvas.drawPath(cuerpocarro, colorA); 
+
+      var Ventana =Path()
+      ..moveTo(50, 30)
+      ..lineTo(120, 30)
+      ..lineTo(120, 90)
+      ..lineTo(50, 90)
+      ..lineTo(50, 35)
+      ..close();
+     canvas.drawPath(Ventana, colorB);
+
+     var Manija = Path()
+       ..moveTo(100, 100)
+      ..lineTo(120, 100)
+      ..lineTo(120, 120)
+      ..lineTo(100,120)
+      
+      ..close();
+     
+    canvas.drawPath(Manija,colorC);
+
+
   
   }
-  @override
-  void update(double deltaTime) {}
 }
