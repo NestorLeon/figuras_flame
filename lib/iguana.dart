@@ -1,81 +1,76 @@
-import 'dart:ui';
+library figuras_flame;
+
+import 'package:figuras/tipos_de_forma.dart';
 import 'package:flame/components.dart';
-import 'package:flame/game.dart';
-import 'package:flame/text.dart';
 import 'package:flutter/material.dart';
 
 class Iguana extends PositionComponent {
-  @override
-  final double width = 100;
-  @override
-  final double height = 50;
-  Paint _paint = Paint();
+  final Paint paint;
+  final FormaTypes forma;
 
-  Iguana() {
-    _paint = Paint()
-      ..color = Colors.green
-      ..style = PaintingStyle.fill;
-  }
-
+  Iguana({
+    required super.position,
+    required super.size,
+    required this.paint,
+    this.forma = FormaTypes.rectanguloVertical,
+    super.children,
+  }) : super();
   @override
   void render(Canvas canvas) {
+    super.render(canvas);
+
+    double r = size.x / 2;
     // Cabeza
-    canvas.drawCircle(position.toOffset(), height / 2, _paint);
+    canvas.drawCircle(Offset(r, r), r, paint);
     // Ojos
-    final leftEyePosition = Offset(position.x - 25, position.y - 10);
-    final rightEyePosition = Offset(position.x + 25, position.y - 10);
-    canvas.drawCircle(leftEyePosition, 10, Paint()..color = Colors.white);
-    canvas.drawCircle(leftEyePosition, 5, Paint()..color = Colors.black);
-    canvas.drawCircle(rightEyePosition, 10, Paint()..color = Colors.white);
-    canvas.drawCircle(rightEyePosition, 5, Paint()..color = Colors.black);
+    final leftEyePosition = Offset(r * 1 / 2, r);
+    final rightEyePosition = Offset(r * 3 / 2, r);
+    canvas.drawCircle(
+      leftEyePosition,
+      (1 / 16) * size.y,
+      Paint()..color = Colors.white,
+    );
+    canvas.drawCircle(
+        leftEyePosition, (1 / 32) * size.y, Paint()..color = Colors.black);
+    canvas.drawCircle(
+        rightEyePosition, (1 / 16) * size.y, Paint()..color = Colors.white);
+    canvas.drawCircle(
+        rightEyePosition, (1 / 32) * size.y, Paint()..color = Colors.black);
     // Nariz
-    final nosePosition = Offset(position.x, position.y + 10);
-    canvas.drawCircle(nosePosition, 5, Paint()..color = Colors.black);
-    // Cuerpo
-    final bodyPath = Path()
-      ..moveTo(position.x - 20, position.y + 25)
-      ..lineTo(position.x + 20, position.y + 25)
-      ..lineTo(position.x + 30, position.y + 100)
-      ..lineTo(position.x - 30, position.y + 100)
-      ..close();
-    canvas.drawPath(bodyPath, _paint);
+    final nosePosition = Offset(r, r * 1.2);
+    canvas.drawCircle(
+        nosePosition, 4, Paint()..color = const Color.fromARGB(69, 0, 0, 0));
+
     // Cola
     final tailPath = Path()
-      ..moveTo(position.x - 30, position.y + 100)
-      ..lineTo(position.x - 50, position.y + 120)
-      ..lineTo(position.x - 30, position.y + 140)
+      ..moveTo(r, 4 * r)
+      ..lineTo(r * 1.3, 3 * r)
+      ..lineTo(r * 1.3, r * 5)
       ..close();
-    canvas.drawPath(tailPath, _paint);
-    // Patas
-    final leftLegPosition = Offset(position.x - 40, position.y + 90);
-    final rightLegPosition = Offset(position.x + 40, position.y + 90);
+    canvas.drawPath(tailPath, paint);
+
     canvas.drawLine(
-        position.toOffset(),
-        leftLegPosition,
-        Paint()
-          ..color = Colors.green
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 5);
+      Offset(2 * r, 4 * r),
+      Offset(0 * r, 2 * r),
+      paint..strokeWidth = r / 4,
+    );
     canvas.drawLine(
-        position.toOffset(),
-        rightLegPosition,
-        Paint()
-          ..color = Colors.green
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 5);
+      Offset(2 * r, 2 * r),
+      Offset(0 * r, 4 * r),
+      paint..strokeWidth = r / 4,
+    );
+    // Cuerpo
     canvas.drawLine(
-        leftLegPosition,
-        Offset(leftLegPosition.dx - 10, leftLegPosition.dy + 30),
-        Paint()
-          ..color = Colors.green
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 5);
+      Offset(r, 1.5 * r),
+      Offset(r, 4 * r),
+      paint..strokeWidth = r,
+    );
     canvas.drawLine(
-        rightLegPosition,
-        Offset(rightLegPosition.dx + 10, rightLegPosition.dy + 30),
-        Paint()
-          ..color = Colors.green
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 5);
+      Offset(r, 2 * r),
+      Offset(r, 3.8 * r),
+      Paint()
+        ..color = const Color.fromARGB(97, 197, 226, 101)
+        ..strokeWidth = r / 2,
+    );
   }
 }
