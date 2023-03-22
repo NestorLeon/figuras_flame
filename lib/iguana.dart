@@ -1,8 +1,9 @@
 library figuras_flame;
 
-import 'package:figuras_flame/tipos_de_forma.dart';
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
+
+import 'tipos_de_forma.dart';
 
 class Iguana extends PositionComponent {
   final Paint paint;
