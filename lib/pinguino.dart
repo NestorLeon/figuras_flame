@@ -1,6 +1,6 @@
 library figuras_flame;
 
-import 'package:figuras/tipos_de_forma.dart';
+import 'package:figuras_flame/tipos_de_forma.dart';
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 
