@@ -23,34 +23,45 @@ class Penguin extends PositionComponent {
     // Cuerpo
     canvas.drawLine(
       Offset(r, r),
-      Offset(r, 4 * r),
+      Offset(r, size.y),
       paint..strokeWidth = r * 2,
     );
     canvas.drawLine(
       Offset(r, r),
-      Offset(r, 3.8 * r),
+      Offset(r, size.y - (r / 4)),
       Paint()
         ..color = Colors.white
         ..strokeWidth = r * 1.5,
     );
     // Cabeza
     canvas.drawCircle(Offset(r, r), r, paint);
-    canvas.drawCircle(Offset(r, r), r * 0.9, Paint()..color = Colors.white);
+    canvas.drawCircle(Offset(r, r), r,
+        Paint()..color = const Color.fromARGB(20, 255, 255, 255));
+    canvas.drawCircle(Offset(r, r), r * 0.9,
+        Paint()..color = const Color.fromARGB(10, 255, 255, 255));
     // Ojos
     final leftEyePosition = Offset(r * 1 / 2, r);
     final rightEyePosition = Offset(r * 3 / 2, r);
     canvas.drawCircle(
       leftEyePosition,
-      (1 / 16) * size.y,
+      (1 / 16) * size.x,
       Paint()..color = Colors.white,
     );
     canvas.drawCircle(
-        leftEyePosition, (1 / 32) * size.y, Paint()..color = Colors.black);
+      leftEyePosition,
+      (1 / 20) * size.x,
+      Paint()..color = Colors.black,
+    );
     canvas.drawCircle(
-        rightEyePosition, (1 / 16) * size.y, Paint()..color = Colors.white);
+      rightEyePosition,
+      (1 / 16) * size.x,
+      Paint()..color = Colors.white,
+    );
     canvas.drawCircle(
-        rightEyePosition, (1 / 32) * size.y, Paint()..color = Colors.black);
-
+      rightEyePosition,
+      (1 / 20) * size.x,
+      Paint()..color = Colors.black,
+    );
     // Pico
     final mouthPath = Path();
     mouthPath.moveTo(r, r * 1.3);
