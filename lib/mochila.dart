@@ -1,5 +1,5 @@
+library figuras_flame;
 import 'dart:js_util';
-
 import 'dart:ui';
 import 'package:figuras_flame/tipos_de_forma.dart';
 import 'package:flame/extensions.dart';
