@@ -1,3 +1,4 @@
+library figuras_flame;
 import 'dart:js_util';
 import 'dart:math' as math;
 import 'dart:ui';
