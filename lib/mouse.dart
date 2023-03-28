@@ -17,9 +17,13 @@ class Mouse extends PositionComponent {
   double t = 0;
   @override
   void render(Canvas canvas) {
+    var X = 13.10;
+    var Y = 7;
+    var A = 0.063;
+    var B = 0.011;
     super.render(canvas);
-    double enx = size.x /2;
-    double eny = size.y /2;
+    double enx = size.x / 2;
+    double eny = size.y / 2;
     final azu = Paint()
       ..color = Colors.grey
       ..strokeWidth = 5
@@ -28,24 +32,28 @@ class Mouse extends PositionComponent {
       ..color = Colors.black
       ..strokeWidth = 5
       ..style = PaintingStyle.fill;
-    
+
     //canvas.drawOval(Rect.fromLTWH(75, 50, 150, 200), azu);
     //canvas.drawLine(Offset(100, 105), Offset(100, 200), cuerda);
     canvas.drawOval(
-        Rect.fromCenter(center: Offset(size.x* 1,size.y* 1), width:size.x* 0.75, height:size.y* 1), azu);
+        Rect.fromCenter(
+            center: Offset(X * size.x * (.1 - A), size.y * Y * (.1 - B)),
+            width: X * size.x * 0.075,
+            height: Y * size.y * (.1)),
+        azu);
     final path = Path()
-      ..moveTo(size.x* 1,size.y* 1.05)
-      ..lineTo(size.x* 1.40,size.y* 1.05)
-      ..lineTo(size.x* 1.30,size.y* 0.50)
-      ..lineTo(size.x* 1,size.y* 0.50)
-      ..lineTo(size.x* 1,size.y* 1.05);
+      ..moveTo(X * size.x * (.1 - A), size.y * Y * (.105 - B))
+      ..lineTo(X * size.x * (.140 - A), size.y * Y * (.105 - B))
+      ..lineTo(X * size.x * (.130 - A), size.y * Y * (0.050 - B))
+      ..lineTo(X * size.x * (.1 - A), size.y * Y * (0.050 - B))
+      ..lineTo(X * size.x * (.1 - A), size.y * Y * (.105 - B));
 
     canvas.drawPath(path, paint);
     final clickizquer = Path()
-      ..moveTo(size.x*1,size.y* 1.05)
-      ..lineTo(size.x*0.60,size.y* 1.05)
-      ..lineTo(size.x*0.75,size.y* 0.55)
-      ..lineTo(size.x*1,size.y* 0.50);
+      ..moveTo(X * size.x * (.1 - A), size.y * Y * (.105 - B))
+      ..lineTo(X * size.x * (0.063 - A), size.y * Y * (.105 - B))
+      ..lineTo(X * size.x * (0.075 - A), size.y * Y * (0.055 - B))
+      ..lineTo(X * size.x * (.1 - A), size.y * Y * (0.050 - B));
     canvas.drawPath(clickizquer, paint);
     ;
 
@@ -53,7 +61,14 @@ class Mouse extends PositionComponent {
       ..color = Colors.white
       ..strokeWidth = 5
       ..style = PaintingStyle.fill;
-    canvas.drawLine(Offset(size.x*1, size.y*1.05), Offset(size.x*1,size.y* 0.10), cuerda);
-    canvas.drawOval(Rect.fromLTWH(size.x*0.93,size.y* 0.60,size.x* 0.15,size.y* 0.20), rueda);
+    canvas.drawLine(Offset(X*size.x * (.1-A), Y*size.y * (.105-B)),
+        Offset(X*size.x * (.1-A), Y* size.y * (0.010-B)), cuerda);
+
+          canvas.drawOval(
+        Rect.fromCenter(
+            center: Offset(  X*size.x * (0.099-A), Y*size.y * (0.060-B),),
+            width: X * size.x * (0.015),
+            height: Y * size.y * (0.020)),
+        rueda);
   }
 }

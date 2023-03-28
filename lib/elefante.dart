@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class elefante extends PositionComponent {
   late TextComponent textComponent;
-final Paint paint;
+  final Paint paint;
   elefante({
     required super.position,
     required super.size,
@@ -17,8 +17,10 @@ final Paint paint;
   @override
   void render(Canvas canvas) {
     super.render(canvas);
-    double enx = size.x /2;
-    double eny = size.y /2;
+    var enx = 3.37;
+    var eny = 3.5;
+    var A = 0.024;
+    var B = 0.08;
     final colorA = Paint()..color = Colors.grey;
     final colorB = Paint()..color = Colors.black;
     final colorC = Paint()..color = Colors.white;
@@ -27,75 +29,90 @@ final Paint paint;
 
     //cabeza
     canvas.drawRect(
-      Rect.fromLTWH(enx *3.00,eny* 1.70,enx* 0.20,eny* 0.80),
+      Rect.fromLTWH(enx * size.x * (.300 - A), eny * size.y * (.170 - B),
+          enx * size.x * (0.020 ), eny * size.y * (.080 )),
       paint,
     );
 
     canvas.drawCircle(
-      Offset(enx *3.00,eny* 1.20),
-      25,
+      Offset(enx * size.x * (.300 - A), eny * size.y * (.120 - B)),
+      enx*size.x*.025,
       paint,
     );
     canvas.drawCircle(
-      Offset(enx *2.40,eny* 1.20),
-      25,
+      Offset(enx * size.x * (.240 - A), eny * size.y * (.120 - B)),
+      enx*size.x*.025,
       paint,
     );
 
     canvas.drawOval(
-      Rect.fromLTWH(enx *2.20,eny* 1.20, enx *1.00,eny* 1.00),
+      Rect.fromLTWH(enx * size.x * (.220 - A), eny * size.y * (.120 - B),
+          enx * size.x * .100, eny * size.y * (.100 )),
       paint,
     );
 
     canvas.drawCircle(
-      Offset(enx *2.60,eny* 1.65),
-      10,
+      Offset(enx * size.x * (.260 - A), eny * size.y * (.165 - B)),
+      enx*size.x*.010,
       paint,
     );
     canvas.drawCircle(
-      Offset(enx *2.95,eny* 1.65),
-      10,
+      Offset(enx * size.x * (.295 - A), eny * size.y * (.165 - B)),
+      enx*size.x*.010,
       paint,
     );
     //ojos
 
-    canvas.drawCircle(Offset(enx *2.60,eny* 1.65), 10, colorC);
-    canvas.drawCircle(Offset(enx *2.95,eny* 1.65), 10, colorC);
     canvas.drawCircle(
-      Offset(enx *2.65,eny*1.65),
-      5,
+        Offset(enx * size.x * (.260 - A), eny * size.y * (.165 - B)),
+        enx*size.x*.010,
+        colorC);
+    canvas.drawCircle(
+        Offset(enx * size.x * (.295 - A), eny * size.y * (.165 - B)),
+        enx*size.x*.010,
+        colorC);
+    canvas.drawCircle(
+      Offset(enx * size.x * (.265 - A), eny * size.y * (.165 - B)),
+      enx*size.x*.005,
       colorB,
     );
     canvas.drawCircle(
-      Offset(enx *3.00,eny* 1.65),
-      5,
+      Offset(enx * size.x * (.300 - A), eny * size.y * (.165 - B)),
+      enx*size.x*.005,
       colorB,
     );
 
 // Dibujar el cuerpo del elefante
 
     canvas.drawOval(
-      Rect.fromLTWH(enx *0.25,eny* 1.75,enx * 2.50, eny*1.25),
+      Rect.fromLTWH(enx * size.x * (.025 - A), eny * size.y * (.175 - B),
+          enx * size.x * (.250), eny * size.y * (.125 )),
       paint,
     );
 
     canvas.drawRect(
-      Rect.fromLTWH(enx *2.00,eny* 2.90, enx *0.20,eny* 0.80),
+      Rect.fromLTWH(enx * size.x * (.200 - A), eny * size.y * (.290 - B),
+          enx * size.x * (.020), eny * size.y * (.080 )),
       paint,
     );
     canvas.drawRect(
-      Rect.fromLTWH(enx *1.20,eny* 2.90,enx * 0.20,eny* 0.80),
+      Rect.fromLTWH(enx * size.x * (.120 - A), eny * size.y * (.290 - B),
+          enx * size.x * (.020), eny * size.y * (.080 )),
       paint,
     );
     canvas.drawRect(
-      Rect.fromLTWH(enx *0.80, eny*2.90,enx * 0.20,eny* 0.80),
+      Rect.fromLTWH(enx * size.x * (.080 - A), eny * size.y * (.290 - B),
+          enx * size.x * (.020), eny * size.y * (.080 )),
       paint,
     );
     canvas.drawRect(
-      Rect.fromLTWH(enx *2.30,eny* 2.70,enx * 0.20,eny* 0.90),
+      Rect.fromLTWH(enx * size.x * (.230 - A), eny * size.y * (.270 - B),
+          enx * size.x * (.020), eny * size.y * (.090 )),
       paint,
     );
     canvas.drawLine(
-        Offset(enx *0.30,eny* 2.35), Offset(enx *-0.40,eny* 3.15), colorA);
+        Offset(enx * size.x * (.030 - A), eny * size.y * (.235 - B)),
+        Offset(enx * size.x * (.040), eny * size.y * (.315 - B)),
+        colorA);
   }
 }
