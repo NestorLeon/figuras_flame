@@ -1,4 +1,6 @@
 import 'dart:ui';
+import 'package:flutter/material.dart';
+
 import 'tipos_de_forma.dart';
 import 'package:flame/components.dart';
 
@@ -20,17 +22,21 @@ class Flower extends PositionComponent {
   @override
   void render(Canvas canvas) {
     super.render(canvas);
-    //Dibujar la cabeza
+    
+    //Parámetros
     double r = size.x / 2;
     double rc = (1/3) * size.x;
     double rp = (1/4) * size.x;
-
-
+    
+    
     //Dibujar el tallo
     canvas.drawLine(
       Offset(r, (5/6) * r),
       Offset(r, size.y),
-      paint..strokeWidth = (1.25/3) * r,
+      Paint()
+
+      ..color = Color.fromARGB(255, 66, 201, 12)
+      ..strokeWidth = (1.25/3) * r,
     );
 
     //Petalos
@@ -64,11 +70,19 @@ class Flower extends PositionComponent {
       paint..strokeWidth = 4,
     );
 
+    canvas.drawCircle(
+      Offset((3/6) * size.x, (3/7) * size.y), 
+      rp, 
+      paint..strokeWidth = 4,
+    );
+
     //Pistillo
     canvas.drawCircle(
       Offset(r, r),
       rc,
-      paint..strokeWidth = 4,
+      Paint()
+      ..color = const Color.fromARGB(255, 255, 196, 0)
+      ..strokeWidth = 4,
     );
   }
 /*

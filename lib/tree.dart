@@ -1,4 +1,6 @@
 import 'dart:ui';
+import 'package:flutter/material.dart';
+
 import 'tipos_de_forma.dart';
 import 'package:flame/components.dart';
 
@@ -30,7 +32,9 @@ class Tree extends PositionComponent {
     canvas.drawLine(
       Offset(r, (5/6) * r),
       Offset(r, size.y),
-      paint..strokeWidth = (2/3) * r,
+      Paint()
+      ..color = const Color.fromARGB(255, 80, 41, 4)
+      ..strokeWidth = (2/3) * r,
     );
 
     //Copas del árbol
