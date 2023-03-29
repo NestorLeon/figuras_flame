@@ -35,7 +35,7 @@ class Flower extends PositionComponent {
       Offset(r, size.y),
       Paint()
 
-      ..color = Color.fromARGB(255, 66, 201, 12)
+      ..color = const Color.fromARGB(255, 66, 201, 12)
       ..strokeWidth = (1.25/3) * r,
     );
 
