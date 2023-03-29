@@ -12,6 +12,11 @@ class Proyector extends PositionComponent {
     super.children,
   }) : super();
 
+  var X=7.7;
+  var Y=16.58;
+  var A=.020;
+  var B=.050;
+
   double t = 0;
 
   @override
@@ -25,36 +30,36 @@ class Proyector extends PositionComponent {
     
     //cuerpo proyector
       var cuerpo = Path()
-      ..moveTo(20, 50)
-      ..lineTo(20, 100)
-      ..lineTo(150, 100)
-      ..lineTo(150, 50) 
+      ..moveTo(X*size.x *(.020-A), Y* size.y* (.050-B))
+      ..lineTo(X*size.x *(.020-A), Y*size.y*(.100-B))
+      ..lineTo(X*size.x *(.150-A), Y*size.y*(.100-B))
+      ..lineTo(X*size.x *(.150-A), Y*size.y*(.050-B)) 
       ..close();
     //reposaderas
     var reposadera1 = Path()
-    ..moveTo(50, 100)
-    ..lineTo(50, 110)
-    ..lineTo(60, 110)
-    ..lineTo(60, 100)
+    ..moveTo(X*size.x *(.050-A), Y*size.y*(.100-B))
+    ..lineTo(X*size.x *(.050-A), Y*size.y*(.110-B))
+    ..lineTo(X*size.x *(.060-A), Y*size.y*(.110-B))
+    ..lineTo(X*size.x *(.060-A), Y*size.y*(.100-B))
     ..close();
   var reposadera2 = Path()
-  ..moveTo(110, 100)
-  ..lineTo(110, 110)
-  ..lineTo(120, 110)
-  ..lineTo(120, 100)
+  ..moveTo(X*size.x *(.110-A), Y*size.y*(.100-B))
+  ..lineTo(X*size.x *(.110-A), Y*size.y*(.110-B))
+  ..lineTo(X*size.x *(.120-A), Y*size.y*(.110-B))
+  ..lineTo(X*size.x *(.120-A), Y*size.y*(.100-B))
 
   ..close();
 
   //lente
   var lente = Path()
-  ..moveTo(115, 82)
-  ..lineTo(117, 74)
-  ..lineTo(120, 72)
-  ..lineTo(126, 71)
-  ..lineTo(128, 71)
-  ..lineTo(130, 72)
-  ..lineTo(134, 74)
-  ..lineTo(135, 82)
+  ..moveTo(X*size.x *(.115-A), Y*size.y* (.082-B))
+  ..lineTo(X*size.x *(.117-A), Y*size.y* (.074-B))
+  ..lineTo(X*size.x *(.120-A), Y*size.y* (.072-B))
+  ..lineTo(X*size.x *(.126-A), Y*size.y* (.071-B))
+  ..lineTo(X*size.x *(.128-A), Y*size.y* (.071-B))
+  ..lineTo(X*size.x *(.130-A), Y*size.y* (.072-B))
+  ..lineTo(X*size.x *(.134-A), Y*size.y* (.074-B))
+  ..lineTo(X*size.x *(.135-A), Y*size.y* (.082-B))
       
       ..close(); 
      

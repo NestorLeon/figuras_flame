@@ -13,6 +13,11 @@ class Tractor extends PositionComponent {
     super.children,
   }) : super();
 
+  var X=9.2;
+  var Y=9.68421;
+  var A=.020;
+  var B=.010;
+
   double t = 0;
 
   @override
@@ -26,46 +31,46 @@ class Tractor extends PositionComponent {
     
     //cuerpo tractor
       var cuerpo = Path()
-      ..moveTo(20, 50)
-      ..lineTo(20, 100)
-      ..lineTo(120, 100)
-      ..lineTo(120, 50) 
+      ..moveTo(X*size.x * (.020-A), Y*size.y * (.050-B))
+      ..lineTo(X*size.x * (.020-A), Y*size.y * (.100-B))
+      ..lineTo(X*size.x * (.120-A), Y*size.y * (.100-B))
+      ..lineTo(X*size.x * (.120-A), Y*size.y * (.050-B)) 
       ..close();
     //techo
       var techo1 = Path()
-      ..moveTo(40, 50)
-      ..lineTo(50, 50)
-      ..lineTo(51, 20)
-      ..lineTo(40, 20)
-      ..lineTo(40, 50)
+      ..moveTo(X*size.x * (.040-A), Y*size.y * (.050-B))
+      ..lineTo(X*size.x * (.050-A), Y*size.y * (.050-B))
+      ..lineTo(X*size.x * (.051-A), Y*size.y * (.020-B))
+      ..lineTo(X*size.x * (.040-A), Y*size.y * (.020-B))
+      ..lineTo(X*size.x * (.040-A), Y*size.y * (.050-B))
       ..close();
       var techo2 = Path()
-      ..moveTo(40, 10)
-      ..lineTo(40, 20)
-      ..lineTo(101, 20)
-      ..lineTo(101, 10) 
+      ..moveTo(X*size.x * (.040-A), Y*size.y * (.010-B))
+      ..lineTo(X*size.x * (.040-A), Y*size.y * (.020-B))
+      ..lineTo(X*size.x * (.101-A), Y*size.y * (.020-B))
+      ..lineTo(X*size.x * (.101-A), Y*size.y * (.010-B)) 
       ..close();
       var techo3 = Path()
-      ..moveTo(90, 50)
-      ..lineTo(100, 50)
-      ..lineTo(101, 20)
-      ..lineTo(90, 20)
-      ..lineTo(90, 50)
+      ..moveTo(X*size.x * (.090-A), Y*size.y * (.050-B))
+      ..lineTo(X*size.x * (.100-A), Y*size.y * (.050-B))
+      ..lineTo(X*size.x * (.101-A), Y*size.y * (.020-B))
+      ..lineTo(X*size.x * (.090-A), Y*size.y * (.020-B))
+      ..lineTo(X*size.x * (.090-A), Y*size.y * (.050-B))
       ..close();
 
       //faro1
       var faro1 = Path()
-      ..moveTo(120, 60)
-      ..lineTo(120, 70)
-      ..lineTo(129, 70)
-      ..lineTo(129, 60) 
+      ..moveTo(X*size.x * (.120-A), Y*size.y * (.060-B))
+      ..lineTo(X*size.x * (.120-A), Y*size.y * (.070-B))
+      ..lineTo(X*size.x * (.129-A), Y*size.y * (.070-B))
+      ..lineTo(X*size.x * (.129-A), Y*size.y * (.060-B)) 
       ..close();
       //faro2
       var faro2 = Path()
-      ..moveTo(120, 80)
-      ..lineTo(120, 90)
-      ..lineTo(129, 90)
-      ..lineTo(129, 80) 
+      ..moveTo(X*size.x * (.120-A), Y*size.y * (.080-B))
+      ..lineTo(X*size.x * (.120-A), Y*size.y * (.090-B))
+      ..lineTo(X*size.x * (.129-A), Y*size.y * (.090-B))
+      ..lineTo(X*size.x * (.129-A), Y*size.y * (.080-B)) 
       ..close();
       //llantas
        var llanta1 = Path()
@@ -73,16 +78,16 @@ class Tractor extends PositionComponent {
  
 
 
-  ..moveTo(40, 100)  
-  ..lineTo(42, 92)
-  ..lineTo(45, 90)
-  ..lineTo(51, 89)
-  ..lineTo(53, 89)
-  ..lineTo(55, 90)   
-  ..lineTo(59, 92)
-  ..lineTo(60, 110)
-  ..lineTo(62, 112)
-  ..lineTo(40, 112)
+  ..moveTo(X*size.x * (.040-A), Y*size.y * (.100-B))  
+  ..lineTo(X*size.x * (.042-A), Y*size.y * (.092-B))
+  ..lineTo(X*size.x * (.045-A), Y*size.y * (.090-B))
+  ..lineTo(X*size.x * (.051-A), Y*size.y * (.089-B))
+  ..lineTo(X*size.x * (.053-A), Y*size.y * (.089-B))
+  ..lineTo(X*size.x * (.055-A), Y*size.y * (.090-B))   
+  ..lineTo(X*size.x * (.059-A), Y*size.y * (.092-B))
+  ..lineTo(X*size.x * (.060-A), Y*size.y * (.110-B))
+  ..lineTo(X*size.x * (.062-A), Y*size.y * (.112-B))
+  ..lineTo(X*size.x * (.040-A), Y*size.y * (.112-B))
      // ..moveTo(40, 100)
       //..lineTo(40, 110)
       //..lineTo(49, 110)
@@ -103,16 +108,16 @@ class Tractor extends PositionComponent {
      
      
       var llanta2 = Path()
-  ..moveTo(88, 100)  
-  ..lineTo(90, 92)
-  ..lineTo(93, 90)
-  ..lineTo(99, 89)
-  ..lineTo(101, 89)
-  ..lineTo(104, 90)   
-  ..lineTo(108, 92)
-  ..lineTo(109, 110)
-  ..lineTo(111, 112)
-  ..lineTo(88, 112)
+  ..moveTo(X*size.x * (.088-A), Y*size.y * (.100-B))  
+  ..lineTo(X*size.x * (.090-A), Y*size.y * (.092-B))
+  ..lineTo(X*size.x * (.093-A), Y*size.y * (.090-B))
+  ..lineTo(X*size.x * (.099-A), Y*size.y * (.089-B))
+  ..lineTo(X*size.x * (.101-A), Y*size.y * (.089-B))
+  ..lineTo(X*size.x * (.104-A), Y*size.y * (.090-B))   
+  ..lineTo(X*size.x * (.108-A), Y*size.y * (.092-B))
+  ..lineTo(X*size.x * (.109-A), Y*size.y * (.110-B))
+  ..lineTo(X*size.x * (.111-A), Y*size.y * (.112-B))
+  ..lineTo(X*size.x * (.088-A), Y*size.y * (.112-B))
 
       ..close();
 
