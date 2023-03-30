@@ -12,6 +12,11 @@ class puerta extends PositionComponent {
     super.children,
   }) : super();
 
+  var X = 8.7;
+  var Y= 6.68;
+  var A= .025;
+  var B= .020;
+
   double t = 0;
 
   @override
@@ -26,34 +31,30 @@ class puerta extends PositionComponent {
 
     
     var cuerpocarro = Path()
-      ..moveTo(40, 20)
-      ..lineTo(130, 20)
-      ..lineTo(130, 170)
-      ..lineTo(40, 170)
-      ..lineTo(40, 35)
+      ..moveTo(X*size.x *(.040-A), Y*size.y*(.020-B))
+      ..lineTo(X*size.x *(.130-A), Y*size.y*(.020-B))
+      ..lineTo(X*size.x *(.130-A), Y*size.y*(.170-B))
+      ..lineTo(X*size.x *(.040-A), Y*size.y*(.170-B))
+      ..lineTo(X*size.x *(.040-A), Y*size.y*(.035-B))
       ..close();
       canvas.drawPath(cuerpocarro, colorA); 
 
       var Ventana =Path()
-      ..moveTo(50, 30)
-      ..lineTo(120, 30)
-      ..lineTo(120, 90)
-      ..lineTo(50, 90)
-      ..lineTo(50, 35)
+      ..moveTo(X*size.x *(.050-A), Y*size.y*(.030-B))
+      ..lineTo(X*size.x *(.120-A), Y*size.y*(.030-B))
+      ..lineTo(X*size.x *(.120-A), Y*size.y*(.090-B))
+      ..lineTo(X*size.x *(.050-A), Y*size.y*(.090-B))
+      ..lineTo(X*size.x *(.050-A), Y*size.y*(.035-B))
       ..close();
      canvas.drawPath(Ventana, colorB);
 
      var Manija = Path()
-       ..moveTo(100, 100)
-      ..lineTo(120, 100)
-      ..lineTo(120, 120)
-      ..lineTo(100,120)
-      
+       ..moveTo(X*size.x*(.100-A), Y*size.y*(.100-B))
+      ..lineTo(X*size.x *(.120-A), Y*size.y*(.100-B))
+      ..lineTo(X*size.x *(.120-A), Y*size.y*(.120-B))
+      ..lineTo(X*size.x *(.100-A), Y*size.y*(.120-B))
       ..close();
-     
     canvas.drawPath(Manija,colorC);
-
-
   
   }
 }

@@ -12,6 +12,11 @@ class carro extends PositionComponent {
     super.children,
   }) : super();
 
+ var X = 7.7;
+ var Y= 8.50;
+ var A= .030;
+ var B= .040;
+
   double t = 0;
 
   @override
@@ -24,62 +29,51 @@ class carro extends PositionComponent {
     final colorD = Paint()..color = Color.fromARGB(255, 229, 255, 0);
 
     var luces=Path()
-   ..moveTo(160, 80)
-   ..lineTo(90, 75)
-   ..lineTo(130, 100)
-   ..lineTo(90, 120)
+   ..moveTo(X*size.x *(.160-A), Y*size.y* (.080-B))
+   ..lineTo(X*size.x *(.090-A), Y*size.y* (.075-B))
+   ..lineTo(X*size.x *(.130-A), Y*size.y* (.100-B))
+   ..lineTo(X*size.x *(.090-A), Y*size.y* (.120-B))
    
    ..close();
     canvas.drawPath(luces, colorD);
     
     var cuerpocarro = Path()
-      ..moveTo(40, 70)
-      ..lineTo(130, 70)
-      ..lineTo(130, 124)
-      ..lineTo(40, 125)
-      ..lineTo(40, 35)
+      ..moveTo(X*size.x *(.040-A), Y*size.y* (.070-B))
+      ..lineTo(X*size.x *(.130-A), Y*size.y* (.070-B))
+      ..lineTo(X*size.x *(.130-A), Y*size.y* (.124-B))
+      ..lineTo(X*size.x *(.040-A), Y*size.y* (.125-B))
+      ..lineTo(X*size.x *(.040-A), Y*size.y* (.035-B))
       ..close();
       canvas.drawPath(cuerpocarro, colorB);
 
     var Ventanas = Path()
-    ..moveTo(50, 70)
-    ..lineTo(120, 70)
-    ..lineTo(120, 40)
-    ..lineTo(50, 40)
- 
-
+    ..moveTo(X*size.x *(.050-A), Y*size.y*(.070-B))
+    ..lineTo(X*size.x *(.120-A), Y*size.y*(.070-B))
+    ..lineTo(X*size.x *(.120-A), Y*size.y*(.040-B))
+    ..lineTo(X*size.x *(.050-A), Y*size.y*(.040-B))
     ..close();
     canvas.drawPath(Ventanas,colorc);
       
     var LLanta1 = Path()
-    ..moveTo(110, 120)
-    ..lineTo(100, 140)
-    ..lineTo(118, 150)
-    ..lineTo(130, 140)
-    ..lineTo(130, 120)
-
+    ..moveTo(X*size.x *(.110-A), Y*size.y*(.120-B))
+    ..lineTo(X*size.x *(.100-A), Y*size.y*(.140-B))
+    ..lineTo(X*size.x *(.118-A), Y*size.y*(.150-B))
+    ..lineTo(X*size.x *(.130-A), Y*size.y*(.140-B))
+    ..lineTo(X*size.x *(.130-A), Y*size.y*(.120-B))
     ..close();
     canvas.drawPath(LLanta1,colorA);
 
     var LLanta2 = Path()
-    ..moveTo(40,120 )
-    ..lineTo(40, 145)
-
-    ..lineTo(65, 145)
-    ..lineTo(70, 120)
-    //
-
-    ..lineTo(55, 110)
-    ..lineTo(55,110)
-   //
-    ..lineTo(35,128)
-    ..lineTo(60,148)
-    
+    ..moveTo(X*size.x *(.040-A),Y*size.y*(.120-B))
+    ..lineTo(X*size.x *(.040-A),Y*size.y*(.145-B))
+    ..lineTo(X*size.x *(.065-A),Y*size.y*(.145-B))
+    ..lineTo(X*size.x *(.070-A),Y*size.y*(.120-B))
+    ..lineTo(X*size.x *(.055-A),Y*size.y*(.110-B))
+    ..lineTo(X*size.x *(.055-A),Y*size.y*(.110-B))
+    ..lineTo(X*size.x *(.035-A),Y*size.y*(.128-B))
+    ..lineTo(X*size.x *(.060-A),Y*size.y*(.148-B))
     ..close();
     canvas.drawPath(LLanta2, colorA);
-
-   
-
   
   }
 }
