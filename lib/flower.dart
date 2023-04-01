@@ -1,3 +1,5 @@
+library figuras_flame;
+
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
