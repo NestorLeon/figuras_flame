@@ -1,8 +1,7 @@
 library figuras_flame;
 
+import 'dart:ui';
 import 'package:flame/components.dart';
-import 'package:flutter/material.dart';
-
 import 'tipos_de_forma.dart';
 
 class Pinguino extends PositionComponent {
@@ -30,7 +29,7 @@ class Pinguino extends PositionComponent {
       Offset(r, r),
       Offset(r, size.y - (r / 4)),
       Paint()
-        ..color = Colors.white
+        ..color = Color.fromARGB(255, 255, 255, 255)
         ..strokeWidth = r * 1.5,
     );
     // Cabeza
@@ -45,29 +44,29 @@ class Pinguino extends PositionComponent {
     canvas.drawCircle(
       leftEyePosition,
       (1 / 16) * size.x,
-      Paint()..color = Colors.white,
+      Paint()..color = Color.fromARGB(255, 255, 255, 255),
     );
     canvas.drawCircle(
       leftEyePosition,
       (1 / 20) * size.x,
-      Paint()..color = Colors.black,
+      Paint()..color = Color.fromARGB(255, 0, 0, 0),
     );
     canvas.drawCircle(
       rightEyePosition,
       (1 / 16) * size.x,
-      Paint()..color = Colors.white,
+      Paint()..color = Color.fromARGB(255, 255, 255, 255),
     );
     canvas.drawCircle(
       rightEyePosition,
       (1 / 20) * size.x,
-      Paint()..color = Colors.black,
+      Paint()..color = Color.fromARGB(255, 0, 0, 0),
     );
     // Pico
     final mouthPath = Path();
     mouthPath.moveTo(r, r * 1.3);
     mouthPath.lineTo(r * 1, r * 1.7);
     mouthPath.lineTo(r * 1.3, r * 1.5);
-    final mouthPaint = Paint()..color = Colors.orange;
+    final mouthPaint = Paint()..color = Color.fromARGB(255, 255, 128, 0);
     canvas.drawPath(mouthPath, mouthPaint);
   }
 }

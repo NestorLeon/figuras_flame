@@ -1,8 +1,7 @@
 library figuras_flame;
 
+import 'dart:ui';
 import 'package:flame/components.dart';
-import 'package:flutter/material.dart';
-
 import 'tipos_de_forma.dart';
 
 class Iguana extends PositionComponent {
@@ -61,22 +60,22 @@ class Iguana extends PositionComponent {
     canvas.drawCircle(
       leftEyePosition,
       (1 / 8) * size.x,
-      Paint()..color = Colors.white,
+      Paint()..color = Color.fromARGB(255, 255, 255, 255),
     );
     canvas.drawCircle(
       leftEyePosition,
       (1 / 16) * size.x,
-      Paint()..color = Colors.black,
+      Paint()..color = Color.fromARGB(255, 0, 0, 0),
     );
     canvas.drawCircle(
       rightEyePosition,
       (1 / 8) * size.x,
-      Paint()..color = Colors.white,
+      Paint()..color = Color.fromARGB(255, 255, 255, 255),
     );
     canvas.drawCircle(
       rightEyePosition,
       (1 / 16) * size.x,
-      Paint()..color = Colors.black,
+      Paint()..color = Color.fromARGB(255, 0, 0, 0),
     );
     // Nariz
     final nosePosition = Offset(r, r * 1.2);
