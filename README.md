@@ -39,8 +39,7 @@ main() {
 Class MyGame
 
 ```dart
-import 'package:figuras_flame/stickman.dart';
-import 'package:figuras_flame/carro.dart';
+import 'package:figuras_flame/figures.dart';
 import 'package:flame/components.dart';
 import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
@@ -58,6 +57,7 @@ class MyGame extends FlameGame {
     return const Color.fromARGB(255, 200, 200, 200);
   }
 
+  // PARA ACTIVAR EL DEBUG
   @override
   bool get debugMode => true;
 
@@ -87,19 +87,44 @@ class MyGame extends FlameGame {
 
   @override
   Future<void> onLoad() async {
-    await add(
-      Stickman(
-        position: Vector2(50, 50),
-        size: Vector2(40, 80),
-        paint: Paint()..color = Colors.blue,
-      ),
-    );
-    await add(
-      Carro(
-        position: Vector2(50, 150),
-        size: Vector2(40, 80),
-        paint: Paint()..color = Colors.red,
-      ),
+    await addAll(
+      [
+        Ballena(
+          position: Vector2(0, 10),
+          size: Vector2(55, 23),
+          paint: Paint()..color = Colors.red,
+        ),
+        Caballito(
+          position: Vector2(100, 10),
+          size: Vector2(66, 133),
+          paint: Paint()..color = Colors.purple,
+        ),
+        Caballo(
+          position: Vector2(200, 10),
+          size: Vector2(50, 23),
+          paint: Paint()..color = const Color.fromARGB(255, 202, 35, 146),
+        ),
+        Iguana(
+          position: Vector2(300, 10),
+          size: Vector2(80, 150),
+          paint: Paint()..color = const Color.fromARGB(255, 7, 23, 36),
+        ),
+        Mochila(
+          position: Vector2(0, 200),
+          size: Vector2(66, 111),
+          paint: Paint()..color = const Color.fromARGB(255, 19, 21, 141),
+        ),
+        Pinguino(
+          position: Vector2(100, 200),
+          size: Vector2(85, 155),
+          paint: Paint()..color = const Color.fromARGB(255, 27, 231, 44),
+        ),
+        Stickman(
+          position: Vector2(200, 200),
+          size: Vector2(40, 80),
+          paint: Paint()..color = Colors.blue,
+        ),
+      ],
     );
   }
 }
