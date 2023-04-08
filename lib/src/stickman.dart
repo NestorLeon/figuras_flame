@@ -1,7 +1,7 @@
 library figuras_flame;
 
 import 'dart:ui';
-import 'package:figuras_flame/tipos_de_forma.dart';
+import 'package:figuras_flame/src/tipos_de_forma.dart';
 import 'package:flame/components.dart';
 
 class Stickman extends PositionComponent {
