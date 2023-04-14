@@ -1,6 +1,6 @@
 name: figuras_flame
 description: A package with figures of animals and objects drawn on canvas for the flame package.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/NestorLeon/figuras_flame
 
 environment:

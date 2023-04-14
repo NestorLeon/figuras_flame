@@ -1,3 +1,10 @@
+## 0.0.4
+
+The following figures have been added:
+
+* Tractor
+* Projector (Proyector)
+
 ## 0.0.3
 
 * Added implementation files folder (src) with all figures, so you can import all figures in a single line of code.
