@@ -3,6 +3,7 @@ import 'package:flame/components.dart';
 import 'package:flame/geometry.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/tipos_de_forma.dart';
+
 class Carro extends PositionComponent {
   late TextComponent textComponent;
   final Paint paint;
