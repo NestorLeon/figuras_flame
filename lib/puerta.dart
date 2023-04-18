@@ -1,15 +1,23 @@
 import 'dart:ui';
 import 'package:flame/components.dart';
-import 'package:flame/geometry.dart';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/tipos_de_forma.dart';
 
-class puerta extends PositionComponent {
-  late TextComponent textComponent;
+class Puerta extends PositionComponent {
+  final Paint paint;
+  
+  
+  
 
-  puerta({
+  Puerta({
+    required this.paint,
     required super.position,
     required super.size,
     super.children,
+    forma = FormaTypes.rectanguloVertical,
+
+
   }) : super();
 
   var X = 8.7;
@@ -24,37 +32,39 @@ class puerta extends PositionComponent {
     super.render(canvas);
     
    
-    final colorA = Paint()..color = Color.fromARGB(255, 54, 19, 19);
+    //final colorA = Paint()..color = Color.fromARGB(255, 54, 19, 19);
     final colorB = Paint()..color = Color.fromARGB(255, 93, 182, 255);
     final colorC = Paint()..color = Color.fromARGB(255, 229, 255, 0);
      
 
     
-    var cuerpocarro = Path()
-      ..moveTo(X*size.x *(.040-A), Y*size.y*(.020-B))
-      ..lineTo(X*size.x *(.130-A), Y*size.y*(.020-B))
-      ..lineTo(X*size.x *(.130-A), Y*size.y*(.170-B))
-      ..lineTo(X*size.x *(.040-A), Y*size.y*(.170-B))
-      ..lineTo(X*size.x *(.040-A), Y*size.y*(.035-B))
+    var cuerpopuerta = Path()
+      ..moveTo(X*size.x (.040-A), Y*size.y(.020-B))
+      ..lineTo(X*size.x (.130-A), Y*size.y(.020-B))
+      ..lineTo(X*size.x (.130-A), Y*size.y(.170-B))
+      ..lineTo(X*size.x (.040-A), Y*size.y(.170-B))
+      ..lineTo(X*size.x (.040-A), Y*size.y(.035-B))
       ..close();
-      canvas.drawPath(cuerpocarro, colorA); 
+      canvas.drawPath(cuerpopuerta, paint); 
 
       var Ventana =Path()
-      ..moveTo(X*size.x *(.050-A), Y*size.y*(.030-B))
-      ..lineTo(X*size.x *(.120-A), Y*size.y*(.030-B))
-      ..lineTo(X*size.x *(.120-A), Y*size.y*(.090-B))
-      ..lineTo(X*size.x *(.050-A), Y*size.y*(.090-B))
-      ..lineTo(X*size.x *(.050-A), Y*size.y*(.035-B))
+      ..moveTo(X*size.x (.050-A), Y*size.y(.030-B))
+      ..lineTo(X*size.x (.120-A), Y*size.y(.030-B))
+      ..lineTo(X*size.x (.120-A), Y*size.y(.090-B))
+      ..lineTo(X*size.x (.050-A), Y*size.y(.090-B))
+      ..lineTo(X*size.x (.050-A), Y*size.y(.035-B))
       ..close();
      canvas.drawPath(Ventana, colorB);
 
      var Manija = Path()
        ..moveTo(X*size.x*(.100-A), Y*size.y*(.100-B))
-      ..lineTo(X*size.x *(.120-A), Y*size.y*(.100-B))
-      ..lineTo(X*size.x *(.120-A), Y*size.y*(.120-B))
-      ..lineTo(X*size.x *(.100-A), Y*size.y*(.120-B))
+      ..lineTo(X*size.x (.120-A), Y*size.y(.100-B))
+      ..lineTo(X*size.x (.120-A), Y*size.y(.120-B))
+      ..lineTo(X*size.x (.100-A), Y*size.y(.120-B))
       ..close();
     canvas.drawPath(Manija,colorC);
+
+
   
   }
 }
