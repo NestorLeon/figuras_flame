@@ -8,3 +8,5 @@ export 'src/stickman.dart' show Stickman;
 export 'src/tractor.dart' show Tractor;
 export 'src/proyector.dart' show Proyector;
 export 'src/puerta.dart' show Puerta;
+export 'src/flower.dart' show Flower;
+export 'src/tree.dart' show Tree;
