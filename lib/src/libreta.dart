@@ -18,12 +18,10 @@ class Libreta extends PositionComponent {
 
   @override
   void render(Canvas canvas) {
-    final colorMorado = Paint()..color = Color.fromARGB(255, 161, 10, 136);
     final colorNegro = Paint()..color = Color.fromARGB(255, 0, 0, 0);
     final colorAzul = Paint()..color = Color.fromARGB(255, 30, 7, 69);
     final colorBlanco = Paint()..color = Color.fromARGB(255, 255, 255, 254);
     final colorGris = Paint()..color = Color.fromARGB(255, 58, 8, 71);
-    final colorArgolla = Paint()..color = Color.fromARGB(134, 127, 94, 150);
 
     var cuerpo_libreta = Path()
       ..moveTo(size.x * .150, size.y * .04)
@@ -225,6 +223,5 @@ class Libreta extends PositionComponent {
     canvas.drawOval(Argolla_libreta_agujero4, colorBlanco);
     canvas.drawOval(Argolla_libreta_agujero5, colorBlanco);
     canvas.drawOval(Argolla_libreta_agujero10, colorBlanco);
-    //canvas.drawOval(Argolla_libreta, colorArgolla);
   }
 }

@@ -19,7 +19,6 @@ class Grillo extends PositionComponent {
   @override
   void render(Canvas canvas) {
     final colorVerde = Paint()..color = Color.fromARGB(255, 70, 113, 75);
-    final colorAzul = Paint()..color = Color.fromARGB(255, 53, 121, 167);
     final colorRojo = Paint()..color = Color.fromARGB(255, 142, 5, 5);
     final colorNegro = Paint()..color = Color.fromARGB(255, 0, 0, 0);
     final colorBlanco = Paint()..color = Color.fromARGB(255, 255, 255, 255);
@@ -94,10 +93,5 @@ class Grillo extends PositionComponent {
     canvas.drawOval(cachete2, colorVerde);
     canvas.drawPath(Bigote, colorNegro);
     canvas.drawPath(Bigote_Fondo, colorVerde);
-
-    final rect = RRect.fromRectAndRadius(
-      Rect.fromCenter(center: Offset(300, 530), width: 100, height: 70),
-      Radius.circular(20),
-    );
   }
 }

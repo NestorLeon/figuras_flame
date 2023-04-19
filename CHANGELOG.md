@@ -1,3 +1,13 @@
+## 0.0.5
+
+The following figures have been added:
+
+* Door (Puerta)
+* Flower (Flor)
+* Tree (Árbol)
+* Cricket (Grillo)
+* Notebook (Libreta)
+
 ## 0.0.4
 
 The following figures have been added:
