@@ -31,11 +31,11 @@ class Puerta extends PositionComponent {
     final colorC = Paint()..color = Color.fromARGB(255, 229, 255, 0);
 
     var cuerpopuerta = Path()
-      ..moveTo(X * size.x * (.040 - A), Y * size.y * (.020 - B))
-      ..lineTo(X * size.x * (.130 - A), Y * size.y * (.020 - B))
-      ..lineTo(X * size.x * (.130 - A), Y * size.y * (.170 - B))
-      ..lineTo(X * size.x * (.040 - A), Y * size.y * (.170 - B))
-      ..lineTo(X * size.x * (.040 - A), Y * size.y * (.035 - B))
+      ..moveTo(position.x, position.y)
+      ..lineTo(position.x + size.x, position.y)
+      ..lineTo(position.x + size.x, position.y + size.y)
+      ..lineTo(position.x, position.y + size.y)
+      ..lineTo(position.x, position.y)
       ..close();
     canvas.drawPath(cuerpopuerta, paint);
 
