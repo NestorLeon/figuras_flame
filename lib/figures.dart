@@ -7,5 +7,4 @@ export 'src/pinguino.dart' show Pinguino;
 export 'src/stickman.dart' show Stickman;
 export 'src/tractor.dart' show Tractor;
 export 'src/proyector.dart' show Proyector;
-export 'src/auto.dart' show Carro;
 export 'src/puerta.dart' show Puerta;
