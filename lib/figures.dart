@@ -13,3 +13,5 @@ export 'src/tree.dart' show Tree;
 export 'src/pepe_grillo.dart' show Grillo;
 export 'src/libreta.dart' show Libreta;
 export 'src/mexico.dart' show Mexico;
+export 'src/elefante.dart' show Elefante;
+export 'src/mouse.dart' show Mouse;
