@@ -1,11 +1,12 @@
+library figuras_flame;
+
 import 'dart:ui';
 import 'package:flame/components.dart';
-import 'package:flame/geometry.dart';
-import 'package:flutter/material.dart';
-library figuras_flame;
+import 'tipos_de_forma.dart';
 
 class Mexico extends PositionComponent {
   final Paint paint;
+  final FormaTypes forma;
   var X = 1.05;
   var Y = 1.5;
   var A = .15;
@@ -15,6 +16,7 @@ class Mexico extends PositionComponent {
     required super.position,
     required this.paint,
     required super.size,
+    this.forma = FormaTypes.rectanguloHorizontal,
     super.children,
   }) : super();
 
@@ -118,8 +120,7 @@ class Mexico extends PositionComponent {
       ..lineTo(X * size.x * (0.188 - A), Y * size.y * (0.146 - B))
       ..lineTo(X * size.x * (0.155 - A), Y * size.y * (0.041 - B))
       ..close();
-    
-      canvas.drawPath(mexico, paint);
 
+    canvas.drawPath(mexico, paint);
   }
 }
