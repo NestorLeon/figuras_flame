@@ -1,16 +1,18 @@
+library figuras_flame;
+
 import 'dart:ui';
 import 'package:flame/components.dart';
-import 'package:flame/geometry.dart';
-import 'package:flutter/material.dart';
+import 'tipos_de_forma.dart';
 
 class Mouse extends PositionComponent {
-  late TextComponent textComponent;
   final Paint paint;
+  final FormaTypes forma;
 
   Mouse({
     required super.position,
     required super.size,
     required this.paint,
+    this.forma = FormaTypes.rectanguloHorizontal,
     super.children,
   }) : super();
 
@@ -21,20 +23,18 @@ class Mouse extends PositionComponent {
     var Y = 7;
     var A = 0.063;
     var B = 0.011;
+
     super.render(canvas);
-    double enx = size.x / 2;
-    double eny = size.y / 2;
+
     final azu = Paint()
-      ..color = Colors.grey
+      ..color = Color.fromARGB(255, 108, 106, 106)
       ..strokeWidth = 5
       ..style = PaintingStyle.fill;
     final cuerda = Paint()
-      ..color = Colors.black
+      ..color = Color.fromARGB(255, 0, 0, 0)
       ..strokeWidth = 5
       ..style = PaintingStyle.fill;
 
-    //canvas.drawOval(Rect.fromLTWH(75, 50, 150, 200), azu);
-    //canvas.drawLine(Offset(100, 105), Offset(100, 200), cuerda);
     canvas.drawOval(
         Rect.fromCenter(
             center: Offset(X * size.x * (.1 - A), size.y * Y * (.1 - B)),
@@ -58,15 +58,18 @@ class Mouse extends PositionComponent {
     ;
 
     final rueda = Paint()
-      ..color = Colors.white
+      ..color = Color.fromARGB(255, 255, 255, 255)
       ..strokeWidth = 5
       ..style = PaintingStyle.fill;
-    canvas.drawLine(Offset(X*size.x * (.1-A), Y*size.y * (.105-B)),
-        Offset(X*size.x * (.1-A), Y* size.y * (0.010-B)), cuerda);
+    canvas.drawLine(Offset(X * size.x * (.1 - A), Y * size.y * (.105 - B)),
+        Offset(X * size.x * (.1 - A), Y * size.y * (0.010 - B)), cuerda);
 
-          canvas.drawOval(
+    canvas.drawOval(
         Rect.fromCenter(
-            center: Offset(  X*size.x * (0.099-A), Y*size.y * (0.060-B),),
+            center: Offset(
+              X * size.x * (0.099 - A),
+              Y * size.y * (0.060 - B),
+            ),
             width: X * size.x * (0.015),
             height: Y * size.y * (0.020)),
         rueda);
