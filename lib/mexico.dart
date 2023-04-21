@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flame/components.dart';
 import 'package:flame/geometry.dart';
 import 'package:flutter/material.dart';
+library figuras_flame;
 
 class Mexico extends PositionComponent {
   final Paint paint;
