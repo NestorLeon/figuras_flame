@@ -1,3 +1,11 @@
+## 0.0.6
+
+The following figures have been added:
+
+* México
+* Elephant (Elefante)
+* Mouse (Ratón)
+
 ## 0.0.5
 
 The following figures have been added:
