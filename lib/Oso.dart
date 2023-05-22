@@ -6,6 +6,7 @@ import 'package:flame/game.dart';
 import 'package:flame/components.dart';
 import 'package:flame/geometry.dart';
 import 'dart:math';
+import 'tipos_de_forma.dart';
 
 class Oso extends PositionComponent {
   final Paint paint;
@@ -15,6 +16,7 @@ class Oso extends PositionComponent {
     required this.paint,
     required super.size,
     super.children,
+    this.forma = FormaType.recyanguloVertical,
   }) : super();
 
   @override
