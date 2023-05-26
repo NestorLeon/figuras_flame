@@ -1,14 +1,21 @@
-name: figuras_flame
-description: A package with figures of animals and objects drawn on canvas for the flame package.
-version: 0.0.6
-homepage: https://github.com/NestorLeon/figuras_flame
+name: figurasgutierrez
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
 
 environment:
-  sdk: '>=2.18.4 <3.0.0'
+  sdk: '>=3.0.1 <4.0.0'
 
 dependencies:
-  flame: ^1.7.2
+  flutter:
+    sdk: flutter
+  flame: ^1.7.3
+  figuras_flame: ^0.0.6
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
