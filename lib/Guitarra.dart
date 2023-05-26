@@ -6,10 +6,11 @@ import 'package:flame/game.dart';
 import 'package:flame/components.dart';
 import 'package:flame/geometry.dart';
 import 'dart:math';
-impory 'tipos_de_forma.dart';
+import 'tipos_de_forma.dart';
 
 class Guitarra extends PositionComponent {
   final Paint paint;
+
 
   Guitarra({
     required super.position,
