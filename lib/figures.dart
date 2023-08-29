@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 export 'src/ballena.dart' show Ballena;
 export 'src/caballito.dart' show Caballito;
 export 'src/caballo.dart' show Caballo;
@@ -15,3 +17,4 @@ export 'src/libreta.dart' show Libreta;
 export 'src/mexico.dart' show Mexico;
 export 'src/elefante.dart' show Elefante;
 export 'src/mouse.dart' show Mouse;
+export 'src/sello_sol.dart' show Sello_Sol;
