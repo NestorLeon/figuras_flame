@@ -22,7 +22,7 @@ class Sello_peyote extends PositionComponent {
     
     double radio = size.x / 2;
 
-    //Dibujar la cabeza
+    //Dibujar la circulo 
     canvas.drawCircle(
       Offset(radio, radio),
       radio,
