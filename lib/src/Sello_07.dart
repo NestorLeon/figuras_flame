@@ -4,11 +4,11 @@ import 'dart:ui';
 import 'package:figuras_flame/src/tipos_de_forma.dart';
 import 'package:flame/components.dart';
 
-class Mono extends PositionComponent {
+class Sello_07 extends PositionComponent {
   final FormaTypes forma;
   final Paint paint;
 
-  Mono({
+  Sello_07({
     required super.position,
     required this.paint,
     required super.size,
