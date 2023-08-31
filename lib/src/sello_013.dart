@@ -12,7 +12,7 @@ class Sello_013 extends PositionComponent {
     required super.position,
     required this.paint,
     required super.size,
-    this.forma = FormaTypes.rectanguloVertical,
+    this.forma = FormaTypes.cuadrado,
     super.children,
   }) : super();
 
