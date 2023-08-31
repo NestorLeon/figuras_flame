@@ -4,11 +4,11 @@ import 'dart:ui';
 import 'package:figuras_flame/src/tipos_de_forma.dart';
 import 'package:flame/components.dart';
 
-class Sello_peyote extends PositionComponent {
+class Sello_013 extends PositionComponent {
   final FormaTypes forma;
   final Paint paint;
 
-  Sello_peyote({
+  Sello_013({
     required super.position,
     required this.paint,
     required super.size,
