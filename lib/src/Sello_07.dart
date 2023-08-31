@@ -1,7 +1,7 @@
 library figuras_flame;
 
 import 'dart:ui';
-import 'package:figuras_flame/src/tipos_de_forma.dart';
+import 'tipos_de_forma.dart';
 import 'package:flame/components.dart';
 
 class Sello_07 extends PositionComponent {
