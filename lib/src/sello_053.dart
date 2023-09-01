@@ -19,7 +19,7 @@ class sello_053 extends PositionComponent {
   @override
   void render(Canvas canvas) {
     super.render(canvas);
-    
+
     double radio = size.x / 2;
 
     //Dibujar la cabeza
@@ -28,6 +28,5 @@ class sello_053 extends PositionComponent {
       radio,
       paint..strokeWidth = 4,
     );
-
   }
 }
