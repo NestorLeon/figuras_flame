@@ -19,16 +19,26 @@ class Sello_013 extends PositionComponent {
   @override
   void render(Canvas canvas) {
     super.render(canvas);
-    
+
     double radio = size.x / 2;
 
-    //Dibujar la circulo 
+    //Dibujar el circulo
     canvas.drawCircle(
       Offset(radio, radio),
-      radio,
-      paint..strokeWidth = 4,
+      radio / 10,
+      paint
+        ..strokeWidth = radio / 18
+        ..style = PaintingStyle.stroke,
     );
 
-   
+    //Dibuja circulo dentro de otro circulo
+    canvas.drawCircle(
+      Offset(radio, radio),
+      radio / 5,
+      paint
+        ..strokeWidth = radio / 18
+        ..style = PaintingStyle.stroke,
+    );
+    ////
   }
 }
