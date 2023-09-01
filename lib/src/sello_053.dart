@@ -20,13 +20,18 @@ class sello_053 extends PositionComponent {
   void render(Canvas canvas) {
     super.render(canvas);
 
-    double radio = size.x / 2;
+    double r = size.x / 2;
 
-    //Dibujar la cabeza
-    canvas.drawCircle(
-      Offset(radio, radio),
-      radio,
-      paint..strokeWidth = 4,
+    canvas.drawLine(
+      Offset(r, (5 / 6) * r),
+      Offset(r, size.y),
+      Paint()
+        ..color = const Color.fromARGB(255, 66, 201, 12)
+        ..strokeWidth = (1.25 / 3) * r,
     );
+    // Paint painCua = Paint();
+    // painCua.color = Color.fromRGBO(53, 32, 32, 1);
+    // Rect cua = Rect.fromPoints(Offset(150.0, 150.0), Offset(150.0, 150.0));
+    // canvas.drawRect(cua, painCua);
   }
 }
