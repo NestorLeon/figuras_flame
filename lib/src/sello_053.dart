@@ -32,14 +32,14 @@ class sello_053 extends PositionComponent {
     // Dibuja una línea
     paint.color = Color.fromRGBO(0, 0, 0, 0);
     paint.strokeWidth = 5.0;
-    canvas.drawLine(Offset(50, 50), Offset(250, 250), paint);
+    canvas.drawLine(Offset(100, 100), Offset(100, 100), paint);
 
     // Dibuja un triángulo
     paint.color = Color.fromRGBO(0, 0, 0, 0);
     final adorno = Path()
       ..moveTo(101, 100)
-      ..lineTo(101, 100)
-      ..lineTo(105, 100)
+      ..lineTo(110, 120)
+      ..lineTo(115, 130)
       ..close();
     canvas.drawPath(adorno, paint);
   }
