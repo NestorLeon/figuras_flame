@@ -25,10 +25,11 @@ class Sello_07 extends PositionComponent {
   {
     super.render(canvas);
 
-       canvas.drawRect(
-      Rect.fromPoints(Offset(position.x, position.y), Offset(size.x, size.y)),
-      paint,
-    );
+       //canvas.drawRect
+       //(
+        //Rect.fromPoints(Offset(position.x, position.y), Offset(size.x, size.y)),
+        //paint,
+      //);
 
     final mano = Path()
       ..moveTo(size.x/2, size.y/2)
@@ -36,6 +37,7 @@ class Sello_07 extends PositionComponent {
       ..close();
 
       final paint2 = Paint()..color =Color.fromARGB(255, 0, 0, 0);
+
     canvas.drawPath(mano, paint2);
   }
 }
