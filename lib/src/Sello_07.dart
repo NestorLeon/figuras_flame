@@ -36,7 +36,10 @@ class Sello_07 extends PositionComponent {
       ..lineTo(size.x, size.y/2)
       ..close();
 
-      final paint2 = Paint()..color =Color.fromARGB(255, 0, 0, 0);
+      final paint2 = Paint()
+      ..color =Color.fromARGB(255, 0, 0, 0)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 5;
 
     canvas.drawPath(mano, paint2);
   }
