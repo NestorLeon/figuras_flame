@@ -21,83 +21,84 @@ class sello_053 extends PositionComponent {
   void render(Canvas canvas) {
     super.render(canvas);
     final paint = Paint()
-      ..color = Color.fromARGB(255, 158, 154, 154)
+      ..color = this.paint.color
       ..style = PaintingStyle.fill;
 
     // // Dibuja un cuadrado
-    RRect redondeoRect = RRect.fromRectAndRadius(
-      Rect.fromPoints(Offset(0, 0), Offset(size.x, size.y)),
-      Radius.circular(20.0), // Radio de las esquinas redondeadas
-    );
+    // RRect redondeoRect = RRect.fromRectAndRadius(
+    //   Rect.fromPoints(Offset(0, 0), Offset(size.x, size.y)),
+    //   Radius.circular(20.0), // Radio de las esquinas redondeadas
+    // );
 
     // Agrega sombreado al cuadrado con esquinas redondeadas
     Paint sombrea = Paint()
-      ..color = Color.fromARGB(255, 0, 0, 0)
-          .withOpacity(1.0) // Color y opacidad de la sombra
+      ..color =
+          this.paint.color.withOpacity(1.0) // Color y opacidad de la sombra
       ..maskFilter =
           MaskFilter.blur(BlurStyle.normal, 7.0); // Desenfoque de la sombra
 
-    canvas.drawRRect(redondeoRect, sombrea);
-    canvas.drawRRect(redondeoRect, paint);
+    // canvas.drawRRect(redondeoRect, sombrea);
+    // canvas.drawRRect(redondeoRect, paint);
 
     // Dibuja una línea
     final paint2 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawLine(Offset(30, 60), Offset(260, 60), paint2);
 
     // Dibuja una línea2
     final paint6 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
-      ..strokeWidth = 5
+      ..color = this.paint.color
+      ..strokeWidth = 10
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    canvas.drawLine(Offset(30, 40), Offset(300, 40), paint6);
+    canvas.drawLine(Offset(this.size.x / 4, this.size.y / 4),
+        Offset(this.size.x, this.size.y / 4), paint6);
 
     // Dibuja una línea3
     final paint7 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawLine(Offset(30, 40), Offset(30, 250), paint7);
 
     // Dibuja una línea4
     final paint8 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawLine(Offset(15, 40), Offset(15, 130), paint8);
 
     // Dibuja una línea5
     final paint9 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawLine(Offset(235, 70), Offset(235, 250), paint9);
     // Dibuja una línea6
     final paint10 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawLine(Offset(40, 250), Offset(235, 250), paint10);
 
 // Dibuja una línea7
     final paint11 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawLine(Offset(255, 70), Offset(255, 250), paint11);
 
     // Dibuja una línea8
     final paint12 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawLine(Offset(40, 270), Offset(265, 270), paint12);
 
     // Dibuja un triángulo1 arriba
     final paint3 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..style = PaintingStyle.stroke
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
@@ -110,7 +111,7 @@ class sello_053 extends PositionComponent {
 
     // Dibuja un triángulo2 arriba
     final paint4 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..style = PaintingStyle.stroke
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
@@ -123,7 +124,7 @@ class sello_053 extends PositionComponent {
 
     // Dibuja un triángulo3 arriba
     final paint5 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..style = PaintingStyle.stroke
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
@@ -136,7 +137,7 @@ class sello_053 extends PositionComponent {
 
     // Dibuja un triángulo1 abajo
     final paint13 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..style = PaintingStyle.stroke
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
@@ -149,7 +150,7 @@ class sello_053 extends PositionComponent {
 
     // Dibuja un triángulo2 abajo
     final paint14 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..style = PaintingStyle.stroke
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
@@ -162,7 +163,7 @@ class sello_053 extends PositionComponent {
 
     // Dibuja un triángulo3 abajo
     final paint15 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..style = PaintingStyle.stroke
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
@@ -175,7 +176,7 @@ class sello_053 extends PositionComponent {
 
     // Dibuja un triángulo1 lado derecho
     final paint16 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..style = PaintingStyle.stroke
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
@@ -188,7 +189,7 @@ class sello_053 extends PositionComponent {
 
     // Dibuja un triángulo2 lado derecho
     final paint17 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..style = PaintingStyle.stroke
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
@@ -201,7 +202,7 @@ class sello_053 extends PositionComponent {
 
     // Dibuja un triángulo3 lado derecho
     final paint18 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..style = PaintingStyle.stroke
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
@@ -214,7 +215,7 @@ class sello_053 extends PositionComponent {
 
     // Dibuja un triángulo1 arriba lado izquierdo
     final paint19 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..style = PaintingStyle.stroke
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
@@ -227,7 +228,7 @@ class sello_053 extends PositionComponent {
 
     // Dibuja un triángulo2 arriba lado izquierdo
     final paint20 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..style = PaintingStyle.stroke
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
@@ -240,7 +241,7 @@ class sello_053 extends PositionComponent {
 
     // Dibuja un triángulo2 arriba lado izquierdo
     final paint21 = Paint()
-      ..color = Color.fromARGB(255, 105, 105, 105).withOpacity(0.8)
+      ..color = this.paint.color
       ..style = PaintingStyle.stroke
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
