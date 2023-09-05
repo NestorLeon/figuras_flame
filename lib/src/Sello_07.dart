@@ -8,17 +8,19 @@ import 'package:flame/components.dart';
 class Sello_07 extends PositionComponent {
   final FormaTypes forma;
   final Paint paint;
+  final Paint paint2;
   
 
   Sello_07({
     required super.position,
     required this.paint,
+    required this.paint2,
     required super.size,
     this.forma = FormaTypes.rectanguloHorizontal,
     super.children,
   }) : super();
 
-
+  
 
   @override
   void render(Canvas canvas) 
@@ -30,12 +32,10 @@ class Sello_07 extends PositionComponent {
       paint,
     );
 
-     paint.color = Color.fromRGBO(109, 88, 69, 0.745);
-
     final mano = Path()
       ..moveTo(101, 100)
       ..lineTo(110, 120)
       ..close();
-    canvas.drawPath(mano, paint);
+    canvas.drawPath(mano, paint2);
   }
 }
