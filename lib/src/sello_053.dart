@@ -21,7 +21,7 @@ class sello_053 extends PositionComponent {
     super.render(canvas);
     // Dibuja un cuadrado
     canvas.drawRect(
-      Rect.fromPoints(Offset(0, 0), Offset(size.x, size.y)),
+      Rect.fromPoints(Offset(100, 100), Offset(size.x, size.y)),
       paint,
     );
   }
