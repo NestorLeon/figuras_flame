@@ -127,6 +127,13 @@ class Sello_048 extends PositionComponent {
         true,
         Paint()..color = Color.fromARGB(255, 80, 30, 25));
 
+    // Tercer arco lateral derecho
+    canvas.drawArc(Rect.fromLTWH(size.x / 1.15, 0, size.x / 8.5, size.y), 180,
+        4.5, true, Paint()..color = Color.fromARGB(255, 80, 30, 25));
+
+    // Tercer arco lateral izquierdo
+    canvas.drawArc(Rect.fromLTWH(0, 0, size.x / 8.5, size.y), 45, 4.5, true,
+        Paint()..color = Color.fromARGB(255, 80, 30, 25));
     // Ojos
     // final posiscionojo = Offset(((3 / 4) * size.x), ((3 / 8) * size.y));
 
