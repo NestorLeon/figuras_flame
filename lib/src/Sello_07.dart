@@ -16,10 +16,6 @@ class Sello_07 extends PositionComponent {
     super.children,
   }) : super();
 
-  var X = 1.05;
-  var Y = 1.5;
-  var A = .15;
-  var B = .03;
 
   @override
   void render(Canvas canvas) 
