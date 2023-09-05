@@ -1,6 +1,6 @@
 library figuras_flame;
 
-import 'dart:convert';
+
 import 'dart:ui';
 import 'tipos_de_forma.dart';
 import 'package:flame/components.dart';
@@ -30,13 +30,12 @@ class Sello_07 extends PositionComponent {
       paint,
     );
 
-    Paint()..color = Color.fromARGB(255, 102, 82, 55);
+     Paint()..color =Color.fromARGB(255, 174, 98, 66);
 
     final mano = Path()
       ..moveTo(101, 100)
       ..lineTo(110, 120)
       ..close();
     canvas.drawPath(mano, paint);
-
   }
 }
