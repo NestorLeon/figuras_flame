@@ -16,17 +16,28 @@ class Sello_07 extends PositionComponent {
     super.children,
   }) : super();
 
+  var X = 1.05;
+  var Y = 1.5;
+  var A = .15;
+  var B = .03;
+
   @override
   void render(Canvas canvas) {
     super.render(canvas);
     
-    double radio = size.x / 2;
+    //double radio = size.x / 2;
 
     //Dibujar circulo
-    canvas.drawCircle(
-      Offset(radio, radio),
-      radio,
-      paint..strokeWidth = 4,
-    );
+    //canvas.drawCircle(
+      //Offset(radio, radio),
+      //radio,
+      //paint..strokeWidth = 4,
+    //);
+
+      final dedo01 = Path()
+      ..moveTo(X * size.x * (0.155 - A), Y * size.y * (0.041 - B))
+      ..lineTo(X * size.x * (0.227 - A), Y * size.y * (0.035 - B))
+      ..close();
+      canvas.drawPath(dedo01, paint);
   }
 }
