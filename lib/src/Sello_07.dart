@@ -22,15 +22,8 @@ class Sello_07 extends PositionComponent {
   {
     super.render(canvas);
 
-        var cuerpopuerta = Path()
-      ..moveTo(0, 0)
-      ..lineTo(size.x, 0)
-      ..lineTo(size.x, size.y)
-      ..lineTo(0, size.y)
-      ..lineTo(0, 0)
-      ..close();
-    canvas.drawPath(cuerpopuerta, paint);
 
+  canvas.drawRect(Offset(100, 100) & const Size(200, 150), Paint());
       
   }
 }
