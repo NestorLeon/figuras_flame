@@ -23,7 +23,7 @@ class Sello_07 extends PositionComponent {
     super.render(canvas);
 
        canvas.drawRect(
-      Rect.fromPoints(Offset(300, 300), Offset(size.x, size.y)),
+      Rect.fromPoints(Offset(x, y), Offset(size.x, size.y)),
       paint,
     );
 
