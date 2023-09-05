@@ -27,5 +27,11 @@ class Sello_07 extends PositionComponent {
       paint,
     );
 
+    final mano = Path()
+      ..moveTo(101, 100)
+      ..lineTo(110, 120)
+      ..close();
+    canvas.drawPath(mano, paint);
+
   }
 }
