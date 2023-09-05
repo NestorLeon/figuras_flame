@@ -12,13 +12,14 @@ class Sello12 extends PositionComponent {
     required super.position,
     required this.paint,
     required super.size,
-    this.forma = FormaTypes.cuadrado,
+    this.forma = FormaTypes.rectanguloVertical,
     super.children,
   }) : super();
 
   @override
   void render(Canvas canvas) {
-    final colorCafeFuerte = Paint()..color = Color.fromARGB(255, 85, 59, 22);
+    final colorCafeFuerte = Paint()..color = this.paint.color;
+    // final colorCafeFuerte = Paint()..color = Color.fromARGB(255, 85, 59, 22);
     final colorCafeBase = Paint()..color = Color.fromARGB(255, 143, 101, 42);
     final colorNegro = Paint()..color = Color.fromARGB(255, 0, 0, 0);
 
