@@ -19,10 +19,27 @@ class sello_053 extends PositionComponent {
   @override
   void render(Canvas canvas) {
     super.render(canvas);
+
     // Dibuja un cuadrado
     canvas.drawRect(
       Rect.fromPoints(Offset(100, 100), Offset(size.x, size.y)),
       paint,
     );
+
+    // Dibuja una línea
+    canvas.drawLine(
+      Offset(10, 10),
+      Offset(size.x, size.y),
+      paint,
+    );
+
+    // Dibuja un triángulo
+    final path = Path()
+      ..moveTo(size.x / 2, 0)
+      ..lineTo(0, size.y)
+      ..lineTo(size.x, size.y)
+      ..close();
+
+    canvas.drawPath(path, paint);
   }
 }
