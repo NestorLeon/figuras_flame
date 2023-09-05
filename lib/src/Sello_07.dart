@@ -12,7 +12,7 @@ class Sello_07 extends PositionComponent {
     required super.position,
     required this.paint,
     required super.size,
-    this.forma = FormaTypes.rectanguloVertical,
+    this.forma = FormaTypes.rectanguloHorizontal,
     super.children,
   }) : super();
 
@@ -24,15 +24,6 @@ class Sello_07 extends PositionComponent {
   @override
   void render(Canvas canvas) {
     super.render(canvas);
-    
-    //double radio = size.x / 2;
-
-    //Dibujar circulo
-    //canvas.drawCircle(
-      //Offset(radio, radio),
-      //radio,
-      //paint..strokeWidth = 4,
-    //);
 
       final dedo01 = Path()
       ..moveTo(X * size.x * (0.155 - A), Y * size.y * (0.041 - B))
