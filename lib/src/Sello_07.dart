@@ -33,8 +33,8 @@ class Sello_07 extends PositionComponent {
 
 
     final mano = Path()
-      ..moveTo(101, 100)
-      ..lineTo(110, 120)
+      ..moveTo(201, 200)
+      ..lineTo(310, 320)
       ..close();
 
       final paint2 = Paint()..color =Color.fromARGB(255, 103, 86, 61);
