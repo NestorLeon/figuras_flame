@@ -19,6 +19,9 @@ class sello_053 extends PositionComponent {
   @override
   void render(Canvas canvas) {
     super.render(canvas);
+    final paint = Paint()
+      ..color = Color.fromARGB(255, 255, 255, 255)
+      ..style = PaintingStyle.fill;
 
     // Dibuja un cuadrado
     canvas.drawRect(
