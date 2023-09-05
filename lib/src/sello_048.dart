@@ -20,7 +20,7 @@ class Sello_048 extends PositionComponent {
     super.render(canvas);
 
     //CuerpoSello
-    canvas.drawRect(Rect.fromLTWH(0, 0, size.x, size.y), paint);
+    //canvas.drawRect(Rect.fromLTWH(0, 0, size.x, size.y), paint);
     // canvas.drawArc(Rect.fromLTWH(0, 0, size.x, size.y), 0, 360, true, paint);
 
     //Ovalo central del sello
@@ -29,11 +29,11 @@ class Sello_048 extends PositionComponent {
         90,
         180,
         true,
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
 
     //Barra central
     canvas.drawRect(Rect.fromLTWH(size.x / 2.18, 0, size.x / 14, size.y),
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
 
     //Centro rectangular del sello
     canvas.drawRect(
@@ -42,30 +42,30 @@ class Sello_048 extends PositionComponent {
 
     //Barra lateral superior derecha
     canvas.drawRect(Rect.fromLTWH(size.x / 1.61, 0, size.x / 14, size.y / 3),
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
 
     //Barra lateral inferior derecha
     canvas.drawRect(
         Rect.fromLTWH(size.x / 1.61, size.y * 0.666, size.x / 14, size.y / 3),
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
 
     //Barra lateral superior izquierda
     canvas.drawRect(Rect.fromLTWH(size.x / 3.4, 0, size.x / 14, size.y / 3),
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
 
     //Barra lateral inferior izquierda
     canvas.drawRect(
         Rect.fromLTWH(size.x / 3.4, size.y * 0.666, size.x / 14, size.y / 3),
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
 
     //Complemento superior primer arco de la derecha
     canvas.drawRect(
         Rect.fromLTWH(size.x / 1.45, size.y / 3.8, size.x / 18, size.y / 15),
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
     //Complemento inferior primer arco de la derecha
     canvas.drawRect(
         Rect.fromLTWH(size.x / 1.45, size.y * 0.66, size.x / 18, size.y / 15),
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
 
     // Primer arco lateral derecho
     canvas.drawArc(
@@ -73,17 +73,17 @@ class Sello_048 extends PositionComponent {
         180,
         4.5,
         true,
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
 
     //Complemento superior primer arco de la izquierda
     canvas.drawRect(
         Rect.fromLTWH(size.x / 4, size.y / 3.8, size.x / 18, size.y / 15),
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
 
     //Complemento inferior primer arco de la izquierda
     canvas.drawRect(
         Rect.fromLTWH(size.x / 4, size.y * 0.66, size.x / 18, size.y / 15),
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
 
     // Primer arco lateral izquierdo
     canvas.drawArc(
@@ -91,16 +91,16 @@ class Sello_048 extends PositionComponent {
         45,
         4.5,
         true,
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
 
     //Complemento superior segundo arco de la derecha
     canvas.drawRect(Rect.fromLTWH(size.x / 1.3, 0, size.x / 18, size.y / 5),
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
 
     //Complemento inferior segundo arco de la derecha
     canvas.drawRect(
         Rect.fromLTWH(size.x / 1.3, size.y * 0.8, size.x / 18, size.y / 5),
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
 
     // Segundo arco lateral derecho
     canvas.drawArc(
@@ -108,16 +108,16 @@ class Sello_048 extends PositionComponent {
         180,
         4.5,
         true,
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
 
     //Complemento superior segundo arco de la izquierda
     canvas.drawRect(Rect.fromLTWH(size.x / 6, 0, size.x / 18, size.y / 5),
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
 
     //Complemento inferior segundo arco de la izquierda
     canvas.drawRect(
         Rect.fromLTWH(size.x / 6, size.y * 0.8, size.x / 18, size.y / 5),
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
 
     // Segundo arco lateral izquierdo
     canvas.drawArc(
@@ -125,15 +125,15 @@ class Sello_048 extends PositionComponent {
         45,
         4.5,
         true,
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
 
     // Tercer arco lateral derecho
     canvas.drawArc(Rect.fromLTWH(size.x / 1.15, 0, size.x / 8.5, size.y), 180,
-        4.5, true, Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        4.5, true, Paint()..color = this.paint.color);
 
     // Tercer arco lateral izquierdo
     canvas.drawArc(Rect.fromLTWH(0, 0, size.x / 8.5, size.y), 45, 4.5, true,
-        Paint()..color = Color.fromARGB(255, 80, 30, 25));
+        Paint()..color = this.paint.color);
     // Ojos
     // final posiscionojo = Offset(((3 / 4) * size.x), ((3 / 8) * size.y));
 
