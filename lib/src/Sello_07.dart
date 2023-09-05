@@ -30,12 +30,14 @@ class Sello_07 extends PositionComponent {
       paint,
     );
 
-final paint2 = Paint()..color =Color.fromARGB(255, 103, 86, 61) ;
+
 
     final mano = Path()
       ..moveTo(101, 100)
       ..lineTo(110, 120)
       ..close();
+
+      final paint2 = Paint()..color =Color.fromARGB(255, 103, 86, 61);
     canvas.drawPath(mano, paint2);
   }
 }
