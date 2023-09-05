@@ -22,13 +22,19 @@ class Sello_07 extends PositionComponent {
   var B = .03;
 
   @override
-  void render(Canvas canvas) {
+  void render(Canvas canvas) 
+  {
     super.render(canvas);
 
-      final dedo01 = Path()
-      ..moveTo(X * size.x * (0.155 - A), Y * size.y * (0.041 - B))
-      ..lineTo(X * size.x * (0.227 - A), Y * size.y * (0.035 - B))
+        var cuerpopuerta = Path()
+      ..moveTo(0, 0)
+      ..lineTo(size.x, 0)
+      ..lineTo(size.x, size.y)
+      ..lineTo(0, size.y)
+      ..lineTo(0, 0)
       ..close();
-      canvas.drawPath(dedo01, paint);
+    canvas.drawPath(cuerpopuerta, paint);
+
+      
   }
 }
