@@ -27,13 +27,13 @@ class Sello_07 extends PositionComponent {
         // Contorno
     canvas.drawRect(Rect.fromLTWH(0, 0, size.x, size.y), paint);
 
-    // Circulos 
-    final posiscioncirc = Offset(((1 / 9) * size.x), ((1.35/ 8) * size.y));
-    canvas.drawCircle(
-      posiscioncirc,
-      1 / 50 * size.x,
-      Paint()..color = Color.fromARGB(255, 123, 103, 73),
-    );
+  // // Circulos 
+  // final posiscioncirc = Offset(((1 / 9) * size.x), ((1.35/ 8) * size.y));
+  // canvas.drawCircle(
+  //   posiscioncirc,
+  //   1 / 50 * size.x,
+  //   Paint()..color = Color.fromARGB(255, 123, 103, 73),
+  // );
         
         //RECTANGULO
        //canvas.drawRect
@@ -42,18 +42,18 @@ class Sello_07 extends PositionComponent {
         //paint,
       //);
 
- //   final mano = Path()
- //     ..moveTo(size.x/2, size.y/2)
- //     ..lineTo(size.x, size.y/2)
- //     ..close();
-//
- //     final paint2 = Paint()
- //     ..color =Color.fromARGB(255, 0, 0, 0)
- //     ..style = PaintingStyle.stroke
- //     ..strokeWidth = 5
- //     ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-//
- //   canvas.drawPath(mano, paint2);
+    final mano = Path()
+      ..moveTo(((1 / 9) * size.x), ((1.35/ 8) * size.y))
+      ..lineTo(((1 / 8) * size.x), ((1.35/ 8) * size.y))
+      ..close();
+
+      final paint2 = Paint()
+      ..color =Color.fromARGB(255, 101, 76, 50)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 5
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
+
+    canvas.drawPath(mano, paint2);
 
 
   }
