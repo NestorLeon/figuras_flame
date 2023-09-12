@@ -22,234 +22,142 @@ class sello_053 extends PositionComponent {
     super.render(canvas);
     final paint = Paint()
       ..color = this.paint.color
+      ..strokeWidth = 5
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9)
       ..style = PaintingStyle.fill;
 
-    // // Dibuja un cuadrado
-    // RRect redondeoRect = RRect.fromRectAndRadius(
-    //   Rect.fromPoints(Offset(0, 0), Offset(size.x, size.y)),
-    //   Radius.circular(20.0), // Radio de las esquinas redondeadas
-    // );
+    //cuadrado
+    final cuadrado = Paint()..color = this.paint.color.withOpacity(0.2);
+    canvas.drawRect(
+        Rect.fromPoints(Offset(0, 0), Offset(this.size.x, this.size.y)),
+        cuadrado);
 
-    // Agrega sombreado al cuadrado con esquinas redondeadas
-    Paint sombrea = Paint()
-      ..color =
-          this.paint.color.withOpacity(1.0) // Color y opacidad de la sombra
-      ..maskFilter =
-          MaskFilter.blur(BlurStyle.normal, 7.0); // Desenfoque de la sombra
-
-    // canvas.drawRRect(redondeoRect, sombrea);
-    // canvas.drawRRect(redondeoRect, paint);
-
-    // Dibuja una línea
-    final paint2 = Paint()
-      ..color = this.paint.color
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    canvas.drawLine(Offset(30, 60), Offset(260, 60), paint2);
+    // Dibuja una línea1
+    canvas.drawLine(Offset(this.size.x / 8, this.size.y / 7),
+        Offset(this.size.x, this.size.y / 7), paint);
 
     // Dibuja una línea2
-    final paint6 = Paint()
-      ..color = this.paint.color
-      ..strokeWidth = 10
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    canvas.drawLine(Offset(this.size.x / 4, this.size.y / 4),
-        Offset(this.size.x, this.size.y / 4), paint6);
+    canvas.drawLine(Offset(this.size.x / 8, this.size.y / 5),
+        Offset(this.size.x / 3 * 2.6, this.size.y / 5), paint);
 
     // Dibuja una línea3
-    final paint7 = Paint()
-      ..color = this.paint.color
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    canvas.drawLine(Offset(30, 40), Offset(30, 250), paint7);
+    canvas.drawLine(Offset(this.size.x / 8, this.size.y / 5),
+        Offset(this.size.x / 8, this.size.y / 4 * 3.37), paint);
 
     // Dibuja una línea4
-    final paint8 = Paint()
-      ..color = this.paint.color
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    canvas.drawLine(Offset(15, 40), Offset(15, 130), paint8);
+    canvas.drawLine(Offset(this.size.x / 13, this.size.y / 7),
+        Offset(this.size.x / 13, this.size.y / 4 * 2), paint);
 
     // Dibuja una línea5
-    final paint9 = Paint()
-      ..color = this.paint.color
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    canvas.drawLine(Offset(235, 70), Offset(235, 250), paint9);
+    canvas.drawLine(Offset(this.size.x / 3 * 2.35, this.size.y / 3 * 2.5),
+        Offset(this.size.x / 3 * 2.35, this.size.y / 5), paint);
+
     // Dibuja una línea6
-    final paint10 = Paint()
-      ..color = this.paint.color
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    canvas.drawLine(Offset(40, 250), Offset(235, 250), paint10);
+    canvas.drawLine(Offset(this.size.x / 8, this.size.y / 3 * 2.5),
+        Offset(this.size.x / 4 * 3.1, this.size.y / 3 * 2.5), paint);
 
 // Dibuja una línea7
-    final paint11 = Paint()
-      ..color = this.paint.color
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    canvas.drawLine(Offset(255, 70), Offset(255, 250), paint11);
+    canvas.drawLine(Offset(this.size.x / 3 * 2.57, this.size.y / 4 * 3.39),
+        Offset(this.size.x / 3 * 2.57, this.size.y / 4.8), paint);
 
     // Dibuja una línea8
-    final paint12 = Paint()
-      ..color = this.paint.color
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    canvas.drawLine(Offset(40, 270), Offset(265, 270), paint12);
+    canvas.drawLine(Offset(this.size.x / 8, this.size.y / 3 * 2.8),
+        Offset(this.size.x / 4 * 3.6, this.size.y / 3 * 2.8), paint);
 
     // Dibuja un triángulo1 arriba
-    final paint3 = Paint()
-      ..color = this.paint.color
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    final adorno = Path()
-      ..moveTo(40, 130)
-      ..lineTo(75, 80)
-      ..lineTo(110, 130)
+    final triangulo1 = Path()
+      ..moveTo(this.size.x / 8 * 1.3, this.size.y / 2.3)
+      ..lineTo(this.size.x / 3.7, this.size.y / 3.7)
+      ..lineTo(this.size.x / 3 * 1.1, this.size.y / 2.3)
       ..close();
-    canvas.drawPath(adorno, paint3);
+    canvas.drawPath(triangulo1, paint);
 
     // Dibuja un triángulo2 arriba
-    final paint4 = Paint()
-      ..color = this.paint.color
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    final adorno2 = Path()
-      ..moveTo(110, 130)
-      ..lineTo(142, 70)
-      ..lineTo(170, 130)
+    final triangulo2 = Path()
+      ..moveTo(this.size.x / 8 * 4.5, this.size.y / 2.3)
+      ..lineTo(this.size.x / 2.1, this.size.y / 4.2)
+      ..lineTo(this.size.x / 3 * 1.09, this.size.y / 2.3)
       ..close();
-    canvas.drawPath(adorno2, paint4);
+    canvas.drawPath(triangulo2, paint);
 
     // Dibuja un triángulo3 arriba
-    final paint5 = Paint()
-      ..color = this.paint.color
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    final adorno3 = Path()
-      ..moveTo(170, 130)
-      ..lineTo(198, 90)
-      ..lineTo(225, 130)
+    final triangulo3 = Path()
+      ..moveTo(this.size.x / 8 * 5.9, this.size.y / 2.3)
+      ..lineTo(this.size.x / 1.5, this.size.y / 3.7)
+      ..lineTo(this.size.x / 3 * 1.7, this.size.y / 2.3)
       ..close();
-    canvas.drawPath(adorno3, paint5);
+    canvas.drawPath(triangulo3, paint);
 
     // Dibuja un triángulo1 abajo
-    final paint13 = Paint()
-      ..color = this.paint.color
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    final adorno4 = Path()
-      ..moveTo(176, 150)
-      ..lineTo(198, 200)
-      ..lineTo(225, 150)
+    final trianabajo1 = Path()
+      ..moveTo(this.size.x / 8 * 5.9, this.size.y / 2)
+      ..lineTo(this.size.x / 1.5, this.size.y / 1.5)
+      ..lineTo(this.size.x / 3 * 1.76, this.size.y / 2)
       ..close();
-    canvas.drawPath(adorno4, paint13);
+    canvas.drawPath(trianabajo1, paint);
 
     // Dibuja un triángulo2 abajo
-    final paint14 = Paint()
-      ..color = this.paint.color
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    final adorno5 = Path()
-      ..moveTo(110, 150)
-      ..lineTo(140, 210)
-      ..lineTo(178, 150)
+    final trianabajo2 = Path()
+      ..moveTo(this.size.x / 8 * 4.6, this.size.y / 2)
+      ..lineTo(this.size.x / 2.1, this.size.y / 1.4)
+      ..lineTo(this.size.x / 3 * 1.12, this.size.y / 2)
       ..close();
-    canvas.drawPath(adorno5, paint14);
+    canvas.drawPath(trianabajo2, paint);
 
     // Dibuja un triángulo3 abajo
-    final paint15 = Paint()
-      ..color = this.paint.color
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    final adorno6 = Path()
-      ..moveTo(45, 150)
-      ..lineTo(80, 200)
-      ..lineTo(110, 150)
+    final trianabajo3 = Path()
+      ..moveTo(this.size.x / 8 * 1.3, this.size.y / 2)
+      ..lineTo(this.size.x / 3.5, this.size.y / 1.5)
+      ..lineTo(this.size.x / 3 * 1.1, this.size.y / 2)
       ..close();
-    canvas.drawPath(adorno6, paint15);
+    canvas.drawPath(trianabajo3, paint);
 
     // Dibuja un triángulo1 lado derecho
-    final paint16 = Paint()
-      ..color = this.paint.color
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    final adorno7 = Path()
-      ..moveTo(260, 61)
-      ..lineTo(298, 70)
-      ..lineTo(260, 100)
+    final trianlad1 = Path()
+      ..moveTo(this.size.x / 4 * 3.4, this.size.y / 5.42)
+      ..lineTo(this.size.x / 1.03, this.size.y / 8 * 2.2)
+      ..lineTo(this.size.x / 4 * 3.4, this.size.y / 4 * 1.5)
       ..close();
-    canvas.drawPath(adorno7, paint16);
+    canvas.drawPath(trianlad1, paint);
 
     // Dibuja un triángulo2 lado derecho
-    final paint17 = Paint()
-      ..color = this.paint.color
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    final adorno8 = Path()
-      ..moveTo(260, 122)
-      ..lineTo(298, 140)
-      ..lineTo(260, 160)
+    final trianlad2 = Path()
+      ..moveTo(this.size.x / 4 * 3.4, this.size.y / 4 * 1.7)
+      ..lineTo(this.size.x / 1.01, this.size.y / 8 * 4)
+      ..lineTo(this.size.x / 4 * 3.4, this.size.y / 4 * 2.5)
       ..close();
-    canvas.drawPath(adorno8, paint17);
+    canvas.drawPath(trianlad2, paint);
 
     // Dibuja un triángulo3 lado derecho
-    final paint18 = Paint()
-      ..color = this.paint.color
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    final adorno9 = Path()
-      ..moveTo(260, 190)
-      ..lineTo(298, 210)
-      ..lineTo(260, 230)
+    final trianlad3 = Path()
+      ..moveTo(this.size.x / 4 * 3.4, this.size.y / 4 * 2.6)
+      ..lineTo(this.size.x / 1.01, this.size.y / 8 * 5.9)
+      ..lineTo(this.size.x / 4 * 3.4, this.size.y / 4 * 3.2)
       ..close();
-    canvas.drawPath(adorno9, paint18);
+    canvas.drawPath(trianlad3, paint);
 
-    // Dibuja un triángulo1 arriba lado izquierdo
-    final paint19 = Paint()
-      ..color = this.paint.color
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    final adorno10 = Path()
-      ..moveTo(40, 40)
-      ..lineTo(55, 3)
-      ..lineTo(70, 40)
+    // Dibuja un triángulo1 arriba inicio
+    final trianlaI1 = Path()
+      ..moveTo(this.size.x / 8 * 1.3, this.size.y / 8 * 1.19)
+      ..lineTo(this.size.x / 4, this.size.y / 6 * 0.2)
+      ..lineTo(this.size.x / 3 * 1, this.size.y / 8 * 1.19)
       ..close();
-    canvas.drawPath(adorno10, paint19);
+    canvas.drawPath(trianlaI1, paint);
 
-    // Dibuja un triángulo2 arriba lado izquierdo
-    final paint20 = Paint()
-      ..color = this.paint.color
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    final adorno11 = Path()
-      ..moveTo(150, 40)
-      ..lineTo(125, 3)
-      ..lineTo(100, 40)
+    // Dibuja un triángulo2 arriba inicio
+    final trianlaI2 = Path()
+      ..moveTo(this.size.x / 8 * 3.2, this.size.y / 8 * 1.19)
+      ..lineTo(this.size.x / 2.05, this.size.y / 6 * 0.1)
+      ..lineTo(this.size.x / 3 * 1.7, this.size.y / 8 * 1.19)
       ..close();
-    canvas.drawPath(adorno11, paint20);
+    canvas.drawPath(trianlaI2, paint);
 
-    // Dibuja un triángulo2 arriba lado izquierdo
-    final paint21 = Paint()
-      ..color = this.paint.color
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    final adorno12 = Path()
-      ..moveTo(240, 40)
-      ..lineTo(210, 3)
-      ..lineTo(180, 40)
+    // Dibuja un triángulo2 arriba lado inicio
+    final trianlaI3 = Path()
+      ..moveTo(this.size.x / 8 * 5, this.size.y / 8 * 1.19)
+      ..lineTo(this.size.x / 1.45, this.size.y / 6 * 0.1)
+      ..lineTo(this.size.x / 3 * 2.3, this.size.y / 8 * 1.19)
       ..close();
-    canvas.drawPath(adorno12, paint21);
+    canvas.drawPath(trianlaI3, paint);
   }
 }
