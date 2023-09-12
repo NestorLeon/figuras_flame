@@ -87,7 +87,7 @@ class Sello_07 extends PositionComponent {
     ..color =Color.fromARGB(255, 101, 76, 50)
     ..style = PaintingStyle.stroke
     ..strokeWidth = 10
-    ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9)
+    ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
   canvas.drawPath(cuerpo, paint3);
 
 
