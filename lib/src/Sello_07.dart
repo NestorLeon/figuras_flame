@@ -53,6 +53,7 @@ class Sello_07 extends PositionComponent {
       ..lineTo(((1 / 7) * size.x), ((1.6/ 8) * size.y))
       ..moveTo(((1 / 9.3) * size.x), ((1.85/ 8) * size.y))
       ..lineTo(((1 / 7) * size.x), ((1.85/ 8) * size.y))
+      ..moveTo(((1 / 7) * size.x), ((1.85/ 8) * size.y))
       ..lineTo(((1 / 7) * size.x), ((1.6/ 8) * size.y))
       
       ..close();
