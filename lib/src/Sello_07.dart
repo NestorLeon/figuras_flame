@@ -28,7 +28,7 @@ class Sello_07 extends PositionComponent {
     canvas.drawRect(Rect.fromLTWH(0, 0, size.x, size.y), paint);
 
     // Circulos 
-    final posiscioncirc = Offset(((1 / 2.56) * size.x), ((2/ 8) * size.y));
+    final posiscioncirc = Offset(((1 / 4.56) * size.x), ((4/ 8) * size.y));
     canvas.drawCircle(
       posiscioncirc,
       1 / 50 * size.x,
