@@ -17,19 +17,9 @@ class Sello_013 extends PositionComponent {
     super.children,
   }) : super();
 
-  void drawTriangle(Canvas canvas, double x, double y, double size) {
-    Path path = Path();
-    path.moveTo(x, y);
-    path.lineTo(x + size, y);
-    path.lineTo(x + size / 2, y + size);
-    path.close();
-    canvas.drawPath(path, paint);
-  }
-
   @override
   void render(Canvas canvas) {
     super.render(canvas);
-
     double radio = size.x / 2;
 
     //Dibuja un circulo hueco
@@ -69,7 +59,7 @@ class Sello_013 extends PositionComponent {
     for (int i = 0; i < 6; i++) {
       double x = radio + radio * 0.85 * cos(pi / 3 * i);
       double y = radio + radio * 0.85 * sin(pi / 3 * i);
-      //Dibuja un 6 mitad de circulo al rededor del original
+
       canvas.drawArc(
         Rect.fromCircle(center: Offset(x, y), radius: radio / 8),
         i + 1.6,
@@ -81,26 +71,66 @@ class Sello_013 extends PositionComponent {
       );
     }
 
-    //Calcula la posicion cada 45 grados para dibujar un triangulo
-    for (int i = 0; i < 3; i++) {
-      double x = radio + radio * 0.85 * cos(pi / 3 * i + pi / 6);
-      double y = radio + radio * 0.85 * sin(pi / 3 * i + pi / 6);
+    canvas.drawPath(
+      Path()
+        ..moveTo(53, 115)
+        ..lineTo(53 + radio / 10, 115)
+        ..lineTo(53 + radio / 20, 115 + radio / 10)
+        ..close(),
+      paint
+        ..strokeWidth = radio / 13
+        ..style = PaintingStyle.stroke,
+    );
+    canvas.drawPath(
+      Path()
+        ..moveTo(325, 115)
+        ..lineTo(325 + radio / 10, 115)
+        ..lineTo(325 + radio / 20, 115 + radio / 10)
+        ..close(),
+      paint
+        ..strokeWidth = radio / 13
+        ..style = PaintingStyle.stroke,
+    );
+    canvas.drawPath(
+      Path()
+        ..moveTo(325, 290)
+        ..lineTo(325 + radio / 10, 290)
+        ..lineTo(325 + radio / 20, 290 - radio / 10)
+        ..close(),
+      paint
+        ..strokeWidth = radio / 13
+        ..style = PaintingStyle.stroke,
+    );
+    canvas.drawPath(
+      Path()
+        ..moveTo(53, 290)
+        ..lineTo(53 + radio / 10, 290)
+        ..lineTo(53 + radio / 20, 290 - radio / 10)
+        ..close(),
+      paint
+        ..strokeWidth = radio / 13
+        ..style = PaintingStyle.stroke,
+    );
+    canvas.drawPath(
+      Path()
+        ..moveTo(195, 350)
+        ..lineTo(195 + radio / 10, 350)
+        ..lineTo(195 + radio / 20, 350 + radio / 10)
+        ..close(),
+      paint
+        ..strokeWidth = radio / 13
+        ..style = PaintingStyle.stroke,
+    );
 
-      drawTriangle(canvas, x, y, radio / 10);
-    }
-//     flutter: 285.0
-// flutter: 370.0
-// flutter: 285.00000000000006
-// flutter: 115.00000000000004
-// flutter: 30.0
-// flutter: 114.99999999999993
-//         200.0
-// flutter: 52.775681356645464
-// flutter: 52.77568135664541
-// flutter: 199.99999999999997
-// flutter: 347.22431864335454
-//     //drawTriangle(canvas, x, y, size)
-
-    //Gira el triangulo 180 grados
+    canvas.drawPath(
+      Path()
+        ..moveTo(195, 55)
+        ..lineTo(195 + radio / 10, 55)
+        ..lineTo(195 + radio / 20, 55 - radio / 10)
+        ..close(),
+      paint
+        ..strokeWidth = radio / 13
+        ..style = PaintingStyle.stroke,
+    );
   }
 }
