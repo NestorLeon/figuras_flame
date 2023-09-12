@@ -1,6 +1,8 @@
 library figuras_flame;
 
 import 'dart:ui';
+import 'package:flame/effects.dart';
+
 import 'tipos_de_forma.dart';
 import 'package:flame/components.dart';
 
@@ -46,7 +48,7 @@ class Sello_07 extends PositionComponent {
     //Dedos
       ..moveTo(((1 / 7) * size.x), ((.85/ 8) * size.y))
       ..lineTo(((1 / 6) * size.x), ((.85/ 8) * size.y))
-       ..moveTo(((1 / 8) * size.x), ((1/ 8) * size.y))
+      ..moveTo(((1 / 8) * size.x), ((1/ 8) * size.y))
       ..lineTo(((1 / 7) * size.x), ((1/ 8) * size.y))
       ..moveTo(((1 / 9) * size.x), ((1.15/ 8) * size.y))
       ..lineTo(((1 / 7) * size.x), ((1.15/ 8) * size.y))
@@ -56,7 +58,7 @@ class Sello_07 extends PositionComponent {
       ..lineTo(((1 / 7) * size.x), ((1.45/ 8) * size.y))
 
       ..moveTo(((1 / 7) * size.x), ((1.5/ 8) * size.y))
-      ..lineTo(((1 / 7) * size.x), ((1.2/ 8) * size.y))
+      ..lineTo(((3 / 7) * size.x), ((1.7/ 8) * size.y))
       
       ..close();
 
@@ -67,6 +69,22 @@ class Sello_07 extends PositionComponent {
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
 
     canvas.drawPath(mano, paint2);
+
+
+    final cuerpo= Path()
+
+        ..moveTo(((1 / 7) * size.x), ((1.15/ 8) * size.y))
+        ..lineTo(((1 / 7) * size.x), ((1.2/ 8) * size.y))
+      
+        ..close();
+
+      final paint3 = Paint()
+      ..color =Color.fromARGB(255, 101, 76, 50)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 10
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
+
+    canvas.drawPath(cuerpo, paint3);
 
 
   }
