@@ -16,4 +16,3 @@ export 'src/mexico.dart' show Mexico;
 export 'src/elefante.dart' show Elefante;
 export 'src/mouse.dart' show Mouse;
 export 'src/sello_013.dart' show Sello_013;
-export 'src/sello_014.dart' show Sello_014;
