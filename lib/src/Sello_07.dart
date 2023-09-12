@@ -46,16 +46,16 @@ class Sello_07 extends PositionComponent {
     //Dedos
       ..moveTo(((1 / 7) * size.x), ((.85/ 8) * size.y))
       ..lineTo(((1 / 6) * size.x), ((.85/ 8) * size.y))
-       ..moveTo(((1 / 8) * size.x), ((1.1/ 8) * size.y))
-      ..lineTo(((1 / 7) * size.x), ((1.1/ 8) * size.y))
-      ..moveTo(((1 / 9) * size.x), ((1.35/ 8) * size.y))
-      ..lineTo(((1 / 7) * size.x), ((1.35/ 8) * size.y))
-      ..moveTo(((.9 / 9) * size.x), ((1.6/ 8) * size.y))
-      ..lineTo(((1 / 7) * size.x), ((1.6/ 8) * size.y))
-      ..moveTo(((1 / 9.3) * size.x), ((1.85/ 8) * size.y))
-      ..lineTo(((1 / 7) * size.x), ((1.85/ 8) * size.y))
+       ..moveTo(((1 / 8) * size.x), ((1/ 8) * size.y))
+      ..lineTo(((1 / 7) * size.x), ((1/ 8) * size.y))
+      ..moveTo(((1 / 9) * size.x), ((1.25/ 8) * size.y))
+      ..lineTo(((1 / 7) * size.x), ((1.25/ 8) * size.y))
+      ..moveTo(((.9 / 9) * size.x), ((1.5/ 8) * size.y))
+      ..lineTo(((1 / 7) * size.x), ((1.5/ 8) * size.y))
+      ..moveTo(((1 / 9.3) * size.x), ((1.75/ 8) * size.y))
+      ..lineTo(((1 / 7) * size.x), ((1.75/ 8) * size.y))
 
-      ..moveTo(((1 / 7) * size.x), ((1.85/ 8) * size.y))
+      ..moveTo(((1 / 7) * size.x), ((1.75/ 8) * size.y))
       ..lineTo(((1 / 7) * size.x), ((1.6/ 8) * size.y))
       
       ..close();
