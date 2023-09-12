@@ -4,8 +4,6 @@ import 'dart:math';
 import 'dart:ui';
 import 'package:figuras_flame/src/tipos_de_forma.dart';
 import 'package:flame/components.dart';
-import 'package:flame/extensions.dart';
-import 'package:flame/text.dart';
 
 class Sello_040 extends PositionComponent {
   final FormaTypes forma;
