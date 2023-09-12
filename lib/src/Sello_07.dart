@@ -76,20 +76,19 @@ class Sello_07 extends PositionComponent {
     canvas.drawPath(mano, paint2);
 
 
- // final cuerpo= Path()
+  final cuerpo= Path()
 
- //     ..moveTo(((1 / 7) * size.x), ((1.5/ 8) * size.y))
- //     ..lineTo(((3 / 7) * size.x), ((1.7/ 8) * size.y))
- //   
- //     ..close();
+      ..moveTo(((1 / 7) * size.x), ((1.15/ 8) * size.y))
+      ..lineTo(((3 / 7) * size.x), ((1.7/ 8) * size.y))
+    
+      ..close();
 
- //   final paint3 = Paint()
- //   ..color =Color.fromARGB(255, 101, 76, 50)
- //   ..style = PaintingStyle.stroke
- //   ..strokeWidth = 10
- //   ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-
- // canvas.drawPath(cuerpo, paint3);
+    final paint3 = Paint()
+    ..color =Color.fromARGB(255, 101, 76, 50)
+    ..style = PaintingStyle.stroke
+    ..strokeWidth = 10
+    ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9)
+  canvas.drawPath(cuerpo, paint3);
 
 
   }
