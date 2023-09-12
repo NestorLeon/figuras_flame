@@ -3,13 +3,12 @@ library figuras_flame;
 import 'dart:ui';
 import 'package:figuras_flame/src/tipos_de_forma.dart';
 import 'package:flame/components.dart';
-import 'package:flame/text.dart';
 
-class sello_053 extends PositionComponent {
+class Sello_053 extends PositionComponent {
   final FormaTypes forma;
   final Paint paint;
 
-  sello_053({
+  Sello_053({
     required super.position,
     required this.paint,
     required super.size,
