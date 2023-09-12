@@ -44,7 +44,9 @@ class Sello_07 extends PositionComponent {
 
     final mano = Path()
       ..moveTo(((1 / 9) * size.x), ((1.35/ 8) * size.y))
-      ..lineTo(((1 / 6) * size.x), ((1.35/ 8) * size.y))
+      ..lineTo(((1 / 7) * size.x), ((1.35/ 8) * size.y))
+      ..moveTo(((1 / 8) * size.x), ((1.1/ 8) * size.y))
+      ..lineTo(((1 / 7) * size.x), ((1.1/ 8) * size.y))
       ..close();
 
       final paint2 = Paint()
