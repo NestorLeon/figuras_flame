@@ -3,13 +3,12 @@ library figuras_flame;
 import 'dart:ui';
 import 'package:figuras_flame/src/tipos_de_forma.dart';
 import 'package:flame/components.dart';
-import 'package:flame/text.dart';
 
-class sello_053 extends PositionComponent {
+class Sello_053 extends PositionComponent {
   final FormaTypes forma;
   final Paint paint;
 
-  sello_053({
+  Sello_053({
     required super.position,
     required this.paint,
     required super.size,
@@ -25,12 +24,6 @@ class sello_053 extends PositionComponent {
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9)
       ..style = PaintingStyle.fill;
-
-    //cuadrado
-    final cuadrado = Paint()..color = this.paint.color.withOpacity(0.2);
-    canvas.drawRect(
-        Rect.fromPoints(Offset(0, 0), Offset(this.size.x, this.size.y)),
-        cuadrado);
 
     // Dibuja una línea1
     canvas.drawLine(Offset(this.size.x / 8, this.size.y / 7),
