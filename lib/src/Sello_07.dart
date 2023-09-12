@@ -80,13 +80,13 @@ class Sello_07 extends PositionComponent {
   final cuerpo= Path()
     
       ..moveTo(((1 / 7) * size.x), ((1.15/ 8) * size.y))
-      ..quadraticBezierTo(((3 / 7) * size.x), ((1.7/ 8) * size.y),((2 / 7) * size.x), ((1.9/ 8) * size.y))
+      ..quadraticBezierTo(((3 / 7) * size.x), ((1.7/ 8) * size.y),((1.5 / 7) * size.x), ((1.9/ 8) * size.y))
       ..close;
 
     final paint3 = Paint()
     ..color =Color.fromARGB(255, 101, 76, 50)
     ..style = PaintingStyle.stroke
-    ..strokeWidth = 20
+    ..strokeWidth = 15
     ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
   canvas.drawPath(cuerpo, paint3);
 
