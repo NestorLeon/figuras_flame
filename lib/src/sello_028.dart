@@ -19,17 +19,39 @@ class Sello_028 extends PositionComponent {
   void render(Canvas canvas) {
     super.render(canvas);
     //Rectangulo central
-    canvas.drawRect(
-        Rect.fromLTWH(0, (4 / 14) * size.y, size.x, (6 / 14) * size.y), paint);
+    // canvas.drawRect(
+    //     Rect.fromLTWH(0, (4 / 14) * size.y, size.x, (6 / 14) * size.y), paint);
 
     //Circulo1
     final poscir1 = Offset(((1 / 28) * size.x), ((8 / 16) * size.y));
 
-    canvas.drawCircle(
-      poscir1,
-      1 / 34 * size.x,
-      Paint()..color = const Color.fromARGB(255, 0, 0, 0),
+    Path pathRecortes = Path();
+    pathRecortes.addOval(
+      Rect.fromCircle(
+          center: Offset(((1 / 28) * size.x), ((8 / 16) * size.y)),
+          radius: 1 / 34 * size.x),
     );
+
+    final myPathCombine = Path.combine(
+        PathOperation.difference,
+        Path()
+          ..fillType = PathFillType.evenOdd
+          ..addRect(
+              Rect.fromLTWH(0, (4 / 14) * size.y, size.x, (6 / 14) * size.y)),
+        pathRecortes);
+
+    canvas.drawPath(
+      myPathCombine,
+      this.paint
+        ..style = PaintingStyle.fill
+        ..strokeWidth = 0.0,
+    );
+
+    // canvas.drawCircle(
+    //   poscir1,
+    //   1 / 34 * size.x,
+    //   Paint()..color = const Color.fromARGB(255, 0, 0, 0),
+    // );
 
     //Circulo2
     final poscir2 = Offset(((3 / 28) * size.x), ((8 / 16) * size.y));
