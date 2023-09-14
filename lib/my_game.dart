@@ -53,7 +53,7 @@ class MyGame extends FlameGame {
         Sello(
          position: Vector2(0, 10),
          size: Vector2(130, 57),
-         paint: Paint()..color = Color.fromARGB(255, 136, 115, 85),  //paint: Paint()..color = Color.fromARGB(255, 136, 115, 85),
+         paint: Paint()..color = Color.fromARGB(255, 136, 115, 85), 
      ),
       ],
     );
