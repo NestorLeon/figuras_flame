@@ -73,9 +73,9 @@ class Sello_013 extends PositionComponent {
 
     canvas.drawPath(
       Path()
-        ..moveTo(53, 115)
-        ..lineTo(53 + radio / 10, 115)
-        ..lineTo(53 + radio / 20, 115 + radio / 10)
+        ..moveTo(size.x * 0.13, size.y * 0.28)
+        ..lineTo(size.x * 0.13 + radio / 10, size.y * 0.28)
+        ..lineTo(size.x * 0.13 + radio / 20, size.y * 0.28 + radio / 10)
         ..close(),
       paint
         ..strokeWidth = radio / 13
@@ -83,9 +83,9 @@ class Sello_013 extends PositionComponent {
     );
     canvas.drawPath(
       Path()
-        ..moveTo(325, 115)
-        ..lineTo(325 + radio / 10, 115)
-        ..lineTo(325 + radio / 20, 115 + radio / 10)
+        ..moveTo(size.x * 0.813, size.y * 0.28)
+        ..lineTo(size.x * 0.813 + radio / 10, size.y * 0.28)
+        ..lineTo(size.x * 0.813 + radio / 20, size.y * 0.28 + radio / 10)
         ..close(),
       paint
         ..strokeWidth = radio / 13
@@ -93,9 +93,9 @@ class Sello_013 extends PositionComponent {
     );
     canvas.drawPath(
       Path()
-        ..moveTo(325, 290)
-        ..lineTo(325 + radio / 10, 290)
-        ..lineTo(325 + radio / 20, 290 - radio / 10)
+        ..moveTo(size.x * 0.813, size.y * 0.725)
+        ..lineTo(size.x * 0.813 + radio / 10, size.y * 0.725)
+        ..lineTo(size.x * 0.813 + radio / 20, size.y * 0.725 - radio / 10)
         ..close(),
       paint
         ..strokeWidth = radio / 13
@@ -103,9 +103,9 @@ class Sello_013 extends PositionComponent {
     );
     canvas.drawPath(
       Path()
-        ..moveTo(53, 290)
-        ..lineTo(53 + radio / 10, 290)
-        ..lineTo(53 + radio / 20, 290 - radio / 10)
+        ..moveTo(size.x * 0.1325, size.y * 0.725)
+        ..lineTo(size.x * 0.1325 + radio / 10, size.y * 0.725)
+        ..lineTo(size.x * 0.1325 + radio / 20, size.y * 0.725 - radio / 10)
         ..close(),
       paint
         ..strokeWidth = radio / 13
@@ -113,9 +113,9 @@ class Sello_013 extends PositionComponent {
     );
     canvas.drawPath(
       Path()
-        ..moveTo(195, 350)
-        ..lineTo(195 + radio / 10, 350)
-        ..lineTo(195 + radio / 20, 350 + radio / 10)
+        ..moveTo(size.x * 0.4875, size.y * 0.875)
+        ..lineTo(size.x * 0.4875 + radio / 10, size.y * 0.875)
+        ..lineTo(size.x * 0.4875 + radio / 20, size.y * 0.875 + radio / 10)
         ..close(),
       paint
         ..strokeWidth = radio / 13
@@ -124,9 +124,9 @@ class Sello_013 extends PositionComponent {
 
     canvas.drawPath(
       Path()
-        ..moveTo(195, 55)
-        ..lineTo(195 + radio / 10, 55)
-        ..lineTo(195 + radio / 20, 55 - radio / 10)
+        ..moveTo(size.x * 0.4875, size.y * 0.1375)
+        ..lineTo(size.x * 0.4875 + radio / 10, size.y * 0.1375)
+        ..lineTo(size.x * 0.4875 + radio / 20, size.y * 0.1375 - radio / 10)
         ..close(),
       paint
         ..strokeWidth = radio / 13
