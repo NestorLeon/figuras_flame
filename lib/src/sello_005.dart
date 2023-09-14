@@ -1,6 +1,5 @@
 library figuras_flame;
 
-import 'dart:ffi';
 import 'dart:ui';
 import 'package:figuras_flame/src/tipos_de_forma.dart';
 import 'package:flame/components.dart';
@@ -26,7 +25,6 @@ class Sello_005 extends PositionComponent {
     double circulo2 = size.x /12;
     double circulo3 = size.x /6;
 
-    double radio1Endidura = size.x / 5.4;
 
     var posicion4Circulo = {
       'radio': radioCentral,
@@ -255,11 +253,5 @@ class Sello_005 extends PositionComponent {
           ..style = PaintingStyle.stroke  // Configura para que no se rellene
       );
     }
-
-
-
-    
-
-    
   }
 }
