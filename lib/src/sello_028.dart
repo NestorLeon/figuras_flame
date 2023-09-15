@@ -22,23 +22,26 @@ class Sello_028 extends PositionComponent {
     // canvas.drawRect(
     //     Rect.fromLTWH(0, (4 / 14) * size.y, size.x, (6 / 14) * size.y), paint);
 
-    //Circulo1
+    //Circulos
     final poscir1 = Offset(((1 / 28) * size.x), ((8 / 16) * size.y));
-
-    Path pathRecortes = Path();
-    pathRecortes.addOval(
-      Rect.fromCircle(
-          center: Offset(((1 / 28) * size.x), ((8 / 16) * size.y)),
-          radius: 1 / 34 * size.x),
-    );
-
+    Path circulo1 = Path();
+    double ctn = 0;
+    ctn = ctn + (1 / 28);
+    for (double i = 0; i < 14; i++) {
+      circulo1.addOval(
+        Rect.fromCircle(
+            center: Offset((ctn * size.x), ((8 / 16) * size.y)),
+            radius: 1 / 34 * size.x),
+      );
+      ctn = ctn + (2 / 28);
+    }
     final myPathCombine = Path.combine(
         PathOperation.difference,
         Path()
           ..fillType = PathFillType.evenOdd
           ..addRect(
               Rect.fromLTWH(0, (4 / 14) * size.y, size.x, (6 / 14) * size.y)),
-        pathRecortes);
+        circulo1);
 
     canvas.drawPath(
       myPathCombine,
@@ -46,6 +49,12 @@ class Sello_028 extends PositionComponent {
         ..style = PaintingStyle.fill
         ..strokeWidth = 0.0,
     );
+    // Path circulo1 = Path();
+    // circulo1.addOval(
+    //   Rect.fromCircle(
+    //       center: Offset(((1 / 28) * size.x), ((8 / 16) * size.y)),
+    //       radius: 1 / 34 * size.x),
+    // );
 
     // canvas.drawCircle(
     //   poscir1,
@@ -53,115 +62,115 @@ class Sello_028 extends PositionComponent {
     //   Paint()..color = const Color.fromARGB(255, 0, 0, 0),
     // );
 
-    //Circulo2
+    // //Circulo2
     final poscir2 = Offset(((3 / 28) * size.x), ((8 / 16) * size.y));
 
-    canvas.drawCircle(
-      poscir2,
-      1 / 34 * size.x,
-      Paint()..color = const Color.fromARGB(255, 0, 0, 0),
-    );
+    // canvas.drawCircle(
+    //   poscir2,
+    //   1 / 34 * size.x,
+    //   Paint()..color = const Color.fromARGB(255, 0, 0, 0),
+    // );
 
-    //Circulo3
+    // //Circulo3
     final poscir3 = Offset(((5 / 28) * size.x), ((8 / 16) * size.y));
 
-    canvas.drawCircle(
-      poscir3,
-      1 / 34 * size.x,
-      Paint()..color = const Color.fromARGB(255, 0, 0, 0),
-    );
+    // canvas.drawCircle(
+    //   poscir3,
+    //   1 / 34 * size.x,
+    //   Paint()..color = const Color.fromARGB(255, 0, 0, 0),
+    // );
 
-    //Circulo4
+    // //Circulo4
     final poscir4 = Offset(((7 / 28) * size.x), ((8 / 16) * size.y));
 
-    canvas.drawCircle(
-      poscir4,
-      1 / 34 * size.x,
-      Paint()..color = Color.fromARGB(255, 0, 0, 0),
-    );
+    // canvas.drawCircle(
+    //   poscir4,
+    //   1 / 34 * size.x,
+    //   Paint()..color = Color.fromARGB(255, 0, 0, 0),
+    // );
 
     final poscir5 = Offset(((9 / 28) * size.x), ((4 / 8) * size.y));
-    canvas.drawCircle(
-      poscir5,
-      1 / 34 * size.x,
-      Paint()..color = Color.fromARGB(255, 0, 0, 0),
-    );
+    // canvas.drawCircle(
+    //   poscir5,
+    //   1 / 34 * size.x,
+    //   Paint()..color = Color.fromARGB(255, 0, 0, 0),
+    // );
 
-    //Circulo6
+    // //Circulo6
     final poscir6 = Offset(((11 / 28) * size.x), ((8 / 16) * size.y));
 
-    canvas.drawCircle(
-      poscir6,
-      1 / 34 * size.x,
-      Paint()..color = const Color.fromARGB(255, 0, 0, 0),
-    );
+    // canvas.drawCircle(
+    //   poscir6,
+    //   1 / 34 * size.x,
+    //   Paint()..color = const Color.fromARGB(255, 0, 0, 0),
+    // );
 
-    //Circulo7
+    // //Circulo7
     final poscir7 = Offset(((13 / 28) * size.x), ((8 / 16) * size.y));
 
-    canvas.drawCircle(
-      poscir7,
-      1 / 34 * size.x,
-      Paint()..color = const Color.fromARGB(255, 0, 0, 0),
-    );
+    // canvas.drawCircle(
+    //   poscir7,
+    //   1 / 34 * size.x,
+    //   Paint()..color = const Color.fromARGB(255, 0, 0, 0),
+    // );
 
-    //Circulo8
+    // //Circulo8
     final poscir8 = Offset(((15 / 28) * size.x), ((8 / 16) * size.y));
 
-    canvas.drawCircle(
-      poscir8,
-      1 / 34 * size.x,
-      Paint()..color = const Color.fromARGB(255, 0, 0, 0),
-    );
+    // canvas.drawCircle(
+    //   poscir8,
+    //   1 / 34 * size.x,
+    //   Paint()..color = const Color.fromARGB(255, 0, 0, 0),
+    // );
 
-    //Circulo9
+    // //Circulo9
     final poscir9 = Offset(((17 / 28) * size.x), ((8 / 16) * size.y));
 
-    canvas.drawCircle(
-      poscir9,
-      1 / 34 * size.x,
-      Paint()..color = const Color.fromARGB(255, 0, 0, 0),
-    );
+    // canvas.drawCircle(
+    //   poscir9,
+    //   1 / 34 * size.x,
+    //   Paint()..color = const Color.fromARGB(255, 0, 0, 0),
+    // );
 
-    //Circulo10
+    // //Circulo10
     final poscir10 = Offset(((19 / 28) * size.x), ((4 / 8) * size.y));
-    canvas.drawCircle(
-      poscir10,
-      1 / 34 * size.x,
-      Paint()..color = Color.fromARGB(255, 0, 0, 0),
-    );
+    // canvas.drawCircle(
+    //   poscir10,
+    //   1 / 34 * size.x,
+    //   Paint()..color = Color.fromARGB(255, 0, 0, 0),
+    // );
 
-    //Circulo11
+    // //Circulo11
     final poscir11 = Offset(((21 / 28) * size.x), ((4 / 8) * size.y));
-    canvas.drawCircle(
-      poscir11,
-      1 / 34 * size.x,
-      Paint()..color = Color.fromARGB(255, 0, 0, 0),
-    );
+    // canvas.drawCircle(
+    //   poscir11,
+    //   1 / 34 * size.x,
+    //   Paint()..color = Color.fromARGB(255, 0, 0, 0),
+    // );
 
-    //Circulo12
+    // //Circulo12
     final poscir12 = Offset(((23 / 28) * size.x), ((4 / 8) * size.y));
-    canvas.drawCircle(
-      poscir12,
-      1 / 34 * size.x,
-      Paint()..color = Color.fromARGB(255, 0, 0, 0),
-    );
+    // canvas.drawCircle(
+    //   poscir12,
+    //   1 / 34 * size.x,
+    //   Paint()..color = Color.fromARGB(255, 0, 0, 0),
+    // );
 
-    //Circulo13
+    // //Circulo13
     final poscir13 = Offset(((25 / 28) * size.x), ((4 / 8) * size.y));
-    canvas.drawCircle(
-      poscir13,
-      1 / 34 * size.x,
-      Paint()..color = Color.fromARGB(255, 0, 0, 0),
-    );
+    // canvas.drawCircle(
+    //   poscir13,
+    //   1 / 34 * size.x,
+    //   Paint()..color = Color.fromARGB(255, 0, 0, 0),
+    // );
 
-    //Circulo14
+    // //Circulo14
     final poscir14 = Offset(((27 / 28) * size.x), ((4 / 8) * size.y));
-    canvas.drawCircle(
-      poscir14,
-      1 / 34 * size.x,
-      Paint()..color = Color.fromARGB(255, 0, 0, 0),
-    );
+    // canvas.drawCircle(
+    //   poscir14,
+    //   1 / 34 * size.x,
+    //   Paint()..color = Color.fromARGB(255, 0, 0, 0),
+    // );
 
     //CirculoCentral1
     canvas.drawCircle(
