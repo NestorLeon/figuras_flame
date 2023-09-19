@@ -87,7 +87,7 @@ class Sello_07 extends PositionComponent {
       ..quadraticBezierTo(((4.5 / 7) * size.x), ((7/ 8) * size.y),((1 / 6) * size.x), ((7.1/ 8) * size.y))
       ..moveTo(((2.3 / 7) * size.x), ((4/ 8) * size.y))
       ..quadraticBezierTo(((2.6 / 7) * size.x), ((5.8/ 8) * size.y),((4.1 / 7) * size.x), ((3.25/ 8) * size.y))
-      ..quadraticBezierTo(((4.5 / 7) * size.x), ((2.5/ 8) * size.y),((4.6 / 7) * size.x), ((3.6/ 8) * size.y))
+      ..quadraticBezierTo(((4.5 / 7) * size.x), ((2.5/ 8) * size.y),((4.7 / 7) * size.x), ((3.6/ 8) * size.y))
       ..close;
 
     final paint3 = Paint()
