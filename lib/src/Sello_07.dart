@@ -82,8 +82,8 @@ class Sello_07 extends PositionComponent {
   final cuerpo= Path()
     
       ..moveTo(((1 / 7) * size.x), ((1.15/ 8) * size.y))
-      ..quadraticBezierTo(((5.3 / 7) * size.x), ((1.8/ 8) * size.y),((2.7 / 7) * size.x), ((2.9/ 8) * size.y))
-      ..quadraticBezierTo(((1.5 / 7) * size.x), ((4/ 8) * size.y),((3.5 / 7) * size.x), ((5/ 8) * size.y))
+      ..quadraticBezierTo(((5.3 / 7) * size.x), ((1.8/ 8) * size.y),((2.9 / 7) * size.x), ((3.2/ 8) * size.y))
+      ..quadraticBezierTo(((1.5 / 7) * size.x), ((4/ 8) * size.y),((3.5 / 7) * size.x), ((7/ 8) * size.y))
       ..close;
 
     final paint3 = Paint()
