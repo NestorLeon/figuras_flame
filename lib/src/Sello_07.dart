@@ -82,7 +82,8 @@ class Sello_07 extends PositionComponent {
   final cuerpo= Path()
     
       ..moveTo(((1 / 7) * size.x), ((1.15/ 8) * size.y))
-      ..quadraticBezierTo(((5.3 / 7) * size.x), ((1.8/ 8) * size.y),((2 / 7) * size.x), ((2.5/ 8) * size.y))
+      ..quadraticBezierTo(((5.3 / 7) * size.x), ((1.8/ 8) * size.y),((2 / 7) * size.x), ((2.8/ 8) * size.y))
+      //..quadraticBezierTo(((5.3 / 7) * size.x), ((1.8/ 8) * size.y),((2 / 7) * size.x), ((2.5/ 8) * size.y))
       ..close;
 
     final paint3 = Paint()
@@ -91,22 +92,6 @@ class Sello_07 extends PositionComponent {
     ..strokeWidth = 15
     ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
   canvas.drawPath(cuerpo, paint3);
-
- //final cuerpo= Path()
-
- //    ..moveTo(((1 / 7) * size.x), ((1.15/ 8) * size.y))
- //    ..cuadra
- //    ..lineTo(((3 / 7) * size.x), ((1.7/ 8) * size.y))
- //  
- //    ..close();
-
- //  final paint3 = Paint()
- //  ..color =Color.fromARGB(255, 101, 76, 50)
- //  ..style = PaintingStyle.stroke
- //  ..strokeWidth = 20
- //  ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
- //canvas.drawPath(cuerpo, paint3);
-
 
   }
 }
