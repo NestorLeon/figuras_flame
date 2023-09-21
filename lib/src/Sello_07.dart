@@ -102,12 +102,50 @@ class Sello_07 extends PositionComponent {
       ..quadraticBezierTo(((3.5 / 7) * size.x), ((2.2/ 8) * size.y),((6 / 7) * size.x), ((1.5/ 8) * size.y))
       ..close;
 
+
+
     final paint3 = Paint()
     ..color =Color.fromARGB(255, 101, 76, 50)
     ..style = PaintingStyle.stroke
     ..strokeWidth = 15
     ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
   canvas.drawPath(cuerpo, paint3);
+
+    final mano2 = Path()
+    //Dedos
+      ..moveTo(((1 / 9.5) * size.x), ((6.9/ 8) * size.y))
+      ..lineTo(((1 / 6) * size.x), ((7.1/ 8) * size.y))
+
+      ..moveTo(((1 / 10.5) * size.x), ((7.1/ 8) * size.y))
+      ..lineTo(((1 / 6) * size.x), ((7.1/ 8) * size.y))
+
+      ..moveTo(((1 / 11) * size.x), ((7.1/ 8) * size.y))
+      ..lineTo(((1 / 6) * size.x), ((7.1/ 8) * size.y))
+
+      ..moveTo(((.9 / 11) * size.x), ((7.1/ 8) * size.y))
+      ..lineTo(((1 / 6) * size.x), ((7.1/ 8) * size.y))
+
+      ..moveTo(((1 / 11.3) * size.x), ((7.3/ 8) * size.y))
+      ..lineTo(((1 / 6) * size.x), ((7.1/ 8) * size.y))
+
+      //
+     //..moveTo(((1 / 7) * size.x), ((1.5/ 8) * size.y))
+     //..lineTo(((1 / 7) * size.x), ((.95/ 8) * size.y))
+
+     //..moveTo(((1 / 7.2) * size.x), ((1.5/ 8) * size.y))
+     //..lineTo(((1 / 7.2) * size.x), ((.95/ 8) * size.y))
+
+     //..moveTo(((1 / 6.8) * size.x), ((.85/ 8) * size.y))
+     //..lineTo(((1 / 6.8) * size.x), ((1.1/ 8) * size.y))
+     //
+      ..close();
+
+      final paint4 = Paint()
+      ..color =Color.fromARGB(255, 101, 76, 50)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 5
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
+    canvas.drawPath(mano2, paint4);
 
   }
 }
