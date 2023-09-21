@@ -94,7 +94,7 @@ class Sello_07 extends PositionComponent {
       ..quadraticBezierTo(((5.3 / 7) * size.x), ((3.3/ 8) * size.y),((6.4 / 7) * size.x), ((3.5/ 8) * size.y))
       ..quadraticBezierTo(((6.5 / 7) * size.x), ((3.5/ 8) * size.y),((5.3 / 7) * size.x), ((6.2/ 8) * size.y))
       ..quadraticBezierTo(((5 / 7) * size.x), ((6.6/ 8) * size.y),((4.3 / 7) * size.x), ((6.9/ 8) * size.y))
-      
+      ..moveTo(((5.3 / 7) * size.x), ((6.2/ 8) * size.y))
       ..quadraticBezierTo(((5.4 / 7) * size.x), ((5.8/ 8) * size.y),((5 / 7) * size.x), ((5.8/ 8) * size.y))
       ..close;
 
