@@ -15,12 +15,9 @@ export 'src/libreta.dart' show Libreta;
 export 'src/mexico.dart' show Mexico;
 export 'src/elefante.dart' show Elefante;
 export 'src/mouse.dart' show Mouse;
-<<<<<<< HEAD
 export 'src/Sello_016.dart' show Selloespi;
-=======
 export 'src/sello_028.dart' show Sello_028;
 export 'src/sello_053.dart' show Sello_053;
 export 'src/sello_013.dart' show Sello_013;
 export 'src/sello_040.dart' show Sello_040;
 export 'src/sello_048.dart' show Sello_048;
->>>>>>> 5da5383e3c059435d9bdee478cec3e9630e0aa2a
