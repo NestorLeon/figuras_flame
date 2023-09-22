@@ -166,7 +166,7 @@ class Sello_07 extends PositionComponent {
        canvas.drawOval
        (
  
-       Rect.fromPoints(Offset(((1 / 7) * size.x), ((1.8/ 8) * size.y)), Offset(((3 / 7) * size.x), ((5.8/ 8) * size.y))),
+       Rect.fromPoints(Offset(((1 / 7) * size.x), ((2/ 8) * size.y)), Offset(((2 / 7) * size.x), ((5.8/ 8) * size.y))),
        paint5,
       );
   }
