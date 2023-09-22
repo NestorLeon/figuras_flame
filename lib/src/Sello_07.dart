@@ -128,16 +128,7 @@ class Sello_07 extends PositionComponent {
       ..moveTo(((1 / 9.5 ) * size.x), ((7.45/ 8) * size.y))
       ..lineTo(((1 / 5.9) * size.x), ((7.25/ 8) * size.y))
 
-      //
-     //..moveTo(((1 / 7) * size.x), ((1.5/ 8) * size.y))
-     //..lineTo(((1 / 7) * size.x), ((.95/ 8) * size.y))
 
-     //..moveTo(((1 / 7.2) * size.x), ((1.5/ 8) * size.y))
-     //..lineTo(((1 / 7.2) * size.x), ((.95/ 8) * size.y))
-
-     //..moveTo(((1 / 6.8) * size.x), ((.85/ 8) * size.y))
-     //..lineTo(((1 / 6.8) * size.x), ((1.1/ 8) * size.y))
-     //
       ..close();
 
       final paint4 = Paint()
@@ -146,6 +137,29 @@ class Sello_07 extends PositionComponent {
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawPath(mano2, paint4);
+
+    final mano3 = Path()
+    //Dedos
+      ..moveTo(((6 / 7) * size.x), ((1.5/ 8) * size.y))
+      ..lineTo(((6.2 / 7) * size.x), ((1.4/ 8) * size.y))
+
+      ..moveTo(((6 / 7) * size.x), ((1.5/ 8) * size.y))
+      ..lineTo(((6.3 / 7) * size.x), ((1.5/ 8) * size.y))
+
+      ..moveTo(((6 / 7) * size.x), ((1.5/ 8) * size.y))
+      ..lineTo(((6.3 / 7) * size.x), ((1.5/ 8) * size.y))
+
+      ..moveTo(((6 / 7) * size.x), ((1.5/ 8) * size.y))
+      ..lineTo(((6.2 / 7) * size.x), ((1.6/ 8) * size.y))
+
+      ..close();
+
+      final paint5 = Paint()
+      ..color =Color.fromARGB(255, 101, 76, 50)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 5
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
+    canvas.drawPath(mano3, paint5);
 
   }
 }
