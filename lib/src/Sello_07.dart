@@ -162,12 +162,24 @@ class Sello_07 extends PositionComponent {
     canvas.drawPath(mano3, paint5);
 
           
-        //RECTANGULO
-       canvas.drawOval
-       (
+    //Cabeza
+    canvas.drawOval
+    (
  
-       Rect.fromPoints(Offset(((.8 / 7) * size.x), ((3/ 8) * size.y)), Offset(((2.5 / 7) * size.x), ((5.2/ 8) * size.y))),
-       paint5,
-      );
+     Rect.fromPoints(Offset(((.8 / 7) * size.x), ((3/ 8) * size.y)), Offset(((2.4 / 7) * size.x), ((5.2/ 8) * size.y))),
+     paint5,
+    );
+
+    //oreja1
+    final posiscioncirc = Offset(((2 / 7) * size.x), ((3/ 8) * size.y));
+    canvas.drawCircle
+    (posiscioncirc,1 / 50 * size.x,Paint()..color = Color.fromARGB(255, 101, 76, 50),
+    );
+
+    //oreja2
+    final posiscioncirc2 = Offset(((2 / 7) * size.x), ((5.2/ 8) * size.y));
+    canvas.drawCircle
+    (posiscioncirc2,1 / 50 * size.x,Paint()..color = Color.fromARGB(255, 101, 76, 50),
+    );
   }
 }
