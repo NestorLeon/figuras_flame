@@ -133,7 +133,7 @@ class Sello_07 extends PositionComponent {
 
       final paint4 = Paint()
       ..color =Color.fromARGB(255, 101, 76, 50)
-      ..style = PaintingStyle.fill
+      ..style = PaintingStyle.stroke
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawPath(mano2, paint4);
@@ -151,18 +151,23 @@ class Sello_07 extends PositionComponent {
     ..close();
     final paint5 = Paint()
      ..color =Color.fromARGB(255, 101, 76, 50)
-     ..style = PaintingStyle.fill
+     ..style = PaintingStyle.stroke
      ..strokeWidth = 5
      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
    canvas.drawPath(mano3, paint5);
 
-          
+     final paint6 = Paint()
+      ..color =Color.fromARGB(255, 101, 76, 50)
+      ..style = PaintingStyle.fill
+      ..strokeWidth = 5
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
+
     //Cabeza
     canvas.drawOval
     (
  
      Rect.fromPoints(Offset(((.8 / 7) * size.x), ((3/ 8) * size.y)), Offset(((2.4 / 7) * size.x), ((5.2/ 8) * size.y))),
-     paint4,
+     paint6,
     );
 
     //oreja1
