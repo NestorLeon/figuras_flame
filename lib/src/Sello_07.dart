@@ -141,16 +141,16 @@ class Sello_07 extends PositionComponent {
     final mano3 = Path()
     //Dedos
       ..moveTo(((5.9 / 7) * size.x), ((1.39/ 8) * size.y))
-      ..lineTo(((6.6 / 7) * size.x), ((1.28/ 8) * size.y))
+      ..lineTo(((6.6 / 7) * size.x), ((1.25/ 8) * size.y))
 
       ..moveTo(((5.9 / 7) * size.x), ((1.45/ 8) * size.y))
-      ..lineTo(((6.65 / 7) * size.x), ((1.43/ 8) * size.y))
+      ..lineTo(((6.65 / 7) * size.x), ((1.4/ 8) * size.y))
 
       ..moveTo(((5.9 / 7) * size.x), ((1.55/ 8) * size.y))
       ..lineTo(((6.65 / 7) * size.x), ((1.57/ 8) * size.y))
 
       ..moveTo(((5.9 / 7) * size.x), ((1.65/ 8) * size.y))
-      ..lineTo(((6.6 / 7) * size.x), ((1.72/ 8) * size.y))
+      ..lineTo(((6.6 / 7) * size.x), ((1.75/ 8) * size.y))
 
       ..close();
 
