@@ -185,13 +185,13 @@ class Sello_07 extends PositionComponent {
     //ojo1
     final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.5/ 8) * size.y));
     canvas.drawCircle
-    (posiscioncirc3,1 / 50 * size.x,Paint()..color = Color.fromARGB(255, 101, 76, 50),
+    (posiscioncirc3,1 / 50 * size.x,Paint()..color = Color.fromARGB(255, 200, 200, 200),
     );
 
     //ojo2
     final posiscioncirc4 = Offset(((1.5 / 7) * size.x), ((4.5/ 8) * size.y));
     canvas.drawCircle
-    (posiscioncirc4,1 / 50 * size.x,Paint()..color = Color.fromARGB(255, 101, 76, 50),
+    (posiscioncirc4,1 / 50 * size.x,Paint()..color = Color.fromARGB(255, 200, 200, 200),
     );
   }
 }
