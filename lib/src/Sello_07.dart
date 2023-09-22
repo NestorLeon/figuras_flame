@@ -167,7 +167,7 @@ class Sello_07 extends PositionComponent {
        (
  
        Rect.fromPoints(Offset(((1 / 7) * size.x), ((1.8/ 8) * size.y)), Offset(((1.5 / 7) * size.x), ((5.8/ 8) * size.y))),
-       paint,
+       paint5,
       );
   }
 }
