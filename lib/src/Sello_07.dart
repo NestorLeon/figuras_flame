@@ -161,5 +161,13 @@ class Sello_07 extends PositionComponent {
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawPath(mano3, paint5);
 
+          
+        //RECTANGULO
+       canvas.drawOval
+       (
+ 
+       Rect.fromPoints(Offset(((1 / 7) * size.x), ((1.8/ 8) * size.y)), Offset(((1.5 / 7) * size.x), ((5.8/ 8) * size.y))),
+       paint,
+      );
   }
 }
