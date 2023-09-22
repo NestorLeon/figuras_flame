@@ -1,5 +1,6 @@
 export 'src/ballena.dart' show Ballena;
 export 'src/sello_07.dart' show Sello_07;
+export 'src/sello_037.dart' show Sello_037;
 export 'src/caballito.dart' show Caballito;
 export 'src/caballo.dart' show Caballo;
 export 'src/iguana.dart' show Iguana;
