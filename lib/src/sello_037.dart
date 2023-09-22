@@ -20,28 +20,27 @@ class Sello_037 extends PositionComponent {
   void render(Canvas canvas) {
     super.render(canvas);
      
+ // Copia de paint con relleno
+Paint filledPaint = Paint()..color = paint.color..style = PaintingStyle.fill;
 
-    // Contorno
-    canvas.drawRect(Rect.fromLTWH(0, 0, size.x, size.y), paint);
 
     // Circulos 3arriba
     final posiscioncirc = Offset(((0.1 / 0.238) * size.x), ((0.2/ 0.8) * size.y));
     canvas.drawCircle(
       posiscioncirc,
       1 / 75 * size.x,
-      Paint()
-    ..color = Color.fromARGB(255, 97, 81, 58)
-    
+      filledPaint,
     );
      
+    
 
-//       // Circulos 3abajo
-    final posiscioncirc1 = Offset(((0.1 / 0.238) * size.x), ((0.6/ 0.8) * size.y));
-    canvas.drawCircle(
-      posiscioncirc1,
-      1 / 75 * size.x,
-      Paint()..color = Color.fromARGB(255, 97, 81, 58)
-  
+
+    // Circulos 3abajo con relleno
+final posiscioncirc1 = Offset(((0.1 / 0.238) * size.x), ((0.6/ 0.8) * size.y));
+canvas.drawCircle(
+  posiscioncirc1,
+  1 / 75 * size.x,
+  filledPaint,
     );
 
     
@@ -50,16 +49,15 @@ class Sello_037 extends PositionComponent {
     canvas.drawCircle(
       posiscioncirc2,
       1 / 75 * size.x,
-      Paint()
-    ..color = Color.fromARGB(255, 97, 81, 58)
+      filledPaint,
+    
     );
 //4 abajo
 final posiscioncirc3 = Offset(((0.1 / 0.180) * size.x), ((0.6/ 0.8) * size.y));
 canvas.drawCircle(
   posiscioncirc3,
   1 / 75 * size.x,
-  Paint()
-    ..color = Color.fromARGB(255, 97, 81, 58) 
+  filledPaint,
 );
    
         // Circulos 2 abajo
@@ -67,8 +65,8 @@ canvas.drawCircle(
     canvas.drawCircle(
       l3,
       1 / 75 * size.x,
-     Paint()
-    ..color = Color.fromARGB(255, 97, 81, 58)
+     filledPaint,
+    
     );
 
  
@@ -79,8 +77,7 @@ canvas.drawCircle(
     canvas.drawCircle(
       posiscioncirc29,
       1 / 75 * size.x,
-       Paint()
-    ..color = Color.fromARGB(255, 97, 81, 58)
+     filledPaint,
     );
   
 
@@ -89,16 +86,14 @@ canvas.drawCircle(
     canvas.drawCircle(
       posis5,
       1 / 75 * size.x,
-     Paint()
-    ..color = Color.fromARGB(255, 97, 81, 58)
+    filledPaint,
     );
 // // Circulos 1 abajo
     final posis52 = Offset(((0.1 / 0.577) * size.x), ((0.6/ 0.8) * size.y));
     canvas.drawCircle(
       posis52,
       1 / 75 * size.x,
-       Paint()
-    ..color = Color.fromARGB(255, 97, 81, 58)
+      filledPaint,
      
     );
    
@@ -107,8 +102,7 @@ canvas.drawCircle(
     canvas.drawCircle(
       posi2,
       1 / 75 * size.x,
-      Paint()
-    ..color = Color.fromARGB(255, 97, 81, 58)
+      filledPaint,
     );
     
 // // Circulos 5 arriba
@@ -116,18 +110,19 @@ canvas.drawCircle(
     canvas.drawCircle(
       posi26,
       1 / 75 * size.x,
-     Paint()
-    ..color = Color.fromARGB(255, 97, 81, 58)
+     filledPaint,
     );
+    double ancho = size.x;
+    double xx = ancho * .014;
+   
 //circulo grande del inicio
       final posicioninicio = Offset(((0.023/0.6) * size.x), ((0.4/ 0.8) * size.y));
     canvas.drawCircle(
       posicioninicio,
       1 / 33 * size.x,
-        Paint()
-    ..color = Color.fromARGB(255, 97, 81, 58)
+        paint
     ..style = PaintingStyle.stroke 
-    ..strokeWidth = 7.0, 
+    ..strokeWidth = xx, 
     );
    
        
@@ -136,10 +131,9 @@ canvas.drawCircle(
     canvas.drawCircle(
       posicionfinal,
       1 / 40 * size.x,
-      Paint()
-    ..color = Color.fromARGB(255, 97, 81, 58)
+      paint
     ..style = PaintingStyle.stroke 
-    ..strokeWidth = 7.0, 
+    ..strokeWidth = xx, 
     );
    
 //romboinicio1
@@ -154,9 +148,9 @@ canvas.drawCircle(
       ..lineTo(centerXi1 - romboSizei1X, size.y / 2) // Izquierda
       ..close();
 
-    final romboPainti1 = Paint() ..color = Color.fromARGB(255, 97, 81, 58)
+    final romboPainti1 = paint
     ..style = PaintingStyle.stroke 
-    ..strokeWidth = 5.0;
+    ..strokeWidth = xx;
 
     canvas.drawPath(pathi1, romboPainti1);
 //rombo 1
@@ -173,9 +167,9 @@ canvas.drawCircle(
       ..lineTo(centerX2 - romboSize2, size.y / 2) // Izquierda
       ..close();
 
-    final romboPaint2 =Paint() ..color = Color.fromARGB(255, 97, 81, 58)
+    final romboPaint2 =paint
     ..style = PaintingStyle.stroke 
-    ..strokeWidth = 6.0;
+    ..strokeWidth = xx;
     canvas.drawPath(pathi2, romboPaint2);
 
 
@@ -191,9 +185,9 @@ canvas.drawCircle(
       ..lineTo(centerX3i - romboSize3i, size.y / 2) // Izquierda
       ..close();
 
-    final romboPaint3i = Paint() ..color = Color.fromARGB(255, 97, 81, 58)
+    final romboPaint3i = paint
     ..style = PaintingStyle.stroke 
-    ..strokeWidth = 7.0;
+    ..strokeWidth = xx;
 
     canvas.drawPath(pathi3i, romboPaint3i);
 
@@ -209,9 +203,9 @@ canvas.drawCircle(
       ..lineTo(centerX4r - romboSize4r, size.y / 2) // Izquierda
       ..close();
 
-    final romboPaint4r = Paint() ..color = Color.fromARGB(255, 97, 81, 58)
+    final romboPaint4r = paint
     ..style = PaintingStyle.stroke 
-    ..strokeWidth = 7.0;
+    ..strokeWidth = xx;
 
     canvas.drawPath(pathi4r, romboPaint4r);
 
@@ -228,9 +222,9 @@ canvas.drawCircle(
       ..lineTo(centerX6r - romboSize6r, size.y / 2) // Izquierda
       ..close();
 
-    final romboPaint6r =Paint() ..color = Color.fromARGB(255, 97, 81, 58)
+    final romboPaint6r =paint
     ..style = PaintingStyle.stroke 
-    ..strokeWidth = 7.0;
+    ..strokeWidth = xx;
 
     canvas.drawPath(pathi6r, romboPaint6r);
 
@@ -246,9 +240,9 @@ canvas.drawCircle(
       ..lineTo(centerX7r - romboSize7r, size.y / 2) // Izquierda
       ..close();
 
-    final romboPaint7r = Paint() ..color = Color.fromARGB(255, 97, 81, 58)
+    final romboPaint7r = paint
     ..style = PaintingStyle.stroke 
-    ..strokeWidth = 7.0;
+    ..strokeWidth = xx;
 
     canvas.drawPath(pathi7r, romboPaint7r);
 
@@ -260,7 +254,7 @@ canvas.drawCircle(
     canvas.drawCircle(
       pos1,
       1 / 87 * size.x,
-      Paint()..color = Color.fromARGB(255, 97, 81, 58),
+     filledPaint,
     );
     
 
@@ -269,7 +263,7 @@ canvas.drawCircle(
     canvas.drawCircle(
       pos2,
       1 / 75 * size.x,
-      Paint()..color = Color.fromARGB(255, 97, 81, 58),
+      filledPaint,
     );
     
 
@@ -278,10 +272,9 @@ canvas.drawCircle(
     canvas.drawCircle(
       pos4,
       1 / 60 * size.x,
-        Paint()
-    ..color = Color.fromARGB(255, 97, 81, 58)
+        paint
     ..style = PaintingStyle.stroke 
-    ..strokeWidth = 8.0, 
+    ..strokeWidth = xx 
     );
    
 
@@ -292,10 +285,9 @@ canvas.drawCircle(
     canvas.drawCircle(
       pos7,
       1 / 60 * size.x,
-       Paint()
-    ..color = Color.fromARGB(255, 97, 81, 58)
+       paint
     ..style = PaintingStyle.stroke 
-    ..strokeWidth = 8.0, 
+    ..strokeWidth = xx, 
     );
 
         //CIRCULO 5 
@@ -303,10 +295,9 @@ canvas.drawCircle(
     canvas.drawCircle(
       pos8,
       1 / 60 * size.x,
-        Paint()
-    ..color = Color.fromARGB(255, 97, 81, 58)
+    paint
     ..style = PaintingStyle.stroke 
-    ..strokeWidth = 8.0, 
+    ..strokeWidth = xx, 
     );
     
           //C6
@@ -314,17 +305,16 @@ canvas.drawCircle(
     canvas.drawCircle(
       pos9,
       1 / 60 * size.x,
-      Paint()
-    ..color = Color.fromARGB(255, 97, 81, 58)
+   paint
     ..style = PaintingStyle.stroke 
-    ..strokeWidth = 8.0, 
+    ..strokeWidth = xx, 
     );
   
 
 
 
 //RECTANGULOS FLECHA
- final colorC = Paint()..color =Color.fromARGB(255, 97, 81, 58);
+ final colorC = filledPaint;
   
   final Linea= Rect.fromCenter(
         center: Offset(size.x * 0.089, size.y * 0.50),
@@ -334,7 +324,7 @@ canvas.drawCircle(
 
     canvas.drawRect(Linea, colorC);
 
-final colorv = Paint()..color =Color.fromARGB(255, 97, 81, 58);
+final colorv = filledPaint;
   
   final Linea2= Rect.fromCenter(
         center: Offset(size.x * 0.079, size.y * 0.57),
@@ -343,7 +333,7 @@ final colorv = Paint()..color =Color.fromARGB(255, 97, 81, 58);
 
 
     canvas.drawRect(Linea2, colorv);
-    final colorv1 = Paint()..color =Color.fromARGB(255, 97, 81, 58);
+    final colorv1 = filledPaint;
   
   final Linea3= Rect.fromCenter(
         center: Offset(size.x * 0.099, size.y * 0.57),
@@ -353,7 +343,7 @@ final colorv = Paint()..color =Color.fromARGB(255, 97, 81, 58);
 
     canvas.drawRect(Linea3, colorv1);
 
-    final colorv4 = Paint()..color =Color.fromARGB(255, 97, 81, 58);
+    final colorv4 = filledPaint;
   
   final Linea4= Rect.fromCenter(
         center: Offset(size.x * 0.079, size.y * 0.64),
@@ -362,7 +352,7 @@ final colorv = Paint()..color =Color.fromARGB(255, 97, 81, 58);
 
 
     canvas.drawRect(Linea4, colorv4);
-    final colorv5 = Paint()..color =Color.fromARGB(255, 97, 81, 58);
+    final colorv5 = filledPaint;
   
   final Linea5= Rect.fromCenter(
         center: Offset(size.x * 0.099, size.y * 0.64),
@@ -372,7 +362,7 @@ final colorv = Paint()..color =Color.fromARGB(255, 97, 81, 58);
 
     canvas.drawRect(Linea5, colorv5);
 
-   final colorv7 = Paint()..color =Color.fromARGB(255, 97, 81, 58);
+   final colorv7 = filledPaint;
   
   final Linea7= Rect.fromCenter(
         center: Offset(size.x * 0.079, size.y * 0.422),
@@ -381,7 +371,7 @@ final colorv = Paint()..color =Color.fromARGB(255, 97, 81, 58);
 
 
     canvas.drawRect(Linea7, colorv7);
-    final colorv8 = Paint()..color =Color.fromARGB(255, 97, 81, 58);
+    final colorv8 = filledPaint;
   
   final Linea8= Rect.fromCenter(
         center: Offset(size.x * 0.099, size.y * 0.422),
@@ -391,7 +381,7 @@ final colorv = Paint()..color =Color.fromARGB(255, 97, 81, 58);
 
     canvas.drawRect(Linea8, colorv8);
 
-  final colorv9 = Paint()..color =Color.fromARGB(255, 97, 81, 58);
+  final colorv9 = filledPaint;
   
   final Linea9= Rect.fromCenter(
         center: Offset(size.x * 0.079, size.y * 0.37),
@@ -400,7 +390,7 @@ final colorv = Paint()..color =Color.fromARGB(255, 97, 81, 58);
 
 
     canvas.drawRect(Linea9, colorv9);
-    final colorv10= Paint()..color =Color.fromARGB(255, 97, 81, 58);
+    final colorv10= filledPaint;
   
   final Linea10= Rect.fromCenter(
         center: Offset(size.x * 0.099, size.y * 0.37),
@@ -417,10 +407,9 @@ final colorv = Paint()..color =Color.fromARGB(255, 97, 81, 58);
     canvas.drawCircle(
       pos40,
       1 / 65 * size.x,
-      Paint()
-      ..color = Color.fromARGB(255, 97, 81, 58)
+    paint
     ..style = PaintingStyle.stroke 
-    ..strokeWidth = 5.0, 
+    ..strokeWidth = xx, 
     );
 
 //2 ABAJO
@@ -428,10 +417,9 @@ final colorv = Paint()..color =Color.fromARGB(255, 97, 81, 58);
     canvas.drawCircle(
       pos41,
       1 / 65 * size.x,
-      Paint()
-      ..color = Color.fromARGB(255, 97, 81, 58)
+      paint
     ..style = PaintingStyle.stroke 
-    ..strokeWidth = 5.0, 
+    ..strokeWidth = xx, 
     );
 
     //  3 ABAJO
@@ -440,10 +428,9 @@ final colorv = Paint()..color =Color.fromARGB(255, 97, 81, 58);
     canvas.drawCircle(
       pos43,
       1 / 65 * size.x,
-      Paint()
-      ..color = Color.fromARGB(255, 97, 81, 58)
+     paint
     ..style = PaintingStyle.stroke 
-    ..strokeWidth = 5.0, 
+    ..strokeWidth = xx, 
     );
 
 //5 MEDIO ARRIBA
@@ -451,10 +438,9 @@ final colorv = Paint()..color =Color.fromARGB(255, 97, 81, 58);
     canvas.drawCircle(
       pos44,
      1 / 65 * size.x,
-      Paint()
-      ..color = Color.fromARGB(255, 97, 81, 58)
+      paint
     ..style = PaintingStyle.stroke 
-    ..strokeWidth = 5.0, 
+    ..strokeWidth = xx, 
     );
 
 
@@ -462,10 +448,9 @@ final colorv = Paint()..color =Color.fromARGB(255, 97, 81, 58);
     canvas.drawCircle(
       pos45,
       1 / 65 * size.x,
-      Paint()
-      ..color = Color.fromARGB(255, 97, 81, 58)
+     paint
     ..style = PaintingStyle.stroke 
-    ..strokeWidth = 5.0, 
+    ..strokeWidth = xx, 
     );
      
 
