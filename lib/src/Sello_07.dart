@@ -181,5 +181,17 @@ class Sello_07 extends PositionComponent {
     canvas.drawCircle
     (posiscioncirc2,1 / 30 * size.x,Paint()..color = Color.fromARGB(255, 101, 76, 50),
     );
+
+    //ojo1
+    final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.5/ 8) * size.y));
+    canvas.drawCircle
+    (posiscioncirc3,1 / 50 * size.x,Paint()..color = Color.fromARGB(255, 101, 76, 50),
+    );
+
+    //ojo2
+    final posiscioncirc4 = Offset(((1.5 / 7) * size.x), ((4.5/ 8) * size.y));
+    canvas.drawCircle
+    (posiscioncirc4,1 / 50 * size.x,Paint()..color = Color.fromARGB(255, 101, 76, 50),
+    );
   }
 }
