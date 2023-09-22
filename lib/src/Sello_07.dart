@@ -133,33 +133,33 @@ class Sello_07 extends PositionComponent {
 
       final paint4 = Paint()
       ..color =Color.fromARGB(255, 101, 76, 50)
-      ..style = PaintingStyle.stroke
+      ..style = PaintingStyle.fill
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawPath(mano2, paint4);
 
-    final mano3 = Path()
-    //Dedos
-      ..moveTo(((5.9 / 7) * size.x), ((1.39/ 8) * size.y))
-      ..lineTo(((6.6 / 7) * size.x), ((1.25/ 8) * size.y))
+  // final mano3 = Path()
+  // //Dedos
+  //   ..moveTo(((5.9 / 7) * size.x), ((1.39/ 8) * size.y))
+  //   ..lineTo(((6.6 / 7) * size.x), ((1.25/ 8) * size.y))
 
-      ..moveTo(((5.9 / 7) * size.x), ((1.45/ 8) * size.y))
-      ..lineTo(((6.65 / 7) * size.x), ((1.42/ 8) * size.y))
+  //   ..moveTo(((5.9 / 7) * size.x), ((1.45/ 8) * size.y))
+  //   ..lineTo(((6.65 / 7) * size.x), ((1.42/ 8) * size.y))
 
-      ..moveTo(((5.9 / 7) * size.x), ((1.55/ 8) * size.y))
-      ..lineTo(((6.65 / 7) * size.x), ((1.57/ 8) * size.y))
+  //   ..moveTo(((5.9 / 7) * size.x), ((1.55/ 8) * size.y))
+  //   ..lineTo(((6.65 / 7) * size.x), ((1.57/ 8) * size.y))
 
-      ..moveTo(((5.9 / 7) * size.x), ((1.65/ 8) * size.y))
-      ..lineTo(((6.6 / 7) * size.x), ((1.75/ 8) * size.y))
+  //   ..moveTo(((5.9 / 7) * size.x), ((1.65/ 8) * size.y))
+  //   ..lineTo(((6.6 / 7) * size.x), ((1.75/ 8) * size.y))
 
-      ..close();
+  //   ..close();
 
-      final paint5 = Paint()
-      ..color =Color.fromARGB(255, 101, 76, 50)
-      ..style = PaintingStyle.fill
-      ..strokeWidth = 5
-      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-    canvas.drawPath(mano3, paint5);
+  //   final paint5 = Paint()
+  //   ..color =Color.fromARGB(255, 101, 76, 50)
+  //   ..style = PaintingStyle.fill
+  //   ..strokeWidth = 5
+  //   ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
+  // canvas.drawPath(mano3, paint5);
 
           
     //Cabeza
@@ -167,7 +167,7 @@ class Sello_07 extends PositionComponent {
     (
  
      Rect.fromPoints(Offset(((.8 / 7) * size.x), ((3/ 8) * size.y)), Offset(((2.4 / 7) * size.x), ((5.2/ 8) * size.y))),
-     paint5,
+     paint4,
     );
 
     //oreja1
@@ -183,15 +183,15 @@ class Sello_07 extends PositionComponent {
     );
 
     //ojo1
-    final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.55/ 8) * size.y));
+    final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.6/ 8) * size.y));
     canvas.drawCircle
-    (posiscioncirc3,1 / 50 * size.x,Paint()..color = Color.fromARGB(255, 200, 200, 200),
+    (posiscioncirc3,1 / 50 * size.x,paint,
     );
 
     //ojo2
     final posiscioncirc4 = Offset(((1.5 / 7) * size.x), ((4.5/ 8) * size.y));
     canvas.drawCircle
-    (posiscioncirc4,1 / 50 * size.x,Paint()..color = Color.fromARGB(255, 200, 200, 200),
+    (posiscioncirc4,1 / 50 * size.x,paint,
     );
   }
 }
