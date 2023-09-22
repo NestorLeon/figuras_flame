@@ -156,7 +156,7 @@ class Sello_07 extends PositionComponent {
 
       final paint5 = Paint()
       ..color =Color.fromARGB(255, 101, 76, 50)
-      ..style = PaintingStyle.stroke
+      ..style = PaintingStyle.fill
       ..strokeWidth = 5
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawPath(mano3, paint5);
@@ -166,7 +166,7 @@ class Sello_07 extends PositionComponent {
        canvas.drawOval
        (
  
-       Rect.fromPoints(Offset(((1 / 7) * size.x), ((1.8/ 8) * size.y)), Offset(((1.5 / 7) * size.x), ((5.8/ 8) * size.y))),
+       Rect.fromPoints(Offset(((1 / 7) * size.x), ((1.8/ 8) * size.y)), Offset(((3 / 7) * size.x), ((5.8/ 8) * size.y))),
        paint5,
       );
   }
