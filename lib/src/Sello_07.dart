@@ -170,13 +170,13 @@ class Sello_07 extends PositionComponent {
     //ojo1
     final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.6/ 8) * size.y));
     canvas.drawCircle
-    (posiscioncirc3,1 / 50 * size.x,paint,
+    (posiscioncirc3,1 / 60 * size.x,paint,
     );
 
     //ojo2
     final posiscioncirc4 = Offset(((1.5 / 7) * size.x), ((4.5/ 8) * size.y));
     canvas.drawCircle
-    (posiscioncirc4,1 / 50 * size.x,paint,
+    (posiscioncirc4,1 / 60 * size.x,paint,
     );
   }
 }
