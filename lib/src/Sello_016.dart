@@ -1,16 +1,16 @@
 library figuras_flame;
 
-import 'package:flame/palette.dart';
+//import 'package:flame/palette.dart';
 import 'package:flutter/widgets.dart';
 
 import 'tipos_de_forma.dart';
 import 'dart:ui';
 import 'package:flame/components.dart';
 
-class Selloespi extends PositionComponent {
+class Sello_016 extends PositionComponent {
   final FormaTypes forma;
   final Paint paint;
-  Selloespi({
+  Sello_016({
     required super.position,
     required this.paint,
     this.forma = FormaTypes.rectanguloHorizontal,
