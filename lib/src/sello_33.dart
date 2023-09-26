@@ -15,8 +15,12 @@ class Flores extends PositionComponent {
     required super.size,
     this.forma = FormaTypes.rectanguloHorizontal,
     super.children,
-  }) : super();
-
+  }) : super() {
+    if (size.x < size.y * 4) {
+      throw Exception(
+          "El ancho de la figura debe ser mayor a 4 veces el alto.");
+    }
+  }
   @override
   void render(Canvas canvas) {
     super.render(canvas);
