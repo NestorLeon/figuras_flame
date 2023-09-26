@@ -143,16 +143,44 @@ class Sello_07 extends PositionComponent {
 
      final paint6 = Paint()
       ..color =paint.color
-      ..style = PaintingStyle.fill
+      ..style = PaintingStyle.stroke
       ..strokeWidth = size.x/110
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
 
     //Cabeza
+
+  // final myPathCombine = Path.combine(
+  //     PathOperation.difference,
+  //     Path()
+  //       ..fillType = PathFillType.evenOdd
+  //       ..addRect(
+  //           Rect.fromLTWH(0, (4 / 14) * size.y, size.x, (6 / 14) * size.y)),
+  //     circulo1);
+  // //Dibuja la figura final
+  // canvas.drawPath(
+  //   myPathCombine,
+  //   this.paint
+  //     ..style = PaintingStyle.fill
+  //     ..strokeWidth = 0.0,
+  // );
+
     canvas.drawOval
     (
  
      Rect.fromPoints(Offset(((.8 / 7) * size.x), ((3/ 8) * size.y)), Offset(((2.4 / 7) * size.x), ((5.2/ 8) * size.y))),
      paint6,
+    );
+
+    //ojo1
+    final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.6/ 8) * size.y));
+    canvas.drawCircle
+    (posiscioncirc3,1 / 60 * size.x,paint,
+    );
+
+    //ojo2
+    final posiscioncirc4 = Offset(((1.5 / 7) * size.x), ((4.5/ 8) * size.y));
+    canvas.drawCircle
+    (posiscioncirc4,1 / 60 * size.x,paint,
     );
 
     //oreja1
@@ -167,16 +195,6 @@ class Sello_07 extends PositionComponent {
     (posiscioncirc2,1 / 35 * size.x,paint,
     );
 
-    //ojo1
-    final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.6/ 8) * size.y));
-    canvas.drawCircle
-    (posiscioncirc3,1 / 60 * size.x,paint,
-    );
 
-    //ojo2
-    final posiscioncirc4 = Offset(((1.5 / 7) * size.x), ((4.5/ 8) * size.y));
-    canvas.drawCircle
-    (posiscioncirc4,1 / 60 * size.x,paint,
-    );
   }
 }
