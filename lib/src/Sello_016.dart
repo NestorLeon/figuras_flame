@@ -40,6 +40,14 @@ class Sello_016 extends PositionComponent {
       size.y * 0.05, //Altura
     );
     canvas.drawRect(partsuperior2, paint);
+
+    final partinferior = Rect.fromLTWH(
+      size.x * 0.0, //mover x
+      size.y * 0.10, //mover y
+      size.x * 0.999, //Ancho
+      size.y * 0.05, //Altura
+    );
+    canvas.drawRect(partinferior, paint);
 //Figura 1
 //Escalera 1
     final rec1 = Rect.fromLTWH(
