@@ -60,7 +60,7 @@ class Sello_07 extends PositionComponent {
       final paint2 = Paint()
       ..color =Color.fromARGB(255, 101, 76, 50)
       ..style = PaintingStyle.stroke
-      ..strokeWidth = size.x/90
+      ..strokeWidth = size.x/110
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawPath(mano, paint2);
 
@@ -92,7 +92,7 @@ class Sello_07 extends PositionComponent {
     final paint3 = Paint()
     ..color =Color.fromARGB(255, 101, 76, 50)
     ..style = PaintingStyle.stroke
-    ..strokeWidth = size.x/32
+    ..strokeWidth = size.x/36
     ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
   canvas.drawPath(cuerpo, paint3);
 
@@ -119,7 +119,7 @@ class Sello_07 extends PositionComponent {
       final paint4 = Paint()
       ..color =Color.fromARGB(255, 101, 76, 50)
       ..style = PaintingStyle.stroke
-      ..strokeWidth = size.x/90
+      ..strokeWidth = size.x/110
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawPath(mano2, paint4);
 
@@ -144,7 +144,7 @@ class Sello_07 extends PositionComponent {
      final paint6 = Paint()
       ..color =Color.fromARGB(255, 101, 76, 50)
       ..style = PaintingStyle.fill
-      ..strokeWidth = size.x/90
+      ..strokeWidth = size.x/110
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
 
     //Cabeza
