@@ -143,6 +143,12 @@ class Sello_07 extends PositionComponent {
 
      final paint6 = Paint()
       ..color =paint.color
+      ..style = PaintingStyle.fill
+      ..strokeWidth = size.x/110
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
+
+         final paint7 = Paint()
+      ..color =paint.color
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.x/110
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
@@ -180,13 +186,13 @@ class Sello_07 extends PositionComponent {
     //ojo2
     final posiscioncirc4 = Offset(((1.5 / 7) * size.x), ((4.5/ 8) * size.y));
     canvas.drawCircle
-    (posiscioncirc4,1 / 60 * size.x,paint,
+    (posiscioncirc4,1 / 60 * size.x,paint7,
     );
 
     //oreja1
     final posiscioncirc = Offset(((1.5 / 7) * size.x), ((3.1/ 8) * size.y));
     canvas.drawCircle
-    (posiscioncirc,1 / 35 * size.x,paint,
+    (posiscioncirc,1 / 35 * size.x,paint7,
     );
 
     //oreja2
