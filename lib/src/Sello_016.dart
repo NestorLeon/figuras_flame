@@ -43,7 +43,7 @@ class Sello_016 extends PositionComponent {
 
     final partinferior = Rect.fromLTWH(
       size.x * 0.0, //mover x
-      size.y * 0.10, //mover y
+      size.y * 0.950, //mover y
       size.x * 0.999, //Ancho
       size.y * 0.05, //Altura
     );
