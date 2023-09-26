@@ -28,21 +28,6 @@ class Sello_07 extends PositionComponent {
         // Contorno
     canvas.drawRect(Rect.fromLTWH(0, 0, size.x, size.y), paint);
 
-  // // Circulos 
-  // final posiscioncirc = Offset(((1 / 9) * size.x), ((1.35/ 8) * size.y));
-  // canvas.drawCircle(
-  //   posiscioncirc,
-  //   1 / 50 * size.x,
-  //   Paint()..color = Color.fromARGB(255, 123, 103, 73),
-  // );
-        
-        //RECTANGULO
-       //canvas.drawRect
-       //(
-        //Rect.fromPoints(Offset(position.x, position.y), Offset(size.x, size.y)),
-        //paint,
-      //);
-
     final mano = Path()
     //Dedos
       ..moveTo(((1 / 9.5) * size.x), ((.85/ 8) * size.y))
@@ -75,7 +60,7 @@ class Sello_07 extends PositionComponent {
       final paint2 = Paint()
       ..color =Color.fromARGB(255, 101, 76, 50)
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 5
+      ..strokeWidth = size.x/100
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawPath(mano, paint2);
 
@@ -107,7 +92,7 @@ class Sello_07 extends PositionComponent {
     final paint3 = Paint()
     ..color =Color.fromARGB(255, 101, 76, 50)
     ..style = PaintingStyle.stroke
-    ..strokeWidth = 15
+    ..strokeWidth = size.x/33
     ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
   canvas.drawPath(cuerpo, paint3);
 
@@ -134,7 +119,7 @@ class Sello_07 extends PositionComponent {
       final paint4 = Paint()
       ..color =Color.fromARGB(255, 101, 76, 50)
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 5
+      ..strokeWidth = size.x/100
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawPath(mano2, paint4);
 
@@ -152,14 +137,14 @@ class Sello_07 extends PositionComponent {
     final paint5 = Paint()
      ..color =Color.fromARGB(255, 101, 76, 50)
      ..style = PaintingStyle.stroke
-     ..strokeWidth = 5
+     ..strokeWidth = size.x/100
      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
    canvas.drawPath(mano3, paint5);
 
      final paint6 = Paint()
       ..color =Color.fromARGB(255, 101, 76, 50)
       ..style = PaintingStyle.fill
-      ..strokeWidth = 5
+      ..strokeWidth = size.x/100
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
 
     //Cabeza
