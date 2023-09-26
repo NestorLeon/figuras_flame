@@ -25,8 +25,8 @@ class Sello_07 extends PositionComponent {
   {
     super.render(canvas);
 
-        // Contorno
-    canvas.drawRect(Rect.fromLTWH(0, 0, size.x, size.y), paint);
+  //     // Contorno
+  // canvas.drawRect(Rect.fromLTWH(0, 0, size.x, size.y), paint);
 
     final mano = Path()
     //Dedos
@@ -58,7 +58,7 @@ class Sello_07 extends PositionComponent {
       ..close();
 
       final paint2 = Paint()
-      ..color =Color.fromARGB(255, 101, 76, 50)
+      ..color = paint.color
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.x/110
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
@@ -90,7 +90,7 @@ class Sello_07 extends PositionComponent {
 
 
     final paint3 = Paint()
-    ..color =Color.fromARGB(255, 101, 76, 50)
+    ..color =paint.color
     ..style = PaintingStyle.stroke
     ..strokeWidth = size.x/36
     ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
@@ -117,7 +117,7 @@ class Sello_07 extends PositionComponent {
       ..close();
 
       final paint4 = Paint()
-      ..color =Color.fromARGB(255, 101, 76, 50)
+      ..color =paint.color
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.x/110
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
@@ -135,14 +135,14 @@ class Sello_07 extends PositionComponent {
      ..lineTo(((6.6 / 7) * size.x), ((1.75/ 8) * size.y))
     ..close();
     final paint5 = Paint()
-     ..color =Color.fromARGB(255, 101, 76, 50)
+     ..color =paint.color
      ..style = PaintingStyle.stroke
      ..strokeWidth = size.x/100
      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
    canvas.drawPath(mano3, paint5);
 
      final paint6 = Paint()
-      ..color =Color.fromARGB(255, 101, 76, 50)
+      ..color =paint.color
       ..style = PaintingStyle.fill
       ..strokeWidth = size.x/110
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
@@ -158,13 +158,13 @@ class Sello_07 extends PositionComponent {
     //oreja1
     final posiscioncirc = Offset(((1.5 / 7) * size.x), ((3.1/ 8) * size.y));
     canvas.drawCircle
-    (posiscioncirc,1 / 30 * size.x,Paint()..color = Color.fromARGB(255, 101, 76, 50),
+    (posiscioncirc,1 / 35 * size.x,paint,
     );
 
     //oreja2
     final posiscioncirc2 = Offset(((1.5 / 7) * size.x), ((5.1/ 8) * size.y));
     canvas.drawCircle
-    (posiscioncirc2,1 / 30 * size.x,Paint()..color = Color.fromARGB(255, 101, 76, 50),
+    (posiscioncirc2,1 / 35 * size.x,paint,
     );
 
     //ojo1
