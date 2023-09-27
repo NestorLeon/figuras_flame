@@ -4,10 +4,10 @@ import 'tipos_de_forma.dart';
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 
-class Sello_055 extends PositionComponent {
+class Sello_056 extends PositionComponent {
   final FormaTypes forma;
   final Paint paint;
-  Sello_055({
+  Sello_056({
     required super.position,
     required this.paint,
     this.forma = FormaTypes.cuadrado,
