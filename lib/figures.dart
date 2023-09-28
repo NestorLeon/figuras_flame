@@ -28,3 +28,4 @@ export 'src/sello_048.dart' show Sello_048;
 export 'src/sello_056.dart' show Sello_056;
 export 'src/sello_037.dart' show Sello_037;
 export 'src/sello_050.dart' show Sello_050;
+export 'src/sello_007.dart' show Sello_007;

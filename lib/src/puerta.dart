@@ -23,7 +23,8 @@ class Puerta extends PositionComponent {
   double t = 0;
 
   @override
-  void render(Canvas canvas) {
+  void render(Canvas canvas) 
+  {
     super.render(canvas);
 
     //final colorA = Paint()..color = Color.fromARGB(255, 54, 19, 19);
