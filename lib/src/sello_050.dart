@@ -1,3 +1,4 @@
+
 library figuras_flame;
 
 //import 'package:flame/experimental.dart';
@@ -355,3 +356,4 @@ class Sello_050 extends PositionComponent {
 
   }
 }
+
