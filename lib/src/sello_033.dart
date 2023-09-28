@@ -5,20 +5,19 @@ import 'package:figuras_flame/src/tipos_de_forma.dart';
 import 'package:flame/components.dart';
 import 'package:flame/effects.dart';
 
-class Flores extends PositionComponent {
+class Sello_033 extends PositionComponent {
   final FormaTypes forma;
   final Paint paint;
 
-  Flores({
+  Sello_033({
     required super.position,
     required this.paint,
     required super.size,
     this.forma = FormaTypes.rectanguloHorizontal,
     super.children,
   }) : super() {
-    if (size.x < size.y * 4) {
-      throw Exception(
-          "El ancho de la figura debe ser mayor a 4 veces el alto.");
+    if (size.x < size.y * 4 || size.x > size.y * 4) {
+      throw Exception("El ancho de la figura debe ser 4 veces el alto.");
     }
   }
   @override
