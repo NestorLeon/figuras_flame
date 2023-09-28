@@ -146,55 +146,55 @@ class Sello_07 extends PositionComponent {
 
 
 
- Path ojos = Path();
-    //ojo1
-      final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.6/ 8) * size.y));
-      canvas.drawCircle
-      (posiscioncirc3,1 / 60 * size.x,paint4,
-      );
-    
-   ////ojo2
-   //final posiscioncirc4 = Offset(((1.5 / 7) * size.x), ((4.5/ 8) * size.y));
-   //canvas.drawCircle
-   //(posiscioncirc4,1 / 60 * size.x,paint4,
-   //);
-
-   final myPathCombine = Path.combine(
-       PathOperation.difference,
-       Path()
-         ..fillType = PathFillType.evenOdd
-         ..addOval(
-              Rect.fromPoints(
-                Offset(((.8 / 7) * size.x), ((3/ 8) * size.y)), 
-              Offset(((2.4 / 7) * size.x), ((5.2/ 8) * size.y)))),ojos);
-   //Dibuja la figura final
-   canvas.drawPath(
-     myPathCombine,
-     this.paint
-       ..style = PaintingStyle.fill
-       ..strokeWidth = 0.0,
-   );
-
-
-////ojo1
-//   final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.6/ 8) * size.y));
-//   canvas.drawCircle
-//   (posiscioncirc3,1 / 60 * size.x,paint,
-//   );
+// Path ojos = Path();
+//    //ojo1
+//    final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.6/ 8) * size.y));
+//    canvas.drawCircle
+//    (posiscioncirc3,1 / 60 * size.x,paint4,
+//    );
+//    
+//    //ojo2
+//    final posiscioncirc4 = Offset(((1.5 / 7) * size.x), ((4.5/ 8) * size.y));
+//    canvas.drawCircle
+//    (posiscioncirc4,1 / 60 * size.x,paint4,
+//    );
 //
-//   //ojo2
-//   final posiscioncirc4 = Offset(((1.5 / 7) * size.x), ((4.5/ 8) * size.y));
-//   canvas.drawCircle
-//   (posiscioncirc4,1 / 60 * size.x,paint,
+//   final myPathCombine = Path.combine(
+//       PathOperation.difference,
+//       Path()
+//         ..fillType = PathFillType.evenOdd
+//         ..addOval(
+//              Rect.fromPoints(
+//                Offset(((.8 / 7) * size.x), ((3/ 8) * size.y)), 
+//              Offset(((2.4 / 7) * size.x), ((5.2/ 8) * size.y)))),ojos);
+//   //Dibuja la figura final
+//   canvas.drawPath(
+//     myPathCombine,
+//     this.paint
+//       ..style = PaintingStyle.fill
+//       ..strokeWidth = 0.0,
 //   );
 
 
- // canvas.drawOval
- // (
- //
- //   Rect.fromPoints(Offset(((.8 / 7) * size.x), ((3/ 8) * size.y)), Offset(((2.4 / 7) * size.x), ((5.2/ 8) * size.y))),
- //  paint,
- //);
+//ojo1
+  final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.6/ 8) * size.y));
+  canvas.drawCircle
+  (posiscioncirc3,1 / 60 * size.x,Paint() ..color=Color.fromARGB(255, 200, 200, 200),
+  );
+  //ojo2
+  final posiscioncirc4 = Offset(((1.5 / 7) * size.x), ((4.5/ 8) * size.y));
+  canvas.drawCircle
+  (posiscioncirc4,1 / 60 * size.x,Paint() ..color=Color.fromARGB(255, 200, 200, 200),
+  );
+  
+  //Cabeza
+ 
+ canvas.drawOval
+ (
+
+   Rect.fromPoints(Offset(((.8 / 7) * size.x), ((3/ 8) * size.y)), Offset(((2.4 / 7) * size.x), ((5.2/ 8) * size.y))),
+  paint,
+);
 
     
 
