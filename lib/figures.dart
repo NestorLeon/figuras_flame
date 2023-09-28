@@ -25,8 +25,5 @@ export 'src/sello_053.dart' show Sello_053;
 export 'src/sello_013.dart' show Sello_013;
 export 'src/sello_040.dart' show Sello_040;
 export 'src/sello_048.dart' show Sello_048;
-<<<<<<< HEAD
 export 'src/sello_056.dart' show Sello_056;
-=======
 export 'src/sello_037.dart' show Sello_037;
->>>>>>> 211a16260b34bcadb10e56e66a139436c6cb68f6
