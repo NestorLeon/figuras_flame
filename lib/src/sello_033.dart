@@ -20,6 +20,7 @@ class Sello_033 extends PositionComponent {
       throw Exception("El ancho de la figura debe ser 4 veces el alto.");
     }
   }
+
   @override
   void render(Canvas canvas) {
     super.render(canvas);
