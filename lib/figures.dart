@@ -1,5 +1,4 @@
 export 'src/ballena.dart' show Ballena;
-export 'src/sello_07.dart' show Sello_07;
 export 'src/caballito.dart' show Caballito;
 export 'src/caballo.dart' show Caballo;
 export 'src/iguana.dart' show Iguana;
@@ -29,3 +28,4 @@ export 'src/sello_048.dart' show Sello_048;
 export 'src/sello_056.dart' show Sello_056;
 export 'src/sello_037.dart' show Sello_037;
 export 'src/sello_050.dart' show Sello_050;
+export 'src/sello_007.dart' show Sello_007;

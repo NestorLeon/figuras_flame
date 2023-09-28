@@ -5,12 +5,12 @@ import 'dart:ui';
 import 'tipos_de_forma.dart';
 import 'package:flame/components.dart';
 
-class Sello_07 extends PositionComponent {
+class Sello_007 extends PositionComponent {
   final FormaTypes forma;
   final Paint paint;
   
 
-  Sello_07({
+  Sello_007({
     required super.position,
     required this.paint,
     required super.size,
@@ -25,9 +25,7 @@ class Sello_07 extends PositionComponent {
   {
     super.render(canvas);
 
-  //     // Contorno
-  // canvas.drawRect(Rect.fromLTWH(0, 0, size.x, size.y), paint);
-
+    //Mano 1
     final mano = Path()
     //Dedos
       ..moveTo(((1 / 9.5) * size.x), ((.85/ 8) * size.y))
@@ -64,9 +62,8 @@ class Sello_07 extends PositionComponent {
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawPath(mano, paint2);
 
-
-
-  final cuerpo= Path()
+    //Cuerpo
+     final cuerpo= Path()
     
       ..moveTo(((1 / 7) * size.x), ((1.15/ 8) * size.y))
       ..quadraticBezierTo(((5.3 / 7) * size.x), ((1.8/ 8) * size.y),((2.9 / 7) * size.x), ((3.2/ 8) * size.y))
@@ -94,8 +91,9 @@ class Sello_07 extends PositionComponent {
     ..style = PaintingStyle.stroke
     ..strokeWidth = size.x/36
     ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-  canvas.drawPath(cuerpo, paint3);
+   canvas.drawPath(cuerpo, paint3);
 
+    //Mano 2
     final mano2 = Path()
     //Dedos
       ..moveTo(((1 / 11.3 ) * size.x), ((6.75/ 8) * size.y))
@@ -123,6 +121,7 @@ class Sello_07 extends PositionComponent {
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
     canvas.drawPath(mano2, paint4);
 
+   //Mano 3
    final mano3 = Path()
    //Dedos
      ..moveTo(((5.9 / 7) * size.x), ((1.39/ 8) * size.y))
@@ -141,67 +140,26 @@ class Sello_07 extends PositionComponent {
      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
    canvas.drawPath(mano3, paint5);
 
-    //Cabeza
-
-
-
-
-// Path ojos = Path();
-//    //ojo1
-//    final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.6/ 8) * size.y));
-//    canvas.drawCircle
-//    (posiscioncirc3,1 / 60 * size.x,paint4,
-//    );
-//    
-//    //ojo2
-//    final posiscioncirc4 = Offset(((1.5 / 7) * size.x), ((4.5/ 8) * size.y));
-//    canvas.drawCircle
-//    (posiscioncirc4,1 / 60 * size.x,paint4,
-//    );
-//
-//   final myPathCombine = Path.combine(
-//       PathOperation.difference,
-//       Path()
-//         ..fillType = PathFillType.evenOdd
-//         ..addOval(
-//              Rect.fromPoints(
-//                Offset(((.8 / 7) * size.x), ((3/ 8) * size.y)), 
-//              Offset(((2.4 / 7) * size.x), ((5.2/ 8) * size.y)))),ojos);
-//   //Dibuja la figura final
-//   canvas.drawPath(
-//     myPathCombine,
-//     this.paint
-//       ..style = PaintingStyle.fill
-//       ..strokeWidth = 0.0,
-//   );
-
-
-
-  
   //Cabeza
- 
- canvas.drawOval
- (
-
+   canvas.drawOval
+  (
    Rect.fromPoints(Offset(((.8 / 7) * size.x), ((3/ 8) * size.y)), Offset(((2.4 / 7) * size.x), ((5.2/ 8) * size.y))),
-  paint,
-);
+   paint,
+  );
 
+  //oreja1
+  final posiscioncirc = Offset(((1.5 / 7) * size.x), ((3.1/ 8) * size.y));
+  canvas.drawCircle
+  (posiscioncirc,1 / 35 * size.x,paint,
+  );
 
+  //oreja2
+  final posiscioncirc2 = Offset(((1.5 / 7) * size.x), ((5.1/ 8) * size.y));
+  canvas.drawCircle
+  (posiscioncirc2,1 / 35 * size.x,paint,
+  );
 
-    //oreja1
-    final posiscioncirc = Offset(((1.5 / 7) * size.x), ((3.1/ 8) * size.y));
-    canvas.drawCircle
-    (posiscioncirc,1 / 35 * size.x,paint,
-    );
-
-    //oreja2
-    final posiscioncirc2 = Offset(((1.5 / 7) * size.x), ((5.1/ 8) * size.y));
-    canvas.drawCircle
-    (posiscioncirc2,1 / 35 * size.x,paint,
-    );
-
-   //ojo1
+  //ojo1
   final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.5/ 8) * size.y));
   canvas.drawCircle
   (posiscioncirc3,1 / 60 * size.x,Paint() ..color=Color.fromARGB(255, 200, 200, 200),
