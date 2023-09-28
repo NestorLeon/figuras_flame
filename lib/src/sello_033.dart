@@ -3,7 +3,6 @@ library figuras_flame;
 import 'dart:ui';
 import 'package:figuras_flame/src/tipos_de_forma.dart';
 import 'package:flame/components.dart';
-import 'package:flame/effects.dart';
 
 class Sello_033 extends PositionComponent {
   final FormaTypes forma;
