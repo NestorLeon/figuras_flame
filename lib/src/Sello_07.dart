@@ -176,16 +176,7 @@ class Sello_07 extends PositionComponent {
 //   );
 
 
-//ojo1
-  final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.6/ 8) * size.y));
-  canvas.drawCircle
-  (posiscioncirc3,1 / 60 * size.x,Paint() ..color=Color.fromARGB(255, 200, 200, 200),
-  );
-  //ojo2
-  final posiscioncirc4 = Offset(((1.5 / 7) * size.x), ((4.5/ 8) * size.y));
-  canvas.drawCircle
-  (posiscioncirc4,1 / 60 * size.x,Paint() ..color=Color.fromARGB(255, 200, 200, 200),
-  );
+
   
   //Cabeza
  
@@ -196,7 +187,16 @@ class Sello_07 extends PositionComponent {
   paint,
 );
 
-    
+    //ojo1
+  final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.6/ 8) * size.y));
+  canvas.drawCircle
+  (posiscioncirc3,1 / 60 * size.x,Paint() ..color=Color.fromARGB(255, 200, 200, 200),
+  );
+  //ojo2
+  final posiscioncirc4 = Offset(((1.5 / 7) * size.x), ((4.5/ 8) * size.y));
+  canvas.drawCircle
+  (posiscioncirc4,1 / 60 * size.x,Paint() ..color=Color.fromARGB(255, 200, 200, 200),
+  );
 
     //oreja1
     final posiscioncirc = Offset(((1.5 / 7) * size.x), ((3.1/ 8) * size.y));
