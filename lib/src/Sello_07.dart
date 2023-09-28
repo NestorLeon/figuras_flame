@@ -141,47 +141,62 @@ class Sello_07 extends PositionComponent {
      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
    canvas.drawPath(mano3, paint5);
 
-   //  final paint6 = Paint()
-   //   ..color =paint.color
-   //   ..style = PaintingStyle.fill
-   //   ..strokeWidth = size.x/110
-   //   ..maskFilter = MaskFilter.blur(BlurStyle.normal, 0.9);
-//
     //Cabeza
 
-  // final myPathCombine = Path.combine(
-  //     PathOperation.difference,
-  //     Path()
-  //       ..fillType = PathFillType.evenOdd
-  //       ..addRect(
-  //           Rect.fromLTWH(0, (4 / 14) * size.y, size.x, (6 / 14) * size.y)),
-  //     circulo1);
-  // //Dibuja la figura final
-  // canvas.drawPath(
-  //   myPathCombine,
-  //   this.paint
-  //     ..style = PaintingStyle.fill
-  //     ..strokeWidth = 0.0,
-  // );
 
-    canvas.drawOval
-    (
- 
-     Rect.fromPoints(Offset(((.8 / 7) * size.x), ((3/ 8) * size.y)), Offset(((2.4 / 7) * size.x), ((5.2/ 8) * size.y))),
-     paint,
-    );
 
+
+ Path ojos = Path();
     //ojo1
-    final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.6/ 8) * size.y));
-    canvas.drawCircle
-    (posiscioncirc3,1 / 60 * size.x,paint,
-    );
-
+      final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.6/ 8) * size.y));
+      canvas.drawCircle
+      (posiscioncirc3,1 / 60 * size.x,paint,
+      );
+    
     //ojo2
     final posiscioncirc4 = Offset(((1.5 / 7) * size.x), ((4.5/ 8) * size.y));
     canvas.drawCircle
     (posiscioncirc4,1 / 60 * size.x,paint,
     );
+
+   final myPathCombine = Path.combine(
+       PathOperation.difference,
+       Path()
+         ..fillType = PathFillType.evenOdd
+         ..addOval(
+              Rect.fromPoints(
+                Offset(((.8 / 7) * size.x), ((3/ 8) * size.y)), 
+              Offset(((2.4 / 7) * size.x), ((5.2/ 8) * size.y)))),ojos);
+   //Dibuja la figura final
+   canvas.drawPath(
+     myPathCombine,
+     this.paint
+       ..style = PaintingStyle.fill
+       ..strokeWidth = 0.0,
+   );
+
+
+////ojo1
+//   final posiscioncirc3 = Offset(((1.5 / 7) * size.x), ((3.6/ 8) * size.y));
+//   canvas.drawCircle
+//   (posiscioncirc3,1 / 60 * size.x,paint,
+//   );
+//
+//   //ojo2
+//   final posiscioncirc4 = Offset(((1.5 / 7) * size.x), ((4.5/ 8) * size.y));
+//   canvas.drawCircle
+//   (posiscioncirc4,1 / 60 * size.x,paint,
+//   );
+
+
+ // canvas.drawOval
+ // (
+ //
+ //   Rect.fromPoints(Offset(((.8 / 7) * size.x), ((3/ 8) * size.y)), Offset(((2.4 / 7) * size.x), ((5.2/ 8) * size.y))),
+ //  paint,
+ //);
+
+    
 
     //oreja1
     final posiscioncirc = Offset(((1.5 / 7) * size.x), ((3.1/ 8) * size.y));
